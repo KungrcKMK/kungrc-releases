@@ -1,0 +1,5 @@
+# Ignore everything except latest.json and build_date.txt
+*
+!.gitignore
+!latest.json
+!build_date.txt
