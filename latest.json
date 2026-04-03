@@ -1,5 +1,5 @@
 {
-    "version":  "1.0.60",
-    "url":  "https://github.com/KungrcKMK/kungrc-releases/releases/download/v1.0.60/KungRC_EA_install.exe",
-    "note":  "v1.0.60 - auto apply full preset when symbol changes"
+    "version":  "1.0.62",
+    "url":  "https://github.com/KungrcKMK/kungrc-releases/releases/download/v1.0.62/KungRC_EA_install.exe",
+    "note":  "v1.0.62 - clean build (session filter + TG alerts)"
 }
