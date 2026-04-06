@@ -1,5 +1,5 @@
 {
-    "version":  "1.0.69",
-    "url":  "https://github.com/KungrcKMK/kungrc-releases/releases/download/v1.0.69/KungRC_EA_install.exe",
-    "note":  "v1.0.69 - Cut Pause: หยุดเปิดไม้ใหม่เมื่อตัดต่อเนื่อง 2 ครั้งใน 60 วิ"
+    "version":  "1.0.70",
+    "url":  "https://github.com/KungrcKMK/kungrc-releases/releases/download/v1.0.70/KungRC_EA_install.exe",
+    "note":  "v1.0.70 - แสดงยอด Balance หลังปิดไม้ + TG แจ้งอัปเดตพร้อมปุ่ม yes/no"
 }

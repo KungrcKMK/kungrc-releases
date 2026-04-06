@@ -4,7 +4,7 @@
 ; ============================================================
 
 #define AppName    "KungRC EA"
-#define AppVersion "1.0.69"
+#define AppVersion "1.0.70"
 #define AppPublisher "Team Moon Mission Control"
 #define AppExe     "KungRC_EA.exe"
 #define DistDir    "dist\KungRC_EA"
