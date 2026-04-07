@@ -4,7 +4,7 @@
 ; ============================================================
 
 #define AppName    "KungRC EA"
-#define AppVersion "1.0.73"
+#define AppVersion "1.0.74"
 #define AppPublisher "Team Moon Mission Control"
 #define AppExe     "KungRC_EA.exe"
 #define DistDir    "dist\KungRC_EA"
@@ -40,6 +40,7 @@ Name: "desktopicon"; Description: "Create a &desktop shortcut"; GroupDescription
 Source: "{#DistDir}\*";          DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "version.txt";           DestDir: "{app}"; Flags: ignoreversion
 Source: "build_date.txt";       DestDir: "{app}"; Flags: ignoreversion
+Source: "mql_template_mt5.mq5"; DestDir: "{app}"; Flags: ignoreversion
 ; ── Default profiles → %APPDATA%\KungRC_EA\ (ไม่ทับถ้ามีอยู่แล้ว) ──
 Source: "aggressive.json";   DestDir: "{userappdata}\KungRC_EA"; Flags: ignoreversion onlyifdoesntexist
 Source: "balanced.json";     DestDir: "{userappdata}\KungRC_EA"; Flags: ignoreversion onlyifdoesntexist

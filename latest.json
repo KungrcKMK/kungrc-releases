@@ -1,5 +1,5 @@
 {
-    "version":  "1.0.73",
-    "url":  "https://github.com/KungrcKMK/kungrc-releases/releases/download/v1.0.73/KungRC_EA_install.exe",
-    "note":  "v1.0.73 - เพิ่ม SESSION profile (เทรดเฉพาะ London+NY session)"
+    "version":  "1.0.74",
+    "url":  "https://github.com/KungrcKMK/kungrc-releases/releases/download/v1.0.74/KungRC_EA_install.exe",
+    "note":  "v1.0.74 - ปุ่ม Export MT5/MT4: ส่งออก profile เป็น .mq5 หรือ .set ให้ผู้อื่นใช้งานได้"
 }
