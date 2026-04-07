@@ -4,7 +4,7 @@
 ; ============================================================
 
 #define AppName    "KungRC EA"
-#define AppVersion "1.0.72"
+#define AppVersion "1.0.73"
 #define AppPublisher "Team Moon Mission Control"
 #define AppExe     "KungRC_EA.exe"
 #define DistDir    "dist\KungRC_EA"
@@ -47,6 +47,7 @@ Source: "conservative.json"; DestDir: "{userappdata}\KungRC_EA"; Flags: ignoreve
 Source: "turbo.json";        DestDir: "{userappdata}\KungRC_EA"; Flags: ignoreversion
 Source: "sniper.json";       DestDir: "{userappdata}\KungRC_EA"; Flags: ignoreversion onlyifdoesntexist
 Source: "custom.json";       DestDir: "{userappdata}\KungRC_EA"; Flags: ignoreversion onlyifdoesntexist
+Source: "session.json";      DestDir: "{userappdata}\KungRC_EA"; Flags: ignoreversion
 Source: "settings.json";     DestDir: "{userappdata}\KungRC_EA"; Flags: ignoreversion onlyifdoesntexist
 
 [Icons]
