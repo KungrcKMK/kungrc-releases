@@ -1,5 +1,5 @@
 {
-    "version":  "1.2.2",
-    "url":  "https://github.com/KungrcKMK/kungrc-releases/releases/download/v1.2.2/KungRC_EA_install.exe",
-    "note":  "v1.2.2 - Fix AutoProfile ถูกปิดเองเมื่อสลับ Profile + Trap Guard"
+    "version":  "1.2.3",
+    "url":  "https://github.com/KungrcKMK/kungrc-releases/releases/download/v1.2.3/KungRC_EA_install.exe",
+    "note":  "v1.2.3 - Contract Auto-Scale + MT5 Journal + Fix AutoProfile"
 }
