@@ -1,5 +1,5 @@
 {
-    "version":  "1.2.0",
-    "url":  "https://github.com/KungrcKMK/kungrc-releases/releases/download/v1.2.0/KungRC_EA_install.exe",
-    "note":  "v1.2.0 - เพิ่ม 4 Profiles ใหม่ (COMMANDO/FARM/SCALP/SWING) + Spike Guard + eWeLink Webhook"
+    "version":  "1.2.1",
+    "url":  "https://github.com/KungrcKMK/kungrc-releases/releases/download/v1.2.1/KungRC_EA_install.exe",
+    "note":  "v1.2.1 - Trap Guard (กันกับดักแซนด์วิช) ป้องกันติดค่ำ 2 ฝั่ง"
 }
