@@ -1,5 +1,5 @@
 {
-    "version":  "1.2.5",
-    "url":  "https://github.com/KungrcKMK/kungrc-releases/releases/download/v1.2.5/KungRC_EA_install.exe",
-    "note":  "v1.2.5 - ปรับ 9 Profiles + Fix TG Spam + Journal + Auto-Scale + Trap Guard"
+    "version":  "1.2.6",
+    "url":  "https://github.com/KungrcKMK/kungrc-releases/releases/download/v1.2.6/KungRC_EA_install.exe",
+    "note":  "v1.2.6 - Easy Entry ทุกโปรไฟล์ + Fix MarginGuard Death Loop"
 }
