@@ -1,6 +1,18 @@
 KungRC EA — Release Notes
 =========================
 
+Version 1.3.7
+-------------
+[Slider Persistence — ค่าไม่หายอีกแล้ว]
+
+- Fix: เปิดแอปครั้งแรกหลังอัพเดท ค่า slider หาย — เพิ่ม snapshot ทั้ง 6 ตัวตอน startup
+- Fix: ปิดแอป ค่า slider หาย — snapshot เสมอก่อนปิด (ไม่ต้องรอ debounce)
+- Fix: สลับ profile ค่า slider profile เก่าหาย — snapshot ก่อนสลับทุกครั้ง
+  * ครอบคลุม: HUD / Telegram / Auto-Profile
+- สาเหตุ: ระบบเดิมจำเฉพาะค่าที่ "ลาก slider" เท่านั้น
+  ค่าที่แสดงอยู่แต่ยังไม่ลาก (profile default) ไม่ถูก persist
+  → เปิดแอปใหม่จึงโหลดค่าจาก profile JSON แทนค่าล่าสุด
+
 Version 1.3.6
 -------------
 [Bug Fixes — Slider Override Race + DD Alert Step]
