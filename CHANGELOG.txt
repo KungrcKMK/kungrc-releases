@@ -1,0 +1,505 @@
+KungRC EA — Release Notes
+=========================
+
+Version 1.3.6
+-------------
+[Bug Fixes — Slider Override Race + DD Alert Step]
+
+- Fix: Slider override ถูกทับ — load() ข้าม key ที่มี override ตั้งแต่ต้น (ป้องกัน race condition)
+- Fix: DD Alert ข้ามขั้น — ปัดค่าเป็น step 5% (เช่น DD 7.3% → ส่ง 5%, ไม่ข้าม 10%)
+- Fix: tuning_overrides.json โผล่เป็น profile ให้เลือก — ซ่อนจาก list แล้ว
+- Fix: Contract size auto-scale ทับค่า slider — ข้ามค่าที่มี override
+- Fix: Slider ค้างเมื่อ error — try/finally ป้องกัน slider suppress ค้างถาวร
+- Fix: สลับ profile → slider sync ทันที ไม่ต้องรอ HUD tick (~1 วินาที)
+- Fix: Dict reference race ใน manage_dynamic_max() — copy ป้องกัน concurrent mutation
+
+Version 1.3.5
+-------------
+[Per-Profile Realtime Tuning + DD Alert Fix]
+
+- New: Per-Profile Realtime Tuning Override — แต่ละโปรไฟล์จำค่า slider เป็นอิสระ
+  * ลาก slider → จำค่าแยกตามโปรไฟล์ (เช่น CMD 15%, BAL 10%)
+  * สลับโปรไฟล์ → โหลดค่า slider ล่าสุดของโปรไฟล์นั้นกลับมา
+  * ปิด-เปิดแอป → ค่า slider ของทุกโปรไฟล์ยังอยู่ครบ
+  * Persist ลง tuning_overrides.json แยกจากไฟล์โปรไฟล์
+  * ไฟล์โปรไฟล์ .json ไม่ถูกทับด้วยค่า override (ป้องกัน leakage)
+- Fix: DD ALERT spam — เปลี่ยนจากแจ้งทุก 1% เป็นทุก 5% step
+- Fix: DD ALERT หยุดส่งหลัง Account SL / Daily Loss fired (ไม่ซ้ำซ้อน)
+- New: ปุ่ม "🔄 Reset DD — ลุยต่อ" inline keyboard ใน Telegram
+  * แสดงใต้ข้อความ Account SL FIRED และ MAX DAILY LOSS
+  * กดแล้วล้าง DD flags ทั้งหมด + auto-resume เทรดต่อทันที
+- New: /resetdd command — ล้าง DD + ลุยต่อ (พิมพ์เองได้)
+- Fix: HUD Reset DD button — เพิ่ม dd_alert_sent_pct reset + auto-resume
+- Fix: manage_dynamic_max() — เคารพ slider override ไม่ทับค่าที่ลากไว้
+
+Version 1.3.3
+-------------
+[SpikeGuard Countdown — HUD + Telegram]
+
+- New: SpikeGuard countdown บน Mood bar — แสดง MM:SS เหลือก่อน block หมด
+- New: Telegram countdown — แจ้ง 1 ข้อความ/bar (ไม่ spam)
+  * ⚠️ Spike detected → ⏳ countdown per bar → ✅ block ended
+- New: state.spike_guard_until tracking — sync ระหว่าง strategy thread กับ HUD
+- Refactor: _BAR_SEC_MAP extracted เป็น module constant
+
+Version 1.3.1
+-------------
+[Realtime Tuning Panel — ปรับ DD/TP/SL/Grid ได้จาก HUD โดยตรง]
+
+- New: Realtime Tuning Panel — slider ปรับค่าสำคัญแบบเรียลไทม์:
+  * DD Limit (Account SL %) — ขยาย/ลดขีดจำกัด DD ได้ทันที
+  * Basket TP ($) — ปรับเป้าหมายกำไร basket
+  * Trail ($) — ปรับระยะ trailing profit
+  * SL/Pos ($) — ปรับ cut loss ต่อออเดอร์
+  * Daily Loss ($) — ปรับขาดทุนสูงสุดต่อวัน
+  * Max Grid — ปรับจำนวนออเดอร์สูงสุดต่อฝั่ง
+- New: Reset DD button — เคลียร์ Account SL / Daily Loss / Watermark
+  แล้วกลับมาเทรดต่อได้ (ยังคง PAUSE — กด RUN เมื่อพร้อม)
+- New: Slider auto-sync เมื่อสลับ profile — ค่าอัพเดตทันที
+- New: Reset DD button highlight แดงเมื่อ SL/Daily fired
+- Fix: Slider debounce save (500ms) — ป้องกัน save ทุก pixel ขณะลาก
+- Fix: Clamp config value ที่เกิน slider range — ป้องกัน label/slider ไม่ตรง
+- Fix: round() preserve float type — ป้องกัน config int/float type mismatch
+
+Version 1.3.0
+-------------
+[Full Audit Release — ตรวจทุกไฟล์ แก้ 72 บัก]
+
+Round 1+2 (8 bugs):
+- Fix: TrapGuard Mode 3 เช็คตัวแปรผิด (same_cnt→opp_cnt) — CRITICAL
+- Fix: AccSL + MaxFloatLoss ไม่ reset รายวัน → ล็อกถาวร — CRITICAL
+- Fix: Bonus entry counter ++ ก่อน order → เสีย bonus เมื่อ fail — CRITICAL
+- Fix: TUNING_PROFILE ผิด (sniper/aggressive/turbo = "BALANCED")
+- Fix: Recovery ไม่เช็ค volatility guard → เปิดในช่วง ATR เกิน
+- Fix: mt5_data_path ไม่ reset หลัง reconnect → Journal พัง
+- Fix: Entry FAILED แสดง ERROR → เปลี่ยนเป็น INFO (ไม่ขึ้น status bar)
+- Improve: เพิ่ม 25 config keys ที่ขาดจาก _FIELDS → save/load ได้ครบ
+- Improve: Installer ใส่ครบ 9 profiles + ทับค่าเก่า (Easy Entry update)
+
+Round 3 (9 bugs):
+- Fix: EMA Separation Score — ef==es ให้คะแนน SELL ผิด → แก้เป็น elif (ไม่ bias)
+- Fix: ADX — plus_di==minus_di ให้คะแนน SELL ผิด → ไม่ให้คะแนนถ้าเท่ากัน
+- Fix: RSI NaN — ค่า NaN ทำให้ comparison เงียบ → fallback เป็น 50 (neutral)
+- Fix: _adjust_lot_to_margin — คืน lot เดิมเมื่อคำนวณ margin ไม่ได้ → คืน 0.0 ป้องกัน lot ไม่จำกัด
+- Fix: modify_sl — hardcode tp=0.0 ลบ TP เดิม → อ่าน TP จาก position ก่อน
+- Fix: comment[:31] crash — comment=None → TypeError → ใส่ fallback ""
+- Fix: get_journal_lines OOM — อ่านทั้งไฟล์ลง RAM → ใช้ deque(maxlen) อ่านเฉพาะ tail
+- Fix: Profile switch ไม่ save profile ปัจจุบันก่อน → เพิ่ม save() ก่อน switch
+- Fix: Updater race condition — VBS รอ 10s แต่ installer อาจยังไม่จบ → รอ PID จบจริง
+
+Round 4 (8 bugs):
+- Fix: Indicator NaN — MACD/Stoch/BB/CCI/WPR/Momentum ไม่เช็ค NaN → score เพี้ยน
+- Fix: MaxDailyLoss limit=0 → `loss >= 0` เป็นจริงเสมอ ปิดหมดทันที → เพิ่ม guard
+- Fix: state.hud อ่านตรงไม่ lock → race condition กับ GUI thread → ใช้ get_hud_snapshot()
+- Fix: MT5 connect retry ไม่มี timeout → วน loop ตลอด → จำกัด 60 ครั้ง (10 นาที)
+- Fix: MT5 reconnect exception เงียบ → ไม่ log error → เพิ่ม log warning
+- Fix: Updater temp file ไม่ลบเมื่อ write error → ไฟล์เสียค้าง → cleanup on error
+- Fix: ewelink _last_event check+set นอก lock → duplicate webhook → ย้ายเข้า lock
+- Fix: TELEGRAM_TIMEOUT_MS ไม่อยู่ใน _GLOBAL_KEYS → ค่าไม่ save → เพิ่มเข้า global
+
+Round 5 (4 bugs):
+- Fix: save() global keys ถูก filter ด้วย _FIELDS → key ที่ไม่อยู่ใน _FIELDS หายเงียบ — CRITICAL
+- Fix: Hedge cooldown ตั้งเฉพาะเมื่อสำเร็จ → fail แล้ว retry spam ทุก 300s → ตั้งก่อน attempt
+- Fix: apply_dict() bool("False")=True — string "False" แปลงเป็น True → เช็ค string ก่อน
+- Fix: save() ไม่ atomic — crash ระหว่าง write ข้อมูลหาย → ใช้ temp+os.replace()
+
+Round 6 (15 bugs):
+- Fix: settings_window _on_ew_test ไม่ import threading → กดทดสอบ eWeLink crash ทันที — CRITICAL
+- Fix: ScheduleStop cancel ไม่ reset no_entry flag → entry ถูก block ตลอดวัน — CRITICAL
+- Fix: SCORE_EXIT / BASKET close ไม่ reset multi_tp_fired → TP ชุดถัดไปถูก skip — CRITICAL
+- Fix: main.py set_profile() ก่อน load() → save defaults ทับ profile เก่า ข้อมูลหาย — CRITICAL
+- Fix: _set_position_sl hardcode tp=0.0 → ลบ TP ที่มีอยู่ (R3 แก้ modify_sl แต่ไม่ได้แก้จุดนี้)
+- Fix: WeekendClose ปิด position แล้วไม่ set manual_pause → EA เปิดไม้ใหม่ได้ก่อนตลาดปิด
+- Fix: _apply_raw() bool("false")=True → global.json string "false" toggle feature เปิดเอง
+- Fix: Profile load ไม่ทำ type coercion → ค่าจาก JSON อาจผิด type → ใช้ _apply_raw() แทน
+- Fix: compute_base_lot() เรียก 2 ครั้ง (log vs actual) → lot ใน log อาจไม่ตรงกับจริง
+- Fix: DailyLoss start_bal=0 (MT5 down ตอน reset) → loss คำนวณผิดทั้งวัน → เพิ่ม guard
+- Fix: ScheduleStop dialog กดปุ่ม X → dialog_open ค้าง True ตลอดไป → เพิ่ม WM_DELETE_WINDOW
+- Fix: gemini_analyst df.get().values crash เมื่อ volume column ไม่มี → เช็ค column ก่อน
+- Fix: gemini_analyst bool("false")=True → AI suggest ค่า config toggle กลับด้าน
+- Fix: CutPause resume ลบ entry_pause ทับ Telegram /entryoff → แยก flag ไม่ overlap
+- Fix: AutoProfile TG message แสดง session เดิม→ใหม่ ผิด (ใช้ตัวแปรหลังทับค่าแล้ว)
+
+Round 7 (15 bugs):
+- Fix: ADX DM masking — ใช้ค่าหลัง mask ทำ comparison → SELL bias เพราะ plus_dm=0 เสมอ — CRITICAL
+- Fix: ATR=0 fallthrough ใน _get_dynamic_basket_target/trail → ไม่ return ค่า fixed ตกไป DYNAMIC_BASKET
+- Fix: get_spread_points คืนค่าลบได้เมื่อ tick ผิดปกติ → เพิ่ม max(0.0, ...) guard
+- Fix: close_partial lot≤0 หรือ lot>volume → validate + clamp ป้องกัน error
+- Fix: AccSL equity=0 (MT5 down) → คำนวณ DD ผิด fire ทันที → เพิ่ม guard bal/eq ≤ 0
+- Fix: equity_watermark close ไม่ set manual_pause → EA เปิดไม้ใหม่ได้หลัง watermark fire
+- Fix: record_close() ไม่ reset consec_loss_pause_until เมื่อชนะ → pause ค้างแม้ชนะแล้ว
+- Fix: TIMEFRAME dropdown ไม่มี "AUTO" → user ไม่สามารถเลือก AUTO ได้ → เพิ่มเป็น option แรก
+- Fix: _on_reset (Settings) ไม่ save() ก่อน destroy → ค่า reset ไม่ถูกบันทึก
+- Fix: HUD _on_close ไม่ cancel auto_run timer → timer fire หลัง window destroy → crash
+- Fix: import_settings() ไม่ save() หลัง apply → ค่าที่ import ไม่ถูกเขียนลง disk
+- Fix: Telegram /cmd@botname ใน group chat → command ไม่ match เพราะมี @suffix → strip ออก
+- Fix: ewelink _worker hold lock ระหว่าง HTTP+sleep 40s → block อื่นๆ ทั้งหมด → ย้าย HTTP ออกนอก lock
+- Fix: license_checker offline clock skew → hours_ago ลบ bypass grace → เพิ่ม guard ≥ 0
+- Fix: gemini apply_suggestion ไม่ทำ type coercion → ค่า config ผิด type → ใช้ _ALLOWED_KEYS dict
+
+Round 8 (12 bugs):
+- Fix: HUD _update_hud() timer ยิงหลัง destroy → crash TclError ทุกครั้งที่ปิดโปรแกรม — CRITICAL
+- Fix: HUD _on_close() ไม่ cancel update timer → timer fire หลัง window destroy → crash
+- Fix: HUD _on_update_result() ไม่มี winfo_exists() guard → crash ถ้าปิด HUD ระหว่างเช็ค update
+- Fix: modify_sl ใช้ config.SYMBOL เมื่อ position ไม่เจอ → ส่ง request ผิด symbol — CRITICAL
+- Fix: _set_position_sl ไม่ guard position query fail → tp=0.0 อาจลบ TP เดิม + pt=0 log crash
+- Fix: ScheduleStop waited flags (warned_30/15) ไม่ reset เมื่อ wait timeout re-dialog → ไม่แจ้งเตือนรอบใหม่
+- Fix: ewelink reset_event อ่าน/เขียน _last_event ไม่มี lock → race condition
+- Fix: close_position/close_partial ไม่ guard tick price=0 → ส่ง order ราคา 0 ไป MT5
+- Fix: license_checker cached_at=None → fromisoformat(None) crash ใน offline mode
+- Fix: Partial close lot ปัดเป็น 0 → position ไม่เข้า done_set ติด evaluation loop ทุก tick
+- Fix: Telegram maxup/maxdown อ่าน state.max_orders_override นอก lock → แสดงค่าผิด
+- Fix: _set_position_sl pt=0 → ZeroDivisionError ใน log (catch แล้วแต่ swallow error)
+
+Round 9 (1 bug):
+- Fix: basket_trailing + bonus counter เป็น global → ฝั่ง SELL ปิด reset counter ของ BUY — CRITICAL
+       แก้เป็น per-side: basket_trailing_buy/sell + bonus_buy/sell_used (state.py + strategy.py)
+
+Version 1.2.6
+-------------
+- Improve: Easy Entry — ลด score/cooldown ทุกโปรไฟล์ เข้าซื้อง่ายขึ้น ไม่เสียโอกาส
+- Improve: ปิด ONLY_OPEN_ON_NEW_BAR สำหรับ FARM/SCALP/BAL/CMD/AGG
+- Improve: RSI filter คลายเป็น 72/28 (CONS/FARM) จาก 65/35
+- Fix: MarginGuard Death Loop — หลัง CLOSE ALL บล็อก entry 5 นาที กัน open→close วนซ้ำ
+- Fix: MarginGuard log spam — เพิ่ม cooldown log (10s CLOSE, 30s Block)
+
+Version 1.2.4
+-------------
+- Feature: Contract Size Auto-Scale — เปลี่ยน symbol ปรับค่า $ อัตโนมัติ
+- Feature: MT5 Journal tab — แสดง trade execution log จาก MT5 บน HUD (auto-update)
+- Feature: Trap Guard — กันกับดักแซนด์วิช 3 โหมด
+- Improve: ปรับค่า 9 Profiles ใหม่ทั้งหมดตามหลักการเทรด (Risk/Indicator/Entry)
+- Improve: จัดลำดับปุ่ม Profile เรียงจากปลอดภัย→เสี่ยง
+- Fix: Telegram SPAM — Margin Guard ส่งซ้ำไม่หยุด เพิ่ม cooldown 300s
+- Fix: AutoProfile ถูกปิดเองเมื่อสลับ Profile
+- Fix: Journal ไม่ auto-update + ว่างเปล่า (missing import os)
+
+Version 1.2.3
+-------------
+(replaced by v1.2.4)
+
+Version 1.2.1
+-------------
+[New Feature: Trap Guard (กันกับดักแซนด์วิช)]
+- ป้องกันปัญหา BUY ที่ยอดดอย + SELL ที่เหว → ราคาไซด์เวย์ → ติดค่ำทั้ง 2 ฝั่ง
+- 3 โหมดให้เลือก:
+  - Mode 1 (ONE SIDE): ห้ามเปิดฝั่งตรงข้ามเลยถ้ามีไม้ค้าง
+  - Mode 2 (GAP CHECK): เปิดฝั่งตรงข้ามได้ถ้า gap > X pts
+  - Mode 3 (LIMIT): จำกัดจำนวนไม้ฝั่งตรงข้าม + บล็อค recovery
+- บล็อคทั้ง Fresh Entry และ Recovery ตามโหมด
+- ตั้งค่าได้ใน Settings → Risk → Trap Guard
+- เปิดใช้เป็น default ในทุก profile (ยกเว้น CUSTOM, SESSION)
+
+Version 1.2.0
+-------------
+[UI Redesign]
+- UI ออกแบบใหม่ — หน้าต่างแคบลง 820x900, toolbar compact, strategy accordion
+- HUD text ย่อให้พอดีจอ — ตัดข้อมูลซ้ำ, TGT แสดงเฉพาะเมื่อ > 0
+- Mood bar แยก 2 บรรทัด — ข้อความไม่โดนตัด
+- Profile buttons เปลี่ยนเป็น grid layout 6 columns 2 แถว
+
+[New Profiles]
+- เพิ่ม COMMANDO — กำไรดี ออกไม้มันส์ แต่ safety 5 ชั้น (สีทอง)
+- เพิ่ม FARM — ฟาร์มเบาๆ เก็บรายได้รายวัน ปลอดภัยสูงสุด (สีเขียวสด)
+- เพิ่ม SCALP — เข้าเร็วออกเร็ว target เล็ก รอบเยอะ M5 (สีม่วง)
+- เพิ่ม SWING — ถือนาน target ใหญ่ H1 กรอง indicator เข้ม (สีฟ้าอ่อน)
+
+[New Feature: Spike Guard]
+- ตรวจจับ ATR spike + Candle Body spike ผิดปกติ (เจ้ามือทุบ/ข่าวแรง)
+- หยุดเปิดไม้อัตโนมัติเมื่อพบ spike + บล็อค recovery
+- หยุดเทรด N แท่งหลัง spike (ตั้งค่าได้)
+- แจ้งเตือน Telegram เมื่อ spike detected
+- เปิดใน Settings → Risk → Spike Guard
+
+[eWeLink / Sonoff — Webhook Rewrite]
+- เปลี่ยนจาก eWeLink API (App ID/Secret/Email/Password) เป็น Webhook URL
+- แยก Webhook ON/OFF ให้ครบทุก event (ACC_SL, Daily Loss, DD, Target, Disconnect)
+- ตั้งค่าง่าย: สร้าง Scene ใน eWeLink App → คัดลอก URL มาใส่
+
+Version 1.1.0
+-------------
+- Fix(CRITICAL): Recovery lot คูณ multiplier เกินจริง — lot โตแบบ explosive (strategy.py)
+- Fix(CRITICAL): Position เปิดแล้ว SL ตั้งไม่ได้ จะไม่มี SL — เพิ่ม retry + แจ้ง TG (mt5_connector.py)
+- Fix(CRITICAL): Daily Loss ตั้ง flag แต่ไม่ปิด positions — เพิ่ม close_all + pause (risk_manager.py)
+- Fix(CRITICAL): Account SL สามารถ fire ซ้ำได้ — แก้ race condition (risk_manager.py)
+- Fix(CRITICAL): ATR=0 เมื่อดึงข้อมูลไม่ได้ bypass filter ทั้งหมด — ใช้ cache เดิมแทน (signal_engine.py)
+- Fix(CRITICAL): Position/Account cache ไม่มี thread lock — เพิ่ม threading.Lock (mt5_connector.py)
+- Fix(CRITICAL): Reconnect MT5 ไม่ clear cache — เพิ่ม invalidate_all_caches (main_loop.py)
+- Fix(CRITICAL): updater.py crash เมื่อ download ไม่ใช่ EXE (file_id undefined)
+- Fix(CRITICAL): Signal default เป็น BUY เมื่อข้อมูลไม่พอ — เปลี่ยนเป็น NEUTRAL (signal_engine.py)
+- Fix: Side guard race condition ใน recovery — เพิ่ม lock (strategy.py)
+- Fix: Multi TP สามารถ fire ซ้ำได้ — ปรับ flow (strategy.py)
+- Fix: Default point 0.00001 ผิดสำหรับ XAUUSD — เพิ่ม fallback ตาม symbol (mt5_connector.py)
+- Fix: Filling mode FOK > IOC — กลับลำดับเป็น IOC > FOK ปลอดภัยกว่า (mt5_connector.py)
+- Fix: Break-even/Partial close คำนวณผิดเมื่อ tick=0 (market ปิด) — เพิ่ม guard (risk_manager.py)
+- Fix: Weekend close flag reset เฉพาะวันจันทร์ — เปลี่ยนเป็นจันทร์-พฤหัส (risk_manager.py)
+- Fix: เปลี่ยน profile ไม่ save profile เก่าก่อน — settings หาย (settings_manager.py)
+- Fix: _apply_raw() ไม่ทำ type coercion — เพิ่ม auto coerce จาก defaults (settings_manager.py)
+- Fix: eWeLink credentials ไม่อยู่ใน _PRIVATE_KEYS — เพิ่มแล้ว (settings_manager.py)
+- Fix: Equity Watermark fire ซ้ำไม่มี dedup — เพิ่ม flag (risk_manager.py, state.py)
+- Fix: updater.py ไม่เช็ค HTTP status code — เพิ่ม raise_for_status()
+- Fix: SyntaxWarning invalid escape sequence ใน paths.py
+
+Version 1.0.47
+--------------
+- Fix: กดปุ่ม strategy toggle ใน HUD แล้วสลับไป CUSTOM profile อัตโนมัติ — แก้แล้ว
+       (dist\hud_window.py ยังมีโค้ดเก่า _sm.set_profile("custom") ถูก sync ให้ตรงกับ source)
+- Feature: SNIPER Profile — เทรดไม้เดียวจบ รอ signal แข็ง → trail profit → ปิดอัตโนมัติ
+  - MAX_ORDERS_PER_SIDE=1, ALLOW_RECOVERY=false, ENABLE_MAX_TOTAL_POS=true (MAX=1)
+  - ENTRY_MIN_SCORE=3, STARTUP_MIN_SCORE=3 — รอ signal แข็ง (3/5+ indicators)
+  - ALLOW_SINGLE_HOLD=true, SINGLE_PROFIT_TRAIL_MONEY=5.0, SINGLE_TRAIL_STEP=2.0
+  - BADTRADE_MODE=1, CUT_LOSS_PER_POS=15.0 — ตัดขาดทุนอัตโนมัติ $15
+  - PROFIT_SCORE_EXIT_ENABLED=true — ปิดเมื่อ signal กลับทิศ (ขณะที่ยังกำไร)
+  - TIMEFRAME=H1, ONLY_OPEN_ON_NEW_BAR=true — รอแท่งใหม่ก่อนเปิด
+  - Indicators: EMA + MACD + Stochastic + ADX + Momentum + Candle Pattern ครบ
+- UX: เพิ่ม SNIPER ใน Tuning Profile dropdown (Settings > General)
+- Fix: Version แสดงไม่อัปเดตหลัง install ใหม่ — เพิ่ม version.txt ข้างๆ EXE
+       state.py เช็ค {app}\version.txt ก่อน bundled version → ไม่ต้อง recompile EXE
+
+Version 1.0.46
+--------------
+- Perf: Non-blocking Telegram send — main loop ไม่รอ HTTP อีกต่อไป
+        send_message/send_photo วาง message ลง queue แล้วกลับทันที (~0.001ms)
+        TG-Sender thread ส่ง HTTP จริงๆ ในพื้นหลัง
+        queue รองรับ 200 messages, drop เมื่อเต็ม (log warning)
+        threads: TG-Poll + TG-Sender (แยกกัน)
+
+Version 1.0.45
+--------------
+- Feature: Score-Based System ครบชุด — ทุก module ใช้ Vote Score ได้แล้ว
+  1. Score Lot Sizing     — SCORE_LOT_ENABLED: คูณ lot เมื่อ signal แข็ง
+  2. Recovery Score Gate  — RECOVERY_MIN_SCORE: บล็อก recovery เมื่อ score อ่อน
+  3. Score Profit Exit    — PROFIT_SCORE_EXIT_ENABLED: ปิด Basket/Single เมื่อ signal กลับทิศ
+  4. Score Cut Loss       — CUT_LOSS_SCORE_ENABLED: ตัดขาดทุนเร็วเมื่อ signal กลับทิศ
+  5. Score Side Guard     — SIDE_GUARD_BY_SCORE: Guard ฝั่งที่ signal กลับทิศแข็ง
+  ทุกฟีเจอร์ default=OFF — เปิดใน Settings > Entry Systems / Profit / Risk
+- Fix: _toggle_strategy() (ปุ่ม strategy ใน HUD) ไม่ auto-switch เป็น CUSTOM
+       อีกต่อไป — บันทึก key ลง profile ปัจจุบันโดยตรง
+
+Version 1.0.44
+--------------
+- Feature: Telegram Inline Keyboard — กดปุ่มได้เลย ไม่ต้องพิมพ์คำสั่ง
+  - /status → ปุ่ม ▶️ Run | ⏸ Stop | 📦 Close All | 🔄 Refresh
+  - /menu (ใหม่) → เมนูด่วนครบชุด 5 แถว (Run/Stop/Buy/Sell/Close/Max/Guard)
+  - /help → แสดง /menu ปุ่มพ่วงท้าย
+  - Schedule Stop (ถึงเวลาหยุด/หมดเวลารอ) → ปุ่ม ⏳ รอกำไร | 🔴 ปิดหมด | ▶️ เดินต่อ
+  - Side Guard ON → ปุ่ม ✅ Clear Guard ของ direction นั้น
+- Internal: process_command คืน tuple (text, markup) แทน str
+           main_loop ปรับรองรับ tuple / backward compat
+
+Version 1.0.43
+--------------
+- UX: เพิ่ม Emoji และปรับข้อความ Telegram ให้อ่านง่ายขึ้นทุกข้อความ
+      STARTUP/ENTRY: 📈📉 พร้อม Lot, Score, เหตุผล
+      RECOVERY: 🔄📈/🔄📉 พร้อม Grid #
+      CLOSE (basket): ✅💰/🔴 พร้อมเหตุผลและจำนวน order
+      SINGLE CLOSE: ✅/🔴 พร้อม PnL
+      PROFIT RESCUE: 🚑 ปรับ format ใหม่
+      /status: จัดกลุ่มข้อมูล, แสดง DD emoji เตือน, รวม PnL เด่นชัด
+      /help: จัดหมวดหมู่ด้วยหัวข้อ ━━━ อ่านง่ายขึ้น
+      /closebuysellone: ✅/⬜ แยกผล BUY/SELL ชัดเจน
+
+Version 1.0.42
+--------------
+- Cleanup: ลบ GEMINI_* keys ที่ไม่ใช้ออกจาก config.py (เหลือแค่ LANGUAGE + EXTRA_PROMPT)
+- Cleanup: mt5_connector.py — ลบ alias `import time as _time` → `import time`
+- Cleanup: state.py — ลบ `import time` ซ้ำใน method (top-level import เพียงพอ)
+- Cleanup: hud_window.py — ลบ `import os` ซ้ำใน method + ลบ `_keep` block ล้าสมัย
+- Cleanup: settings_manager.py — เพิ่ม HUD_HOST/HUD_PORT ใน _GLOBAL_KEYS
+                                + เพิ่ม SCHEDULE_STOP_WARN_MIN/WAIT_HOURS ใน _FIELDS
+
+Version 1.0.41
+--------------
+- Fix: Log terminal ไม่สลับภาษาเมื่อ click เพื่อ copy — ปิด IME บน Windows
+
+Version 1.0.40
+--------------
+- turbo.json: MAX_ORDERS_PER_SIDE 3→2, DYNAMIC_MAX_NORMAL 2, DYNAMIC_MAX_BOOST 3
+- turbo.json: ENABLE_SIDE_GUARD=true, SIDE_GUARD_BY_LOSS=true, SIDE_GUARD_LOSS_USD=20.0
+              ฝั่งที่ขาดทุนเกิน $20 จะหยุดเปิดไม้เพิ่ม ป้องกันลึกเกิน
+
+Version 1.0.39
+--------------
+- Feature: ปุ่ม AI เปลี่ยนเป็น 📊 (Analyst) — flow ใหม่ไม่ต้องใช้ Gemini API
+           สร้าง context file → วางใน ChatGPT/Claude/Grok → Paste response กลับ → Apply
+- Remove: ลบ Gemini AI tab ออกจาก Settings
+- Remove: ลบ GEMINI keys ออกจาก global settings
+
+Version 1.0.38
+--------------
+- Remove: ลบ Gemini AI tab ออกจาก Settings (ไม่ได้ใช้แล้ว)
+- Remove: ลบปุ่ม AI และ dialog ทั้งหมดออกจาก HUD
+- Remove: ลบ GEMINI keys ออกจาก global settings
+
+Version 1.0.37
+--------------
+- Feature: Global Settings แยกจาก Profile — Telegram, SYMBOL, API keys, AUTO_RUN ฯลฯ
+           บันทึกใน global.json ไม่ถูกแทนที่เมื่อสลับ profile
+- Fix: Apply ไม่สลับไป CUSTOM อีกต่อไป — บันทึกลง profile ปัจจุบันเสมอ
+- UX: สถานะ Apply/Save แสดงชื่อ profile ที่ใช้งาน เช่น "✔ Applied [TURBO]"
+
+Version 1.0.36
+--------------
+- Fix: Profit Rescue ข้าม HEDGE positions แล้ว (ไม่ปิดไม้ hedge โดยไม่ตั้งใจ)
+- Fix: turbo.json TOTAL_PROFIT_TRAIL 20.0 → 1.0 (สอดคล้องกับ target $5)
+
+Version 1.0.35
+--------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.34
+--------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.33
+--------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.32
+--------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.31
+--------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.30
+--------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.29
+--------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.28
+--------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.27
+--------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.26
+--------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.25
+--------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.24
+--------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.23
+--------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.22
+--------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.21
+--------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.20
+--------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.19
+--------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.18
+--------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.17
+--------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.16
+--------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.15
+--------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.14
+--------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.13
+--------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.12
+--------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.11
+--------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.10
+--------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.9
+-------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.8
+-------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.7
+-------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.6
+-------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.5
+-------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.4
+-------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.3
+-------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.2
+-------------
+- (รายการเปลี่ยนแปลง)
+
+Version 1.0.1
+-------------
+- AI Analyst: เปลี่ยนจากการจับภาพเป็น OHLCV data (แม่นยำกว่า, เร็วกว่า)
+- AI Analyst: เพิ่ม Order History วันนี้ (Win/Loss/WR) ในการวิเคราะห์
+- AI Analyst: เพิ่ม Correlation กับ DXY, Silver, Oil, US500 ฯลฯ ตาม Symbol ที่เทรด
+- AI Analyst: AI เสนอปรับ Config + ผู้ใช้ติ๊กเลือก Apply ได้ทันที
+- AI Analyst: Save context เป็น .txt สำหรับใช้กับ ChatGPT / Claude / Grok
+- AI Analyst: เพิ่มปุ่ม Paste AI Response สำหรับใช้โดยไม่ต้องมี API Key
+- Fix: No money spam (err=10019) เมื่อ margin ไม่พอแม้แต่ MIN_LOT
+- Fix: เปิดโปรแกรมเริ่มที่ PAUSE — รอผู้ใช้กด RUN เอง
+- Fix: License expire รองรับรูปแบบวันที่หลายแบบ (DD/MM/YYYY, Google Sheet format)
+- Fix: หน้าจอ console ซ่อนเมื่อเปิดโปรแกรม
+
+Version 1.0.0
+-------------
+- ระบบ License ตรวจสอบผ่าน Google Sheet
+- License ครั้งแรกต้องใส่ Callsign — จำไว้ ไม่ต้องใส่อีก
+- Grid Trading + Recovery + Basket TP
+- Price Action: Pin Bar, Engulfing, Inside Bar
+- Margin Reserve: กัน margin สำหรับไม้แก้ท้ายๆ
+- Multi-indicator: EMA, RSI, ATR, MACD, BB, Stochastic, ADX, CCI, WPR
+- Session Filter + Schedule + Telegram Alerts
+- HUD Dashboard พร้อม toggle buttons ทุก feature
+- Gemini AI Analyst integration
