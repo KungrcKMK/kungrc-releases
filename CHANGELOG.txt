@@ -1,6 +1,16 @@
 KungRC EA — Release Notes
 =========================
 
+Version 1.3.8
+-------------
+[DD Limit Slider — ควบคุมทุกจุดที่เกี่ยวกับ DD]
+
+- Fix: DD AutoPause ไม่เคารพ DD Limit slider — ใช้ max(DD_AUTO_PAUSE_PCT, slider) แล้ว
+- Fix: Equity Watermark ปิดทุกออเดอร์ที่ 3% ทั้งที่ slider ตั้ง 19% — ใช้ max(WATERMARK, slider) แล้ว
+- Fix: Max Grid DD บล็อก recovery ที่ 10% ทั้งที่ slider ตั้งสูงกว่า — ใช้ max(GRID_DD, slider) แล้ว
+- Fix: Gemini AI ทับค่า slider (Basket TP/Trail/Max Grid) — AI ข้ามถ้ามี override
+- Fix: Settings Window / Import ทับค่า slider — re-apply override หลัง apply
+
 Version 1.3.7
 -------------
 [Slider Persistence — ค่าไม่หายอีกแล้ว]
