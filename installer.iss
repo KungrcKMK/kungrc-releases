@@ -4,7 +4,7 @@
 ; ============================================================
 
 #define AppName    "KungRC EA"
-#define AppVersion "1.0.75"
+#define AppVersion "1.3.5"
 #define AppPublisher "Team Moon Mission Control"
 #define AppExe     "KungRC_EA.exe"
 #define DistDir    "dist\KungRC_EA"
@@ -41,12 +41,17 @@ Source: "{#DistDir}\*";          DestDir: "{app}"; Flags: ignoreversion recurses
 Source: "version.txt";           DestDir: "{app}"; Flags: ignoreversion
 Source: "build_date.txt";       DestDir: "{app}"; Flags: ignoreversion
 Source: "mql_template_mt5.mq5"; DestDir: "{app}"; Flags: ignoreversion
-; ── Default profiles → %APPDATA%\KungRC_EA\ (ไม่ทับถ้ามีอยู่แล้ว) ──
-Source: "aggressive.json";   DestDir: "{userappdata}\KungRC_EA"; Flags: ignoreversion onlyifdoesntexist
-Source: "balanced.json";     DestDir: "{userappdata}\KungRC_EA"; Flags: ignoreversion onlyifdoesntexist
-Source: "conservative.json"; DestDir: "{userappdata}\KungRC_EA"; Flags: ignoreversion onlyifdoesntexist
+; ── Default profiles → %APPDATA%\KungRC_EA\ ──────────────────────
+; v1.2.6: ทับทุกตัว (Easy Entry update) ยกเว้น custom/settings
+Source: "conservative.json"; DestDir: "{userappdata}\KungRC_EA"; Flags: ignoreversion
+Source: "farm.json";         DestDir: "{userappdata}\KungRC_EA"; Flags: ignoreversion
+Source: "sniper.json";       DestDir: "{userappdata}\KungRC_EA"; Flags: ignoreversion
+Source: "scalp.json";        DestDir: "{userappdata}\KungRC_EA"; Flags: ignoreversion
+Source: "balanced.json";     DestDir: "{userappdata}\KungRC_EA"; Flags: ignoreversion
+Source: "commando.json";     DestDir: "{userappdata}\KungRC_EA"; Flags: ignoreversion
+Source: "aggressive.json";   DestDir: "{userappdata}\KungRC_EA"; Flags: ignoreversion
+Source: "swing.json";        DestDir: "{userappdata}\KungRC_EA"; Flags: ignoreversion
 Source: "turbo.json";        DestDir: "{userappdata}\KungRC_EA"; Flags: ignoreversion
-Source: "sniper.json";       DestDir: "{userappdata}\KungRC_EA"; Flags: ignoreversion onlyifdoesntexist
 Source: "custom.json";       DestDir: "{userappdata}\KungRC_EA"; Flags: ignoreversion onlyifdoesntexist
 Source: "session.json";      DestDir: "{userappdata}\KungRC_EA"; Flags: ignoreversion
 Source: "settings.json";     DestDir: "{userappdata}\KungRC_EA"; Flags: ignoreversion onlyifdoesntexist
