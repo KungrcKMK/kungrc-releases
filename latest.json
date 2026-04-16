@@ -1,5 +1,5 @@
 {
-    "version": "1.3.11",
-    "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/v1.3.11/KungRC_EA_install.exe",
-    "note": "v1.3.11 - Reset DD ล้าง Max DD, DD AutoPause atomic, bug fixes"
+    "version": "1.3.12",
+    "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/v1.3.12/KungRC_EA_install.exe",
+    "note": "v1.3.12 - Poka-Yoke 20 จุด: DD cooldown, safety gate, bounds validation, atomic ops"
 }
