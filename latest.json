@@ -1,5 +1,5 @@
 {
-    "version": "1.3.25",
-    "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/v1.3.25/KungRC_EA_install.exe",
-    "note": "v1.3.25 Debug Fixes - 11 bugs แก้จาก full system audit"
+    "version": "1.3.26",
+    "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/v1.3.26/KungRC_EA_install.exe",
+    "note": "v1.3.26 - Auto-Tuning ฉลาดขึ้น: session fallback + hour analysis + risk thresholds"
 }
