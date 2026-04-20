@@ -1,5 +1,5 @@
 {
-    "version": "1.3.15",
-    "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/v1.3.15/KungRC_EA_install.exe",
-    "note": "v1.3.15 - แก้บั๊ก 31 จุด: per-event cooldown, interruptible sleep, retry, URL validation, test cancellation"
+    "version": "1.3.16",
+    "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/v1.3.16/KungRC_EA_install.exe",
+    "note": "v1.3.16 - Economic Calendar: auto-pause + close positions ก่อนข่าว NFP/CPI/FOMC"
 }
