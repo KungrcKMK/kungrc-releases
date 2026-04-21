@@ -1,5 +1,5 @@
 {
-    "version": "1.3.26",
-    "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/v1.3.26/KungRC_EA_install.exe",
-    "note": "v1.3.26 - Auto-Tuning ฉลาดขึ้น: session fallback + hour analysis + risk thresholds"
+    "version": "1.3.27",
+    "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/v1.3.27/KungRC_EA_install.exe",
+    "note": "v1.3.27 - Auto-Tuning pseudo→real: SKIP_DAYS/HOURS + grid exposure + DD/cut pause fallback"
 }
