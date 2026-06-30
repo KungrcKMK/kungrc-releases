@@ -1,7 +1,7 @@
 {
-  "version": "1.0.0",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-v1.0.0/CarCareManager-Setup-1.0.0.exe",
-  "notes": "เวอร์ชันแรก — บันทึกทะเบียนรถอัตโนมัติ (OCR) + หลายกล้อง + แดชบอร์ดเว็บ/มือถือ + แต้มสะสม + แจ้งเตือน Telegram",
-  "sha256": "23976725b883970dca5d69b201b602fe388dc149e037165610520eabd4f75719",
-  "size": 516781057
+  "version": "1.0.1",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-v1.0.1/CarCareManager-Trial-Setup-1.0.1.exe",
+  "notes": "เพิ่มแท็บ 'รอตรวจสอบ' ป้ายใหม่ให้พนักงานยืนยันความถูกต้อง + ปรับหน้าตาให้ทันสมัยขึ้น + ปรับปรุงการเชื่อมต่อฐานข้อมูลให้เสถียรขึ้น",
+  "sha256": "c8ddee41f79021754be3dd19c73c930ce0971fd31c58c131826c1e4decad77b4",
+  "size": 529339694
 }
