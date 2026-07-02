@@ -1,7 +1,7 @@
 {
-  "version": "1.0.2",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-v1.0.2/CarCareManager-Trial-Setup-1.0.2.exe",
-  "notes": "แก้ระบบอัปเดตอัตโนมัติ + เพิ่มแท็บ 'รอตรวจสอบ' ป้ายใหม่ + ปรับหน้าตาให้ทันสมัยขึ้น + ปรับปรุงการเชื่อมต่อฐานข้อมูลให้เสถียรขึ้น",
-  "sha256": "3659b97e02db03202c6b64f914480fa74eddd53aba2c6d7e44a40daa6611adb2",
-  "size": 529348235
+  "version": "1.0.3",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-v1.0.3/CarCareManager-Trial-Setup-1.0.3.exe",
+  "notes": "🎁 ต่ออายุทดลองให้อีก 7 วัน (รวมเป็น 14 วัน)! + อ่านป้ายแม่นขึ้น (ซูมเข้าป้ายอัตโนมัติ + ปรับความละเอียดเองได้) + แท็บ 'รอตรวจสอบ' ป้ายใหม่ + หน้าตาทันสมัยขึ้น + แก้ระบบอัปเดตอัตโนมัติและการเชื่อมต่อฐานข้อมูลให้เสถียร (ข้อมูลที่บันทึกไว้ยังอยู่ครบ)",
+  "sha256": "9005a33dd4b3eff2444671bcb43d02d12a4854c8f21426746e97e4c91e73e129",
+  "size": 529330918
 }
