@@ -1,7 +1,7 @@
 {
-  "version": "1.0.4",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-v1.0.4/CarCareManager-Trial-Setup-1.0.4.exe",
-  "notes": "แก้ระบบอัปเดตอัตโนมัติ (SSL) — หลังจากนี้อัปเดตอัตโนมัติได้ตลอด + ต่ออายุทดลองรวม 14 วัน + ย่อซ่อนลง System Tray + เปิดโปรแกรมเองหลังอัปเดต + อ่านป้ายแม่นขึ้น (ซูมเข้าป้าย+ปรับจูนได้) + แท็บรอตรวจสอบป้ายใหม่ + หน้าตาทันสมัยขึ้น",
-  "sha256": "b05fbcaf3aa57bd0448d5f4f7a3738205b275854df75d7b59fa89e8ea26cccab",
-  "size": 529256018
+  "version": "1.0.5",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-v1.0.5/CarCareManager-Trial-Setup-1.0.5.exe",
+  "notes": "อ่านป้ายทะเบียนแม่นขึ้นมาก — ระบบใหม่อ่านหลายเฟรมแล้วเลือกผลที่มั่นใจสุด (กันอ่านผิด/บันทึกซ้ำ) · เพิ่มพรีวิวดูผลตอนปรับป้าย · ย่อลง System Tray · เปิดโปรแกรมเองหลังอัปเดต · ยังเป็นรุ่นทดลอง (ไม่กระทบวันหมดอายุเดิม)",
+  "sha256": "41c2e69010435c5ae8c6dafd9330c08850cfc44f1b19f06e05579fa5e5b56ebc",
+  "size": 529294327
 }
