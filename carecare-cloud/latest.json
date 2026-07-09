@@ -1,7 +1,7 @@
 {
-  "version": "1.0.0",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.0/CarCareManagerCloud-Setup-1.0.0.exe",
-  "notes": "อ่านป้ายทะเบียนแม่นขึ้นมาก (ระบบอ่านอัจฉริยะรุ่นใหม่) · โปรแกรมเล็ก ติดตั้งเร็ว · ต้องต่ออินเทอร์เน็ต · ยังเป็นรุ่นทดลอง 7 วัน",
-  "sha256": "55098f74f3951550ed478968927c5cb904d9953fc371099aa444ddd3b719701c",
-  "size": 53022374
+  "version": "1.0.1",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.1/CarCareManagerCloud-Setup-1.0.1.exe",
+  "notes": "เพิ่มช่อง 'รหัส API' ในหน้าตั้งค่า — ใส่รหัสของตัวเองได้ (เว้นว่าง = ใช้รหัสทดลองที่ให้มา) + ปุ่มทดสอบรหัส",
+  "sha256": "42abf2cd4fdcf0d3d76088517c828e55270d93604c60266d72d3cdd8fe77de6c",
+  "size": 53020807
 }
