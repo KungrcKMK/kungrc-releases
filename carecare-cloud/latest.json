@@ -1,7 +1,7 @@
 {
-  "version": "1.0.3",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.3/CarCareAIManager-Setup-1.0.3.exe",
-  "notes": "เปลี่ยนชื่อโปรแกรมเป็น CarCare AI Manager + ระบบรหัส API แบบใส่เอง (ปลอดภัยขึ้น — ไม่ฝังรหัสในตัวโปรแกรม) ใส่ได้ที่แท็บ ตั้งค่า",
-  "sha256": "79372f01e63732f60c3bd0af7c39a96c29afd66548d70b9fad2c795ca943ddd7",
-  "size": 53021566
+  "version": "1.0.4",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.4/CarCareAIManager-Setup-1.0.4.exe",
+  "notes": "แก้ระบบนับวันทดลองใช้ให้ถูกต้อง (เครื่องที่เคยทดลองรุ่นก่อนหน้า จะได้ทดลองครบ 7 วันเต็ม)",
+  "sha256": "ada21fbdd505c52eb28230761d05d570d960f93c2cc41bbac7bf660009bc41a3",
+  "size": 53021442
 }
