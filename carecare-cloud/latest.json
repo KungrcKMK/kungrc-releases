@@ -1,7 +1,7 @@
 {
-  "version": "1.0.1",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.1/CarCareManagerCloud-Setup-1.0.1.exe",
-  "notes": "เพิ่มช่อง 'รหัส API' ในหน้าตั้งค่า — ใส่รหัสของตัวเองได้ (เว้นว่าง = ใช้รหัสทดลองที่ให้มา) + ปุ่มทดสอบรหัส",
-  "sha256": "42abf2cd4fdcf0d3d76088517c828e55270d93604c60266d72d3cdd8fe77de6c",
-  "size": 53020807
+  "version": "1.0.2",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.2/CarCareManagerCloud-Setup-1.0.2.exe",
+  "notes": "โชว์สถานะการทำงานบนจอวิดีโอ (ตรวจพบรถ/กำลังอ่านป้าย/บันทึกแล้ว) + แจ้งชัดเจนเมื่อโควตาอ่านป้ายหมดชั่วคราว พร้อมพักและลองใหม่ให้เอง + ประหยัดโควตาอัตโนมัติ",
+  "sha256": "658512a8ad16d55226b8f5ad51d51e92494981d6414c5678c8a6666fc0357580",
+  "size": 53023319
 }
