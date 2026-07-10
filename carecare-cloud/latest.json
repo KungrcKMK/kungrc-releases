@@ -1,7 +1,7 @@
 {
-  "version": "1.0.2",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.2/CarCareManagerCloud-Setup-1.0.2.exe",
-  "notes": "โชว์สถานะการทำงานบนจอวิดีโอ (ตรวจพบรถ/กำลังอ่านป้าย/บันทึกแล้ว) + แจ้งชัดเจนเมื่อโควตาอ่านป้ายหมดชั่วคราว พร้อมพักและลองใหม่ให้เอง + ประหยัดโควตาอัตโนมัติ",
-  "sha256": "658512a8ad16d55226b8f5ad51d51e92494981d6414c5678c8a6666fc0357580",
-  "size": 53023319
+  "version": "1.0.3",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.3/CarCareAIManager-Setup-1.0.3.exe",
+  "notes": "เปลี่ยนชื่อโปรแกรมเป็น CarCare AI Manager + ระบบรหัส API แบบใส่เอง (ปลอดภัยขึ้น — ไม่ฝังรหัสในตัวโปรแกรม) ใส่ได้ที่แท็บ ตั้งค่า",
+  "sha256": "79372f01e63732f60c3bd0af7c39a96c29afd66548d70b9fad2c795ca943ddd7",
+  "size": 53021566
 }
