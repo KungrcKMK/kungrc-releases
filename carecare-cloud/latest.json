@@ -1,7 +1,7 @@
 {
-  "version": "1.0.4",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.4/CarCareAIManager-Setup-1.0.4.exe",
-  "notes": "แก้ระบบนับวันทดลองใช้ให้ถูกต้อง (เครื่องที่เคยทดลองรุ่นก่อนหน้า จะได้ทดลองครบ 7 วันเต็ม)",
-  "sha256": "ada21fbdd505c52eb28230761d05d570d960f93c2cc41bbac7bf660009bc41a3",
-  "size": 53021442
+  "version": "1.0.5",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.5/CarCareAIManager-Setup-1.0.5.exe",
+  "notes": "เพิ่มโซนตรวจจับ — กดปุ่ม 🎯 แล้วลากกรอบบนภาพตรงจุดจอด ระบบจะอ่านเฉพาะรถที่เข้าโซน และอ่านทันทีที่รถเข้า (แม่นขึ้น เร็วขึ้น ประหยัดขึ้น) + ปุ่มเช็คอัปเดตในหน้าตั้งค่า",
+  "sha256": "f0121344c4d3531eb3bea333a885da5ea23813a9487b5f51df9930bfcd1d5c7e",
+  "size": 53026440
 }
