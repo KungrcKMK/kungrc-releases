@@ -1,7 +1,7 @@
 {
-  "version": "1.0.6",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.6/CarCareAIManager-Setup-1.0.6.exe",
-  "notes": "เก็บรูปรถเข้า Google Drive กลางอัตโนมัติ (ทุกสาขารวมที่เดียว) — ไว้พัฒนาระบบอ่านป้ายของเราเอง ชื่อไฟล์มีสาขากำกับ",
-  "sha256": "d005dc7f344176d56feb0ac220d24075a7e72b0481d888362c54a6ae12f42bd8",
-  "size": 53024966
+  "version": "1.0.7",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.7/CarCareAIManager-Setup-1.0.7.exe",
+  "notes": "รถเข้าจอด ระบบจับภาพ+บันทึกทันที (พนักงานไม่ต้องกด) แล้วอ่านทะเบียนเติมให้เอง · อ่านไม่ออก/ซ้ำ ลบทิ้งอัตโนมัติ ไม่มีแถวขยะ",
+  "sha256": "75d7e1fd26f63677f1d5069a364c7ebc1f0e83b6cc9b6e8b14f8cc1c8bb5ae17",
+  "size": 53035735
 }
