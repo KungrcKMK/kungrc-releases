@@ -1,7 +1,7 @@
 {
-  "version": "1.0.7",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.7/CarCareAIManager-Setup-1.0.7.exe",
-  "notes": "รถเข้าจอด ระบบจับภาพ+บันทึกทันที (พนักงานไม่ต้องกด) แล้วอ่านทะเบียนเติมให้เอง · อ่านไม่ออก/ซ้ำ ลบทิ้งอัตโนมัติ ไม่มีแถวขยะ",
-  "sha256": "75d7e1fd26f63677f1d5069a364c7ebc1f0e83b6cc9b6e8b14f8cc1c8bb5ae17",
-  "size": 53035735
+  "version": "1.0.8",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.8/CarCareAIManager-Setup-1.0.8.exe",
+  "notes": "📢 กระดานข่าวประกาศ — ทุกสาขาโพสต์/แก้/ลบ เห็นร่วมกัน มีแถบวิ่ง+เตือนของใหม่ · ชื่อไฟล์รูปเก็บเป็นทะเบียน (ไม่มีสาขา) เอาไปใช้งานต่อได้เลย",
+  "sha256": "8e2e30d68c4927115dfb015b02024ce6ed91edeacadd5196cbf7bf63feaaf54a",
+  "size": 53042929
 }
