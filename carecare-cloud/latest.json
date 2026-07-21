@@ -1,7 +1,7 @@
 {
-  "version": "1.0.8",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.8/CarCareAIManager-Setup-1.0.8.exe",
-  "notes": "📢 กระดานข่าวประกาศ — ทุกสาขาโพสต์/แก้/ลบ เห็นร่วมกัน มีแถบวิ่ง+เตือนของใหม่ · ชื่อไฟล์รูปเก็บเป็นทะเบียน (ไม่มีสาขา) เอาไปใช้งานต่อได้เลย",
-  "sha256": "8e2e30d68c4927115dfb015b02024ce6ed91edeacadd5196cbf7bf63feaaf54a",
-  "size": 53042929
+  "version": "1.0.9",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.9/CarCareAIManager-Setup-1.0.9.exe",
+  "notes": "เพิ่มระบบรหัสต่ออายุ DEMO — ลูกค้ากรอกรหัสจากผู้ขายที่ ⚙ ตั้งค่า เพื่อทดลองใช้ต่อ (หมดอายุแล้วก็กรอกได้จากหน้าต่างแจ้งเตือน) · แก้ไข/ต่ออายุได้หลายครั้ง",
+  "sha256": "58cf80cf1729db41ce0419ef8f2a6a1b4da14df378d0c652751f0aa1e7415777",
+  "size": 53046271
 }
