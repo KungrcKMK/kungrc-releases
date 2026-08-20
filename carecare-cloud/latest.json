@@ -1,7 +1,7 @@
 {
-  "version": "1.0.11",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.11/CarCareAIManager-Setup-1.0.11.exe",
-  "notes": "รองรับรหัสเปิดรุ่นเต็ม (FULL-...) ใช้งานไม่จำกัดวัน — กรอกที่ ⚙ ตั้งค่า ช่องรหัสจากผู้ขาย · ปรับปรุงระบบตรวจสอบสิทธิ์การใช้งาน",
-  "sha256": "2e6af29a90c31f6558f1528e353df792db266119dea8eddd2e630754f99f6b5a",
-  "size": 53056289
+  "version": "1.0.12",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.12/CarCareAIManager-Setup-1.0.12.exe",
+  "notes": "รุ่นเต็ม — ใช้งานได้ไม่จำกัดวัน ไม่ต้องใส่รหัสใดๆ",
+  "sha256": "1630bd19de60e2665b5f1b9f13e0d692c575cfe3e7bde0d7e6e68d36c9c26752",
+  "size": 53053979
 }
