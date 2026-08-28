@@ -1,7 +1,7 @@
 {
-  "version": "1.0.13",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.13/CarCareAIManager-Setup-1.0.13.exe",
-  "notes": "เชื่อม Telegram กับบอทจริง + ตั้งเวลาสรุปแบบทุ่ม + ประกาศเชื่อม Telegram อัตโนมัติ",
-  "sha256": "8590ce9fb8d4a0470bb1489d5478d053228c98f2cd9c03defea1400a23497735",
-  "size": 49170232
+  "version": "1.0.14",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.14/CarCareAIManager-Setup-1.0.14.exe",
+  "notes": "แก้บั๊ก: ป้องกันหน้าตั้งค่าบันทึกค่า Telegram ว่างทับของจริงถ้ากดบันทึกก่อนโหลดเสร็จ",
+  "sha256": "a0fcdafaa09c49c329912a2fbbfd64b666e8c2b87f35aab834702096b2f39802",
+  "size": 49168381
 }
