@@ -1,7 +1,7 @@
 {
-  "version": "1.0.12",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.12/CarCareAIManager-Setup-1.0.12.exe",
-  "notes": "รุ่นเต็ม — ใช้งานได้ไม่จำกัดวัน ไม่ต้องใส่รหัสใดๆ",
-  "sha256": "1630bd19de60e2665b5f1b9f13e0d692c575cfe3e7bde0d7e6e68d36c9c26752",
-  "size": 53053979
+  "version": "1.0.13",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.13/CarCareAIManager-Setup-1.0.13.exe",
+  "notes": "เชื่อม Telegram กับบอทจริง + ตั้งเวลาสรุปแบบทุ่ม + ประกาศเชื่อม Telegram อัตโนมัติ",
+  "sha256": "8590ce9fb8d4a0470bb1489d5478d053228c98f2cd9c03defea1400a23497735",
+  "size": 49170232
 }
