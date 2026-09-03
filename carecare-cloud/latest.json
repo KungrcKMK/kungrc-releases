@@ -1,7 +1,7 @@
 {
-  "version": "1.0.15",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.15/CarCareAIManager-Setup-1.0.15.exe",
-  "notes": "แก้คิวรอตรวจสอบกระพริบ/ค้างภาพเก่า + ป้ายเตือนรายการค้าง + ปุ่มยืนยันทั้งหมด + สถานะกล้องหลุด",
-  "sha256": "2d60718e92113da92f635537eacb5a77fe6af67db1795e781ee296c18d7f18d4",
-  "size": 49180279
+  "version": "1.0.16",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.16/CarCareAIManager-Setup-1.0.16.exe",
+  "notes": "นับรถทันทีที่กล้องเจอป้าย + แจ้ง Telegram รถเข้า (ไม่ส่งทะเบียน) + ทะเบียนทุกคันมารอยืนยันในแท็บตรวจสอบ + อ่านสำรองในเครื่องเมื่อ AI ใช้ไม่ได้ + ปุ่มส่งสรุปเอง + กรอบตามป้าย (ตัวติดตั้งใหญ่ขึ้นเป็น ~620 MB เพราะมีโมเดลในเครื่อง)",
+  "sha256": "0fd810b9b6f9d8f169bf3070db82ee078ce5207470659a664ab54238b74ebebf",
+  "size": 621435141
 }
