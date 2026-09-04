@@ -1,7 +1,7 @@
 {
-  "version": "1.0.17",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.17/CarCareAIManager-Setup-1.0.17.exe",
-  "notes": "รุ่นไฮบริด (YOLO + อ่านสำรองในเครื่อง) — แก้จอปุ่มทดสอบจากไฟล์",
-  "sha256": "eb366b7178dbda40decf4d4ff965d26dc9176cced5834597f1099a6d90825a62",
-  "size": 621461119
+  "version": "1.0.19",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.19/CarCareAIManager-Setup-1.0.19.exe",
+  "notes": "แก้หน้าต่างหาย: เลิกซ่อนลงถาด + บังคับแสดงหน้าต่างเมื่อเปิด + บันทึก crash_log · รวมรุ่นคอมไพล์ 1.0.18 (สรุปแยกสาขา + CSV + Google Sheet ปลายทาง)",
+  "sha256": "0154ce9ebef3eb048b502b135fe1e063e7ca21c237cbcd5bf745d77379adda30",
+  "size": 622435271
 }
