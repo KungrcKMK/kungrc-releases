@@ -1,7 +1,7 @@
 {
-  "version": "1.0.17",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.17/CarCareAIManager-Setup-1.0.17.exe",
-  "notes": "แก้จอปุ่มทดสอบจากไฟล์ให้แสดงกรอบเขียว/เส้นสแกน + รวมทุกอย่างจาก 1.0.16 (นับรถทันทีที่กล้องเจอป้าย, แจ้ง Telegram แบบนับรถ, ทะเบียนมารอยืนยัน, อ่านสำรองในเครื่อง, ปุ่มส่งสรุปเอง)",
-  "sha256": "eb366b7178dbda40decf4d4ff965d26dc9176cced5834597f1099a6d90825a62",
-  "size": 621461119
+  "version": "1.0.18",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.18/CarCareAIManager-Setup-1.0.18.exe",
+  "notes": "รุ่นคอมไพล์กันแกะโค้ด + สรุปประจำวันแยกสาขา (แนบ CSV / เขียนลง Google Sheet ปลายทาง) + ค่าลับ Telegram เก็บฝั่งเซิร์ฟเวอร์ + ปุ่มทดสอบจากไฟล์แสดงกรอบ/เส้นสแกน",
+  "sha256": "2daa26ff20fde10f5bbf683fd8aaffc8f428dea02a155476464494868882d7e1",
+  "size": 622374352
 }
