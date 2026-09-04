@@ -1,7 +1,7 @@
 {
-  "version": "1.0.19",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.19/CarCareAIManager-Setup-1.0.19.exe",
-  "notes": "แก้หน้าต่างหาย: เลิกซ่อนลงถาด + บังคับแสดงหน้าต่างเมื่อเปิด + บันทึก crash_log · รวมรุ่นคอมไพล์ 1.0.18 (สรุปแยกสาขา + CSV + Google Sheet ปลายทาง)",
-  "sha256": "0154ce9ebef3eb048b502b135fe1e063e7ca21c237cbcd5bf745d77379adda30",
-  "size": 622435271
+  "version": "1.0.20",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.20/CarCareAIManager-Setup-1.0.20.exe",
+  "notes": "แก้เปิดโปรแกรมแล้วหน้าต่างไม่ขึ้นเมื่อคิวตรวจสอบสะสมมาก (แสดง 40 รายการล่าสุด, โหลดหลังหน้าต่างขึ้น) + ไม่ซ่อนลงถาด + รุ่นคอมไพล์ + สรุปแยกสาขา/CSV/Google Sheet",
+  "sha256": "8d7fdf8c48cc7e189decbb8cec59a4cae9c8df1a8823b2f87a8f4c3de244d4e7",
+  "size": 622366709
 }
