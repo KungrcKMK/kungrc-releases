@@ -1,7 +1,7 @@
 {
-  "version": "1.0.23",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.23/CarCareAIManager-Setup-1.0.23.exe",
-  "notes": "ตรวจจับคน: รอคนพ้นป้ายก่อนอ่าน + กรอบคนบนจอ · ตัวเช็คอัปเดตเห็นเวอร์ชันใหม่ทันที · รวมเส้นนับรถ/ลบทั้งหมด/กันนับซ้ำจาก 1.0.22",
-  "sha256": "82771157fbe7f3ac8539136bde6f001149f5a3a899f707136fb43abd0a43316f",
-  "size": 643624428
+  "version": "1.0.24",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.24/CarCareAIManager-Setup-1.0.24.exe",
+  "notes": "ช่องจอดแบบกรอบ (คลิก 2 มุม) + จบงานเมื่อรถออก (บันทึกเวลาออก/นาที ต่อท้ายข้อความ Telegram) + สรุปเฉลี่ยนาทีต่อคัน · รวมตรวจจับคนจาก 1.0.23",
+  "sha256": "f81443d4dc06ec82f57c2a0b697832f57d5b849689f3e3b2e9cba9b845315512",
+  "size": 643778501
 }
