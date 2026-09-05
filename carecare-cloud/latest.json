@@ -1,7 +1,7 @@
 {
-  "version": "1.0.21",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.21/CarCareAIManager-Setup-1.0.21.exe",
-  "notes": "กันนับซ้ำคันเดิม (พนักงานเดินตัดหน้าป้าย/รถจอดนิ่งแล้วขยับ ไม่นับเป็นรถใหม่) + รวมทุกอย่างจาก 1.0.20",
-  "sha256": "fb77c08bf2a46e1b03dc15f0eaa1a4bef9edbdea78967174e9b3dd134072a1d6",
-  "size": 622380858
+  "version": "1.0.22",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.22/CarCareAIManager-Setup-1.0.22.exe",
+  "notes": "เส้นนับรถต่อกล้อง (คลิก 3 จุด นับเฉพาะป้ายฝั่งใน ไม่ส่งอ่านป้ายนอกเส้น) + ปุ่มลบทั้งหมดในคิวตรวจสอบ + รวม 1.0.21 กันนับซ้ำคันเดิม",
+  "sha256": "96d7bee219cbb689f5d974d8eb4f42602e2536372622ab783022e3aec6d4517c",
+  "size": 622426653
 }
