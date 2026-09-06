@@ -1,7 +1,7 @@
 {
-  "version": "1.0.29",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.29/CarCareAIManager-Setup-1.0.29.exe",
-  "notes": "นับคันใหม่ที่เข้ามาแทนที่ทันที (ช่องว่าง 8 วิ / ทะเบียนเปลี่ยน) · รวมทุกอย่างจาก 1.0.28",
-  "sha256": "5cc1c38db5f525e81d53949f055fd446acfc1ba581365e4bed42d572794128ca",
-  "size": 643903967
+  "version": "1.0.30",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.30/CarCareAIManager-Setup-1.0.30.exe",
+  "notes": "นับแม่นขึ้น: สลับคันต้องมีหลักฐานชัด (ภาพอ้างอิง/ป้าย), สถิติเวลาในช่อง, เข้ากรอบ+จอดนิ่งก่อนเริ่ม, ป้ายต้องอยู่บนรถ, เวลาหยุดทันทีที่รถออก, ระบุช่องใน Telegram",
+  "sha256": "fd41f31ba1a0c94d19165d46ebe8312c262e31bf73364b36c94aa2ae42adae5b",
+  "size": 643863578
 }
