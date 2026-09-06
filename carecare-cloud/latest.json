@@ -1,7 +1,7 @@
 {
-  "version": "1.0.30",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.30/CarCareAIManager-Setup-1.0.30.exe",
-  "notes": "นับแม่นขึ้น: สลับคันต้องมีหลักฐานชัด (ภาพอ้างอิง/ป้าย), สถิติเวลาในช่อง, เข้ากรอบ+จอดนิ่งก่อนเริ่ม, ป้ายต้องอยู่บนรถ, เวลาหยุดทันทีที่รถออก, ระบุช่องใน Telegram",
-  "sha256": "fd41f31ba1a0c94d19165d46ebe8312c262e31bf73364b36c94aa2ae42adae5b",
-  "size": 643863578
+  "version": "1.0.31",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.31/CarCareAIManager-Setup-1.0.31.exe",
+  "notes": "นาฬิกาในช่องไม่ค้าง || ระหว่างอ่านป้าย, ย้ายป้ายเวลาไปมุมล่างขวา",
+  "sha256": "3fe1b5b23e8d6963d8f778b3d572577b53a331cf4196b7e9892bec7e45de2cbd",
+  "size": 643764006
 }
