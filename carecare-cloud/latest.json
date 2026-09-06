@@ -1,7 +1,7 @@
 {
-  "version": "1.0.26",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.26/CarCareAIManager-Setup-1.0.26.exe",
-  "notes": "ตัดป้ายปลอมบนพื้น (กรอบเขียวค้างหลังรถออก) อัตโนมัติ · รวมนับด้วยตัวรถ/จับเวลาในช่อง/ปุ่มขอความช่วยเหลือจาก 1.0.25",
-  "sha256": "8549806d60e2aa1333ac291ed7957bb285650c3667f144de0e0dc2c1a8e71e13",
-  "size": 643691212
+  "version": "1.0.27",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.27/CarCareAIManager-Setup-1.0.27.exe",
+  "notes": "แก้นับซ้ำ: รถยังอยู่ดูจากตัวรถหรือป้าย, รถออกต้องหาย 45 วิ (งานใหม่ 90 วิ), ทะเบียนเดิมกลับมาใน 30 นาที/ตัวรถอยู่ที่เดิมหลังจบงาน = ไม่นับ · รวมทุกอย่างจาก 1.0.26",
+  "sha256": "b99df7f4913e693cca4b6af32c9529841c09e6674a75936b4dbf152e485d20cc",
+  "size": 643801702
 }
