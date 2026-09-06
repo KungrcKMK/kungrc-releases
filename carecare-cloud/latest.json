@@ -1,7 +1,7 @@
 {
-  "version": "1.0.27",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.27/CarCareAIManager-Setup-1.0.27.exe",
-  "notes": "แก้นับซ้ำ: รถยังอยู่ดูจากตัวรถหรือป้าย, รถออกต้องหาย 45 วิ (งานใหม่ 90 วิ), ทะเบียนเดิมกลับมาใน 30 นาที/ตัวรถอยู่ที่เดิมหลังจบงาน = ไม่นับ · รวมทุกอย่างจาก 1.0.26",
-  "sha256": "b99df7f4913e693cca4b6af32c9529841c09e6674a75936b4dbf152e485d20cc",
-  "size": 643801702
+  "version": "1.0.28",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.28/CarCareAIManager-Setup-1.0.28.exe",
+  "notes": "เปิดโปรแกรมอัตโนมัติเมื่อเปิดเครื่อง (ติ๊กในตั้งค่า) · รวมแก้นับซ้ำจาก 1.0.27",
+  "sha256": "009e2f7c27a628a68a771a1176ae4bf32f901767d6dff88e69684d843a0c61c7",
+  "size": 643807040
 }
