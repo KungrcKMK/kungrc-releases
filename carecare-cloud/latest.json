@@ -1,7 +1,7 @@
 {
-  "version": "1.0.28",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.28/CarCareAIManager-Setup-1.0.28.exe",
-  "notes": "เปิดโปรแกรมอัตโนมัติเมื่อเปิดเครื่อง (ติ๊กในตั้งค่า) · รวมแก้นับซ้ำจาก 1.0.27",
-  "sha256": "009e2f7c27a628a68a771a1176ae4bf32f901767d6dff88e69684d843a0c61c7",
-  "size": 643807040
+  "version": "1.0.29",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.29/CarCareAIManager-Setup-1.0.29.exe",
+  "notes": "นับคันใหม่ที่เข้ามาแทนที่ทันที (ช่องว่าง 8 วิ / ทะเบียนเปลี่ยน) · รวมทุกอย่างจาก 1.0.28",
+  "sha256": "5cc1c38db5f525e81d53949f055fd446acfc1ba581365e4bed42d572794128ca",
+  "size": 643903967
 }
