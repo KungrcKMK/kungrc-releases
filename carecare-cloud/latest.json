@@ -1,7 +1,7 @@
 {
-  "version": "1.0.32",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.32/CarCareAIManager-Setup-1.0.32.exe",
-  "notes": "โหมดนับรถ: แจ้งเปิดเครื่องเข้า Telegram, ซ่อนระบบอ่านป้ายชั่วคราว, เก็บข้อมูลวินิจฉัยการนับ",
-  "sha256": "d29937d7e5cdf2089ce5d64d4a5cb4e4a6116ecbd74307805658ccfc8bf583f2",
-  "size": 643888691
+  "version": "1.0.33",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.33/CarCareAIManager-Setup-1.0.33.exe",
+  "notes": "นับแม่นขึ้น: ไม่นับรถที่กำลังเข้า, ไฟหน้าจ้าไม่นับซ้ำ, ยกเลิกแถวนับผิดอัตโนมัติ",
+  "sha256": "b15385c2bc94b8a0cd1c180376ea0963880239841f900721d56f6a5ed2f74adb",
+  "size": 643906378
 }
