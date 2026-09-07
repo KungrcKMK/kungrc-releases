@@ -1,7 +1,7 @@
 {
-  "version": "1.0.33",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.33/CarCareAIManager-Setup-1.0.33.exe",
-  "notes": "นับแม่นขึ้น: ไม่นับรถที่กำลังเข้า, ไฟหน้าจ้าไม่นับซ้ำ, ยกเลิกแถวนับผิดอัตโนมัติ",
-  "sha256": "b15385c2bc94b8a0cd1c180376ea0963880239841f900721d56f6a5ed2f74adb",
-  "size": 643906378
+  "version": "1.0.34",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.34/CarCareAIManager-Setup-1.0.34.exe",
+  "notes": "เฝ้ารถในช่องจริงจัง: งานสั้นกว่า 5 นาทีต้องมีหลักฐานว่าออกจริง, ตรวจรถล้นเฟรม, ไม่นับรถกำลังเข้า",
+  "sha256": "33834cec22d48bb540c256fcca0181dfa73ce519765e939b1be06f5945648d66",
+  "size": 643809562
 }
