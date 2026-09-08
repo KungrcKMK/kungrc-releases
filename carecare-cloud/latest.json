@@ -1,7 +1,7 @@
 {
-  "version": "1.0.38",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.38/CarCareAIManager-Setup-1.0.38.exe",
-  "notes": "ตั้งค่าแจ้งเตือน Telegram เหลือ เปิด/ปิด",
-  "sha256": "e86084b2c90359fbaf1d91e5fef13ff3a7bbdbd7c7570d383b2d4b1ebc846a51",
-  "size": 159594673
+  "version": "1.0.40",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.40/CarCareAIManager-Setup-1.0.40.exe",
+  "notes": "หน้าจอเต็มพื้นที่, รถใหญ่คลุมกรอบ=อยู่ในช่อง, สลับคันติดกัน, วัดความเคลื่อนไหวเฉพาะช่องจอด",
+  "sha256": "5acd83d76eb3b6d6a6f7a20e85a4b3178a660cc7a49653c44c6464851835ca1f",
+  "size": 159611870
 }
