@@ -1,7 +1,7 @@
 {
-  "version": "1.0.46",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.46/CarCareAIManager-Setup-1.0.46.exe",
-  "notes": "สลับคันแม่นขึ้น, % ขนาดรถมุมล่างซ้าย, เวลาปกติ=ค่าเฉลี่ยรวม ตั้งเองได้",
-  "sha256": "856ad21b65a0f1a7da337dcd379994fa120f07306f9f74751633a5f4b8d630a1",
-  "size": 159611988
+  "version": "1.0.47",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.47/CarCareAIManager-Setup-1.0.47.exe",
+  "notes": "สถานะบนภาพแสดงเวลาเช็ดเฉลี่ย MM:SS นาที",
+  "sha256": "f520ee6a350723bdd00a24754c5727994d0510996171511cf915c40954b9c685",
+  "size": 159619649
 }
