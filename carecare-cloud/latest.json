@@ -1,7 +1,7 @@
 {
-  "version": "1.0.44",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.44/CarCareAIManager-Setup-1.0.44.exe",
-  "notes": "แก้การ์ดสถานะต่อช่อง",
-  "sha256": "cd0bd2df90c0a7a982c0d321707cae086607f5f9d69047e06c9a77e58862ebc8",
-  "size": 159608544
+  "version": "1.0.46",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.46/CarCareAIManager-Setup-1.0.46.exe",
+  "notes": "สลับคันแม่นขึ้น, % ขนาดรถมุมล่างซ้าย, เวลาปกติ=ค่าเฉลี่ยรวม ตั้งเองได้",
+  "sha256": "856ad21b65a0f1a7da337dcd379994fa120f07306f9f74751633a5f4b8d630a1",
+  "size": 159611988
 }
