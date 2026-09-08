@@ -1,7 +1,7 @@
 {
-  "version": "1.0.35",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.35/CarCareAIManager-Setup-1.0.35.exe",
-  "notes": "เสถียรขึ้น: บันทึกซ้ำอัตโนมัติเมื่อรอบแรกล้ม, จำงานค้างข้ามการอัปเดต ไม่นับซ้ำ",
-  "sha256": "f6bde8055e2a934b608df8448eb730096858d126e798f69fc81730a5ec59098a",
-  "size": 643784804
+  "version": "1.0.36",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.36/CarCareAIManager-Setup-1.0.36.exe",
+  "notes": "อัปเดตอัตโนมัติ: เช็คทุกชั่วโมง ติดตั้งเองเมื่อช่องว่าง + ดึงค่าจูนทุกชั่วโมง",
+  "sha256": "7615829802bcfc4f4faa91c228b41a2ee97345965d0404bae9845890a8f99e0f",
+  "size": 643936294
 }
