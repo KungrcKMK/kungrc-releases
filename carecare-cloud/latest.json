@@ -1,7 +1,7 @@
 {
-  "version": "1.0.40",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.40/CarCareAIManager-Setup-1.0.40.exe",
-  "notes": "หน้าจอเต็มพื้นที่, รถใหญ่คลุมกรอบ=อยู่ในช่อง, สลับคันติดกัน, วัดความเคลื่อนไหวเฉพาะช่องจอด",
-  "sha256": "5acd83d76eb3b6d6a6f7a20e85a4b3178a660cc7a49653c44c6464851835ca1f",
-  "size": 159611870
+  "version": "1.0.41",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.41/CarCareAIManager-Setup-1.0.41.exe",
+  "notes": "ไม่ต้องตีกรอบช่องจอด: นับเมื่อรถกินภาพเกิน X% (ตั้งได้), โชว์ % บนกรอบรถ",
+  "sha256": "264ebd438a5e2c21ce85a6b4e813a6e4e8bc442a2bf9d4039060f45c1bb9bf52",
+  "size": 159605228
 }
