@@ -1,7 +1,7 @@
 {
-  "version": "1.0.43",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.43/CarCareAIManager-Setup-1.0.43.exe",
-  "notes": "ยอดวันนี้/รถล่าสุดซิงก์จากฐานข้อมูลกลาง + นับมอเตอร์ไซค์ + ไม่ต้องตีกรอบ",
-  "sha256": "a7f06a4add761c4cb948f1f3e24223740ee172c8c4ee8c3f55fb3d462293e090",
-  "size": 159610008
+  "version": "1.0.44",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.44/CarCareAIManager-Setup-1.0.44.exe",
+  "notes": "แก้การ์ดสถานะต่อช่อง",
+  "sha256": "cd0bd2df90c0a7a982c0d321707cae086607f5f9d69047e06c9a77e58862ebc8",
+  "size": 159608544
 }
