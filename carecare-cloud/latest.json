@@ -1,7 +1,7 @@
 {
-  "version": "1.0.41",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.41/CarCareAIManager-Setup-1.0.41.exe",
-  "notes": "ไม่ต้องตีกรอบช่องจอด: นับเมื่อรถกินภาพเกิน X% (ตั้งได้), โชว์ % บนกรอบรถ",
-  "sha256": "264ebd438a5e2c21ce85a6b4e813a6e4e8bc442a2bf9d4039060f45c1bb9bf52",
-  "size": 159605228
+  "version": "1.0.42",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.42/CarCareAIManager-Setup-1.0.42.exe",
+  "notes": "นับมอเตอร์ไซค์ + ไม่ต้องตีกรอบช่องจอด",
+  "sha256": "ea87ab83af74e876420bdbcb706d388fde0c5cccc537ae21a622d83b223e6415",
+  "size": 159614976
 }
