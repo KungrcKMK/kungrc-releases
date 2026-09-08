@@ -1,7 +1,7 @@
 {
-  "version": "1.0.36",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.36/CarCareAIManager-Setup-1.0.36.exe",
-  "notes": "อัปเดตอัตโนมัติ: เช็คทุกชั่วโมง ติดตั้งเองเมื่อช่องว่าง + ดึงค่าจูนทุกชั่วโมง",
-  "sha256": "7615829802bcfc4f4faa91c228b41a2ee97345965d0404bae9845890a8f99e0f",
-  "size": 643936294
+  "version": "1.0.37",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.37/CarCareAIManager-Setup-1.0.37.exe",
+  "notes": "โหมดนับรถเต็มตัว: ตัดระบบอ่านป้าย, สรุปละเอียด (รายคัน/รายชั่วโมง), แจ้งอัปเดตใน Telegram",
+  "sha256": "07bd37881b33bef114f915ba98f3bd3725c80f00ad9cd261937179fe29ac8c8a",
+  "size": 159597912
 }
