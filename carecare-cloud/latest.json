@@ -1,7 +1,7 @@
 {
-  "version": "1.0.47",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.47/CarCareAIManager-Setup-1.0.47.exe",
-  "notes": "สถานะบนภาพแสดงเวลาเช็ดเฉลี่ย MM:SS นาที",
-  "sha256": "f520ee6a350723bdd00a24754c5727994d0510996171511cf915c40954b9c685",
-  "size": 159619649
+  "version": "1.0.48",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.48/CarCareAIManager-Setup-1.0.48.exe",
+  "notes": "ส่งรูปรถเข้า Telegram พร้อมแปะลำดับคันของวัน",
+  "sha256": "3201a27cd4a996f43a50f726003666320e9f3e3488921893e25897a307e13656",
+  "size": 159629848
 }
