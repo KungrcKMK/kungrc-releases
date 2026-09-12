@@ -1,7 +1,7 @@
 {
-  "version": "1.0.51",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.51/CarCareAIManager-Setup-1.0.51.exe",
-  "notes": "ปรับข้อความหน้าตั้งค่า + ทุกอย่างจาก 1.0.50 (ธีมแดง, ตรวจจับรถแม่นขึ้น, นับต่อได้แม้เน็ตหลุด)",
-  "sha256": "29c415788c5c7401df5338fa747f37b60719103390271b8941df0537f05c270a",
-  "size": 231433187
+  "version": "1.0.52",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.52/CarCareAIManager-Setup-1.0.52.exe",
+  "notes": "แก้การนับรถตัวเล็กผิด, ข้อความบนภาพพอดี, ความทนทานของระบบ",
+  "sha256": "36307ef4c62bee20e4a07b7e7102a8f21a1cdaee76fc044ee2345ccfec6c6abb",
+  "size": 231436831
 }
