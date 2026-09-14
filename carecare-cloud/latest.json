@@ -1,7 +1,7 @@
 {
-  "version": "1.0.53",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.53/CarCareAIManager-Setup-1.0.53.exe",
-  "notes": "ตรวจหาอัปเดตทันทีตอนเปิดโปรแกรม",
-  "sha256": "6c7d899985f9e3695d58c118ade248064761a6056dce5826ec48e059afdafb58",
-  "size": 231435642
+  "version": "1.0.54",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.54/CarCareAIManager-Setup-1.0.54.exe",
+  "notes": "แก้นับซ้ำคันเดิม/แถวไม่มีเวลาออก, รูป Telegram ไม่ส่งซ้ำ",
+  "sha256": "93d58fd4920a17f113e00b79b5c220a2676104c9c5ce95a5957588eec9099de1",
+  "size": 231438788
 }
