@@ -1,7 +1,7 @@
 {
-  "version": "1.0.54",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.54/CarCareAIManager-Setup-1.0.54.exe",
-  "notes": "แก้นับซ้ำคันเดิม/แถวไม่มีเวลาออก, รูป Telegram ไม่ส่งซ้ำ",
-  "sha256": "93d58fd4920a17f113e00b79b5c220a2676104c9c5ce95a5957588eec9099de1",
-  "size": 231438788
+  "version": "1.0.55",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.55/CarCareAIManager-Setup-1.0.55.exe",
+  "notes": "แจ้ง Telegram ตอนรถออก 1 ข้อความต่อคัน, ตั้งค่าช่องว่างกี่วิถือว่ารถออก",
+  "sha256": "e485982956b5e9371cf70f0a36927f9595902282b4ecd8ebd1601e32d7d2b769",
+  "size": 231439593
 }
