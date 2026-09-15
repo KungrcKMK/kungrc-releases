@@ -1,7 +1,7 @@
 {
-  "version": "1.0.55",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.55/CarCareAIManager-Setup-1.0.55.exe",
-  "notes": "แจ้ง Telegram ตอนรถออก 1 ข้อความต่อคัน, ตั้งค่าช่องว่างกี่วิถือว่ารถออก",
-  "sha256": "e485982956b5e9371cf70f0a36927f9595902282b4ecd8ebd1601e32d7d2b769",
-  "size": 231439593
+  "version": "1.0.56",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.56/CarCareAIManager-Setup-1.0.56.exe",
+  "notes": "เลขคันเริ่มใหม่ทุกวัน, ไม่นับมอเตอร์ไซค์ที่จอดเฉย ๆ, เวลาขั้นต่ำมอเตอร์ไซค์ 5 นาที",
+  "sha256": "ecec51915d7ee07f218b5a178d441743451af855b7d0fda32e250d88900d52c7",
+  "size": 231456825
 }
