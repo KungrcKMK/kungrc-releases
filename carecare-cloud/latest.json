@@ -1,7 +1,7 @@
 {
-  "version": "1.0.58",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.58/CarCareAIManager-Setup-1.0.58.exe",
-  "notes": "ลดข้อมูลวินิจฉัยที่ส่งขึ้นระบบกลาง",
-  "sha256": "597a3f37375c006bdccb5c808fb404eec69c20f62410ba49d8e29e02e212d961",
-  "size": 231449697
+  "version": "1.0.59",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.59/CarCareAIManager-Setup-1.0.59.exe",
+  "notes": "กล้องหลุดไม่ใช้ภาพค้าง, ไม่อัปเดตขณะมีรถ, คิวส่งทนขึ้น, ไฟล์ตั้งค่าปลอดภัย",
+  "sha256": "c5c2086f7c3a63961421eb4c7da10a6e3c1b52a3d6e711129931b1bbaf5c8792",
+  "size": 231466908
 }
