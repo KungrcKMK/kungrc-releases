@@ -1,7 +1,7 @@
 {
-  "version": "1.0.61",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.61/CarCareAIManager-Setup-1.0.61.exe",
-  "notes": "บอกอ่านทะเบียนได้/ไม่ได้, กันอ่านผิดคัน, ตัวเลือก Gemini",
-  "sha256": "93857e207ccfc0dc3b427ae088342922f78d31593fbe3174f972ec3534877677",
-  "size": 315531157
+  "version": "1.0.62",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.62/CarCareAIManager-Setup-1.0.62.exe",
+  "notes": "ทะเบียนลงชีตจริง, อ่านป้ายไม่ถ่วงการนับ",
+  "sha256": "5370cedd9e47efa4747d9bb45bb955a7913330b28f43642e7c50db3f09e9ce31",
+  "size": 315535789
 }
