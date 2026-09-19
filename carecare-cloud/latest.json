@@ -1,7 +1,7 @@
 {
   "version": "1.0.66",
   "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.66/CarCareAIManager-Setup-1.0.66.exe",
-  "notes": "CarCare AI Manager 1.0.66\n\n- ค้นหากล้อง IP ได้แม้ไฟร์วอลล์ของ Windows ไม่ได้อนุญาตโปรแกรม (ไม่ต้องตั้งค่าเพิ่ม)",
+  "notes": "CarCare AI Manager 1.0.66\n\n- ค้นหากล้อง IP ได้แม้ Windows Firewall ไม่ได้อนุญาตโปรแกรม (ไม่ต้องตั้งค่าไฟร์วอลล์เอง)",
   "sha256": "e2a2e7d47b35f3dcc4767273460749fe81e3e3c98ea81e737a9c7d7e170ade20",
   "size": 315624243
 }
