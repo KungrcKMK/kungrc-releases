@@ -1,7 +1,7 @@
 {
   "version": "1.0.67",
   "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.67/CarCareAIManager-Setup-1.0.67.exe",
-  "notes": "CarCare AI Manager 1.0.67\n\n- แก้หน้าค้นหากล้อง IP ที่ค้างที่ \"กำลังค้นหา...\" และไม่แสดงกล้องที่พบ",
-  "sha256": "af70020a69107fae21d2ba7fbe9084060593fe5f78e8edba977ee5cddd6bcda3",
-  "size": 315620111
+  "notes": "CarCare AI Manager 1.0.67\n\n- ปรับปรุงระบบจำทะเบียนให้แม่นยำขึ้นในระยะยาว (เก็บตัวอย่างป้ายเพื่อพัฒนาระบบ)",
+  "sha256": "889f103d01e60bf94281e22fe0bbbe77ed54c18823b32d227b11fd142b8188a5",
+  "size": 315630824
 }
