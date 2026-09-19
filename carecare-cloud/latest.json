@@ -1,7 +1,7 @@
 {
-  "version": "1.0.62",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.62/CarCareAIManager-Setup-1.0.62.exe",
-  "notes": "ทะเบียนลงชีตจริง, อ่านป้ายไม่ถ่วงการนับ",
-  "sha256": "5370cedd9e47efa4747d9bb45bb955a7913330b28f43642e7c50db3f09e9ce31",
-  "size": 315535789
+  "version": "1.0.63",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.63/CarCareAIManager-Setup-1.0.63.exe",
+  "notes": "ข้อความลูกค้าเดิม: ครั้งที่/ครั้งก่อน/สาขา",
+  "sha256": "9dbfba094f9cc267856af5898b448e71e5b00a56aa3b2a59a2745e4fb8e2523f",
+  "size": 315523949
 }
