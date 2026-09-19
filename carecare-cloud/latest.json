@@ -1,7 +1,7 @@
 {
-  "version": "1.0.65",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.65/CarCareAIManager-Setup-1.0.65.exe",
-  "notes": "CarCare AI Manager 1.0.65\n\n- ค้นหากล้อง IP เร็วขึ้นมาก (ตรวจหลายตัวพร้อมกัน) และแสดงยี่ห้อกล้องข้างไอพี\n- ถ้ากล้องไม่ตอบผ่าน ONVIF ระบบจะลองลิงก์ตามยี่ห้อให้เองและยืนยันว่าเปิดภาพได้จริง\n- คำแนะนำในหน้าค้นหากล้องเมื่อรหัสไม่ผ่าน",
-  "sha256": "8155caae9f601c8be8515d4d0f33277e12ed5ccc5196355dccfd1157437fecdd",
-  "size": 315621545
+  "version": "1.0.66",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.66/CarCareAIManager-Setup-1.0.66.exe",
+  "notes": "CarCare AI Manager 1.0.66\n\n- ค้นหากล้อง IP ได้แม้ไฟร์วอลล์ของ Windows ไม่ได้อนุญาตโปรแกรม (ไม่ต้องตั้งค่าเพิ่ม)",
+  "sha256": "e2a2e7d47b35f3dcc4767273460749fe81e3e3c98ea81e737a9c7d7e170ade20",
+  "size": 315624243
 }
