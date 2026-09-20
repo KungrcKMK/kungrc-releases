@@ -1,7 +1,7 @@
 {
-  "version": "1.0.67",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.67/CarCareAIManager-Setup-1.0.67.exe",
-  "notes": "CarCare AI Manager 1.0.67\n\n- ปรับปรุงระบบจำทะเบียนให้แม่นยำขึ้นในระยะยาว (เก็บตัวอย่างป้ายเพื่อพัฒนาระบบ)",
-  "sha256": "889f103d01e60bf94281e22fe0bbbe77ed54c18823b32d227b11fd142b8188a5",
-  "size": 315630824
+  "version": "1.0.68",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.68/CarCareAIManager-Setup-1.0.68.exe",
+  "notes": "CarCare AI Manager 1.0.68\n\n- แก้ปัญหานับรถคันเดิมซ้ำเมื่อพนักงานคลุมผ้าหรือภาพกล้องค้างชั่วคราว\n- อ่านทะเบียนได้ตรงกับคันที่เพิ่งจบงานในช่องเดียวกัน ระบบจะยกเลิกการนับซ้ำให้เอง\n- แท็บ \"ระบุทะเบียน\" แสดงคันที่รอระบุของทุกสาขา ช่วยกันระบุข้ามสาขาได้ ใครระบุก่อนรายการหายจากทุกเครื่อง\n- แจ้งในกลุ่มเมื่อมีการระบุทะเบียน และเตือนรายการค้างเวลา 12:00 / 18:00",
+  "sha256": "b213d42018c1dbbb5593821d16327f3687e989760548ab3dd90fe1d6616b9a4e",
+  "size": 315646095
 }
