@@ -1,7 +1,7 @@
 {
-  "version": "1.0.71",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.71/CarCareAIManager-Setup-1.0.71.exe",
-  "notes": "CarCare AI Manager 1.0.71\n\n- หน้าระบุทะเบียนไม่ค้างขณะบันทึก/ข้าม (ทำงานเบื้องหลัง) และไม่รีเฟรชทับขณะกำลังพิมพ์",
-  "sha256": "16ad37c7a87b6a7f2a0d379a0aaf4dbbbbaa8afa9bb23fb51cf245c98436bd57",
-  "size": 315680145
+  "version": "1.0.72",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.72/CarCareAIManager-Setup-1.0.72.exe",
+  "notes": "CarCare AI Manager 1.0.72\n\n- หน้ายืนยันป้าย: เหลือปุ่มเดียว \"ยืนยันทะเบียนนี้\" (แก้ในช่องแล้วกดปุ่มเดียวกัน) ลดการกดผิด\n- ทะเบียนที่ระบบไม่มั่นใจจะส่งให้พนักงานระบุแทนการบันทึกอัตโนมัติ (กันทะเบียนเพี้ยน)",
+  "sha256": "b13a397534134ec3a2b64cefb3b4d32040e753e534b17f3a2a21bdae0092d5ac",
+  "size": 315688289
 }
