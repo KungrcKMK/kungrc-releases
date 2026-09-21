@@ -1,7 +1,7 @@
 {
-  "version": "1.0.70",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.70/CarCareAIManager-Setup-1.0.70.exe",
-  "notes": "CarCare AI Manager 1.0.70\n\n- รองรับป้ายทะเบียนรถสาธารณะแบบตัวเลข (เช่น 33-4373) ทั้งการอ่านอัตโนมัติ การระบุ และการยืนยัน",
-  "sha256": "e0ce474ecc9a79c2d81292bbe763f44d2220effc5882e87b871883b8ab5e40eb",
-  "size": 315680585
+  "version": "1.0.71",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.71/CarCareAIManager-Setup-1.0.71.exe",
+  "notes": "CarCare AI Manager 1.0.71\n\n- หน้าระบุทะเบียนไม่ค้างขณะบันทึก/ข้าม (ทำงานเบื้องหลัง) และไม่รีเฟรชทับขณะกำลังพิมพ์",
+  "sha256": "16ad37c7a87b6a7f2a0d379a0aaf4dbbbbaa8afa9bb23fb51cf245c98436bd57",
+  "size": 315680145
 }
