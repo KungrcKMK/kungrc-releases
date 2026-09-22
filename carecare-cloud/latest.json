@@ -1,7 +1,7 @@
 {
-  "version": "1.0.74",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.74/CarCareAIManager-Setup-1.0.74.exe",
-  "notes": "CarCare AI Manager 1.0.74\n\n- ระบบอ่านทะเบียนรับการตั้งค่าจากส่วนกลางให้อัตโนมัติ (ไม่ต้องใส่รหัสเองที่เครื่อง)\n- แก้ปัญหาตัวอ่านทะเบียนหยุดทำงานเมื่อพบหลายป้ายในภาพเดียว",
-  "sha256": "5980a83ab51bad32a6d67bd35c9b65ced6b214c79980a4e60ba107b74f54c209",
-  "size": 315679485
+  "version": "1.0.75",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.75/CarCareAIManager-Setup-1.0.75.exe",
+  "notes": "CarCare AI Manager 1.0.75\n\n- ร้านใส่คีย์ Gemini ของตัวเองในหน้าตั้งค่าได้ และจะไม่ถูกค่าจากส่วนกลางทับ",
+  "sha256": "fce4673d51717df58515291152ad06b6e989f4fa8f969d8a69ad30132b8f7ec2",
+  "size": 315688460
 }
