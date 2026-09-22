@@ -1,8 +1,8 @@
 {
-  "version": "1.0.78",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.78/CarCareAIManager-Setup-1.0.78.exe",
-  "notes": "CarCare AI Manager 1.0.78\n\n- ปรับปรุงการเชื่อมต่อระบบกลาง",
-  "sha256": "aef4e12403413c51362e9145850ffb604e4eefc2a8adb4a0e93d411ae3aae7dd",
-  "size": 315709921,
+  "version": "1.0.79",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.79/CarCareAIManager-Setup-1.0.79.exe",
+  "notes": "CarCare AI Manager 1.0.79\n\n- แก้ปัญหางานค้าง \"กำลังอยู่ในช่อง\" หลังเปิดโปรแกรมใหม่ทั้งที่ช่องว่าง",
+  "sha256": "22b7b1638155f4ecae77b2ee2f1985596c0b7de6b408d8bd2820a842513bfecb",
+  "size": 315698444,
   "webapp_url": "https://quicky-api.pitak-ttg.workers.dev"
 }
