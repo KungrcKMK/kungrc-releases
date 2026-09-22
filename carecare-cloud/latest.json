@@ -1,7 +1,7 @@
 {
-  "version": "1.0.73",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.73/CarCareAIManager-Setup-1.0.73.exe",
-  "notes": "CarCare AI Manager 1.0.73\n\n- หน้าตั้งค่าโหลดค่าจากระบบกลางให้เองเมื่อเชื่อมต่อได้ (ไม่แสดงช่องว่างตอนเปิดโปรแกรม)\n- ปรับข้อความสถานะการเชื่อมต่อให้เข้าใจง่ายขึ้น",
-  "sha256": "4053c8017b5c7f967551197081f2c9b745205d2b7f345836ee8b3cd9325f1413",
-  "size": 315684105
+  "version": "1.0.74",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.74/CarCareAIManager-Setup-1.0.74.exe",
+  "notes": "CarCare AI Manager 1.0.74\n\n- ระบบอ่านทะเบียนรับการตั้งค่าจากส่วนกลางให้อัตโนมัติ (ไม่ต้องใส่รหัสเองที่เครื่อง)\n- แก้ปัญหาตัวอ่านทะเบียนหยุดทำงานเมื่อพบหลายป้ายในภาพเดียว",
+  "sha256": "5980a83ab51bad32a6d67bd35c9b65ced6b214c79980a4e60ba107b74f54c209",
+  "size": 315679485
 }
