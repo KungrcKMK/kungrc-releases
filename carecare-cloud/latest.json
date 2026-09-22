@@ -1,7 +1,7 @@
 {
-  "version": "1.0.75",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.75/CarCareAIManager-Setup-1.0.75.exe",
-  "notes": "CarCare AI Manager 1.0.75\n\n- ร้านใส่คีย์ Gemini ของตัวเองในหน้าตั้งค่าได้ และจะไม่ถูกค่าจากส่วนกลางทับ",
-  "sha256": "fce4673d51717df58515291152ad06b6e989f4fa8f969d8a69ad30132b8f7ec2",
-  "size": 315688460
+  "version": "1.0.76",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.76/CarCareAIManager-Setup-1.0.76.exe",
+  "notes": "CarCare AI Manager 1.0.76\n\n- ปุ่ม \"ใช้กับทุกสาขา\" ในหน้าตั้งค่า: กรอกคีย์ Gemini ครั้งเดียว ทุกสาขาได้รับอัตโนมัติ\n- บันทึกทะเบียนให้สาขาอื่น: ระบบลองส่งซ้ำเองเมื่อระบบกลางตอบช้า\n- ลดการติดต่อระบบกลางให้เบาลง ทำงานเสถียรขึ้น",
+  "sha256": "fb98487ae625abbe3ad1f43de8402fdc73f4d3d37610cb12930b690bf48d0e86",
+  "size": 315692763
 }
