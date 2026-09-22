@@ -1,8 +1,8 @@
 {
-  "version": "1.0.77",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.77/CarCareAIManager-Setup-1.0.77.exe",
-  "notes": "CarCare AI Manager 1.0.77\n\n- ปรับปรุงการเชื่อมต่อระบบกลางให้เสถียรขึ้น\n- แก้ปัญหาอัปเดตไม่สำเร็จเมื่อกดอัปเดตเองระหว่างระบบกำลังดาวน์โหลด",
-  "sha256": "0b5a5f2c359fa0be04c7f7e0a7153f1bbf51effd1828bccae8bfe8cd2abb1d79",
-  "size": 315687786,
+  "version": "1.0.78",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.78/CarCareAIManager-Setup-1.0.78.exe",
+  "notes": "CarCare AI Manager 1.0.78\n\n- ปรับปรุงการเชื่อมต่อระบบกลาง",
+  "sha256": "aef4e12403413c51362e9145850ffb604e4eefc2a8adb4a0e93d411ae3aae7dd",
+  "size": 315709921,
   "webapp_url": "https://quicky-api.pitak-ttg.workers.dev"
 }
