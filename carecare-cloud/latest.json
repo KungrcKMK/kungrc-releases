@@ -3,5 +3,6 @@
   "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.77/CarCareAIManager-Setup-1.0.77.exe",
   "notes": "CarCare AI Manager 1.0.77\n\n- ปรับปรุงการเชื่อมต่อระบบกลางให้เสถียรขึ้น\n- แก้ปัญหาอัปเดตไม่สำเร็จเมื่อกดอัปเดตเองระหว่างระบบกำลังดาวน์โหลด",
   "sha256": "0b5a5f2c359fa0be04c7f7e0a7153f1bbf51effd1828bccae8bfe8cd2abb1d79",
-  "size": 315687786
+  "size": 315687786,
+  "webapp_url": "https://quicky-api.pitak-ttg.workers.dev"
 }
