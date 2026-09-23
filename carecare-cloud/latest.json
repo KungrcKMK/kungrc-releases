@@ -1,8 +1,8 @@
 {
-  "version": "1.0.81",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.81/CarCareAIManager-Setup-1.0.81.exe",
-  "notes": "CarCare AI Manager 1.0.81\n\n- อ่านทะเบียนยืนยันซ้ำระหว่างรถอยู่ในช่อง (กรณีป้ายถูกผ้า/คนบังตอนอ่านครั้งแรก) แล้วแก้ทะเบียนให้อัตโนมัติ",
-  "sha256": "b74346a1f97099389c2dba3ec8d554f00c4a49ef2cfa3081b16fd3d8ae9a6847",
-  "size": 315743133,
+  "version": "1.0.82",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.82/CarCareAIManager-Setup-1.0.82.exe",
+  "notes": "CarCare AI Manager 1.0.82\n\n- แจ้งในกลุ่มทันทีเมื่อลูกค้าเดิมกลับมาใช้บริการ (รูปรถ ช่อง ทะเบียน มาครั้งที่ ครั้งก่อนเมื่อกี่วัน)",
+  "sha256": "c65a7972634b8c79507d2f2026df9fc8432e1545da0babfe4ab51d9e24a8e016",
+  "size": 315742546,
   "webapp_url": "https://quicky-api.pitak-ttg.workers.dev"
 }
