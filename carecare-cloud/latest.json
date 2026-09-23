@@ -1,8 +1,8 @@
 {
-  "version": "1.0.80",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.80/CarCareAIManager-Setup-1.0.80.exe",
-  "notes": "CarCare AI Manager 1.0.80\n\n- แจ้งเตือนในกลุ่มเมื่อกล้องถูกบัง (ป้าย/สิ่งของวางหน้ากล้อง) และแจ้งเมื่อกลับมาปกติ\n- หน้าตั้งค่า: แสดงผลการทดสอบคีย์ให้เห็นชัดเจน",
-  "sha256": "14cd03e6cec649795de91f0caa4150a9410bdad90aff47fa8c80366ac02adaef",
-  "size": 315730943,
+  "version": "1.0.81",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.81/CarCareAIManager-Setup-1.0.81.exe",
+  "notes": "CarCare AI Manager 1.0.81\n\n- อ่านทะเบียนยืนยันซ้ำระหว่างรถอยู่ในช่อง (กรณีป้ายถูกผ้า/คนบังตอนอ่านครั้งแรก) แล้วแก้ทะเบียนให้อัตโนมัติ",
+  "sha256": "b74346a1f97099389c2dba3ec8d554f00c4a49ef2cfa3081b16fd3d8ae9a6847",
+  "size": 315743133,
   "webapp_url": "https://quicky-api.pitak-ttg.workers.dev"
 }
