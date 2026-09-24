@@ -1,8 +1,8 @@
 {
-  "version": "1.0.84",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.84/CarCareAIManager-Setup-1.0.84.exe",
-  "notes": "CarCare AI Manager 1.0.84\n\n- อ่านป้ายไม่หยุดเองเมื่อรถเข้าพร้อมกันหลายคัน (รอครู่เดียวแล้วอ่านต่อ ไม่แจ้งกลุ่มผิด ๆ ว่าโควตาหมด)",
-  "sha256": "7890227a065ddd5001db99d572aea44c70a21aff74f0586cfb9eed4cf0e844cf",
-  "size": 315752094,
+  "version": "1.0.85",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.85/CarCareAIManager-Setup-1.0.85.exe",
+  "notes": "CarCare AI Manager 1.0.85\n\n- อ่านจังหวัดจากป้ายทะเบียนด้วย (แสดงคู่ทะเบียนในข้อความกลุ่ม ไฟล์สรุป และชีต) — ป้ายไม่ชัดจะเว้นว่าง ไม่เดา",
+  "sha256": "65fbc7a54de8e15d64cfea49a4ac83706ecc3c6498f55d6740c509c116c7acd7",
+  "size": 315744927,
   "webapp_url": "https://quicky-api.pitak-ttg.workers.dev"
 }
