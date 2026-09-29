@@ -1,8 +1,8 @@
 {
-  "version": "1.0.85",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.85/CarCareAIManager-Setup-1.0.85.exe",
-  "notes": "CarCare AI Manager 1.0.85\n\n- อ่านจังหวัดจากป้ายทะเบียนด้วย (แสดงคู่ทะเบียนในข้อความกลุ่ม ไฟล์สรุป และชีต) — ป้ายไม่ชัดจะเว้นว่าง ไม่เดา",
-  "sha256": "65fbc7a54de8e15d64cfea49a4ac83706ecc3c6498f55d6740c509c116c7acd7",
-  "size": 315744927,
+  "version": "1.0.86",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.86/CarCareAIManager-Setup-1.0.86.exe",
+  "notes": "CarCare AI Manager 1.0.86\n\n- ปรับปรุงการตรวจสถานะการใช้งานให้ถี่ขึ้น",
+  "sha256": "7b468487de729bac3790ef56d226803fb2106b145942f32342a397a7e6d7db4b",
+  "size": 315747531,
   "webapp_url": "https://quicky-api.pitak-ttg.workers.dev"
 }
