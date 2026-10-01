@@ -1,7 +1,7 @@
 {
-  "version": "1.0.2",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-count-v1.0.2/CarCareCount-Setup-1.0.2.exe",
-  "notes": "CarCare Count 1.0.2 - เพิ่มปุ่มตรวจอัปเดตตอนนี้",
-  "sha256": "808f5e534e7fafe787ff29132dc7e520d76aeb25da9261f3450f758f4dd1425b",
-  "size": 137481494
+  "version": "1.0.3",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-count-v1.0.3/CarCareCount-Setup-1.0.3.exe",
+  "notes": "CarCare Count 1.0.3 - ตัวตรวจจับรถใหม่ (YOLOX) และการเทียบภาพยืนยันรถยังจอดอยู่",
+  "sha256": "8befbe031aed0eb1a1237568ffd3457ae35bfea6c1f5d56059c1900cef561111",
+  "size": 111047156
 }
