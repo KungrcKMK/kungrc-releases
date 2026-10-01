@@ -1,7 +1,7 @@
 {
-  "version": "1.0.1",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-count-v1.0.1/CarCareCount-Setup-1.0.1.exe",
-  "notes": "CarCare Count 1.0.1 - หน้าจอแสดงผลลื่นขึ้น",
-  "sha256": "7bd6feb3870580ade4de64b019bd43eae7761c206f2d9f6dbfbdf90314ef48dd",
-  "size": 137477808
+  "version": "1.0.2",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-count-v1.0.2/CarCareCount-Setup-1.0.2.exe",
+  "notes": "CarCare Count 1.0.2 - เพิ่มปุ่มตรวจอัปเดตตอนนี้",
+  "sha256": "808f5e534e7fafe787ff29132dc7e520d76aeb25da9261f3450f758f4dd1425b",
+  "size": 137481494
 }
