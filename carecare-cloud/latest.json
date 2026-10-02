@@ -1,8 +1,7 @@
 {
-  "version": "1.0.86",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v1.0.86/CarCareAIManager-Setup-1.0.86.exe",
-  "notes": "CarCare AI Manager 1.0.86\n\n- ปรับปรุงการตรวจสถานะการใช้งานให้ถี่ขึ้น",
-  "sha256": "7b468487de729bac3790ef56d226803fb2106b145942f32342a397a7e6d7db4b",
-  "size": 315747531,
-  "webapp_url": "https://quicky-api.pitak-ttg.workers.dev"
+  "version": "2.0.0",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.0/CarCareAIManager-Setup-2.0.0.exe",
+  "notes": "CarCare AI Manager 2.0.0\n\n- เพิ่มการเทียบภาพยืนยันว่ารถยังจอดอยู่",
+  "sha256": "755837efa7d03c329ef6eeb4a4db31f21d9b8027c1a16178fe0a4a2863353917",
+  "size": 315743668
 }
