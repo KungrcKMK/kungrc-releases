@@ -1,7 +1,7 @@
 {
-  "version": "1.0.3",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-count-v1.0.3/CarCareCount-Setup-1.0.3.exe",
-  "notes": "CarCare Count 1.0.3 - ตัวตรวจจับรถใหม่ (YOLOX) และการเทียบภาพยืนยันรถยังจอดอยู่",
-  "sha256": "8befbe031aed0eb1a1237568ffd3457ae35bfea6c1f5d56059c1900cef561111",
-  "size": 111047156
+  "version": "2.0.0",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.0/CarCareAIManager-FromCount-Setup-2.0.0.exe",
+  "notes": "เปลี่ยนเป็น CarCare AI Manager 2.0.0 (QUICKY) — ใช้ชื่อสาขาและกล้องเดิม แล้วถอนโปรแกรมเดิมออกให้อัตโนมัติ",
+  "sha256": "d4aa56930dc86d4efb8780d86d064af130976f6473cefbda1f4ea4519f35bafe",
+  "size": 339950706
 }
