@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
   "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.0/CarCareAIManager-Setup-2.0.0.exe",
-  "notes": "CarCare AI Manager 2.0.0\n\n- เพิ่มการเทียบภาพยืนยันว่ารถยังจอดอยู่\n- เพิ่มโปรแกรมตรวจป้ายทะเบียน",
-  "sha256": "0a8c718efa17ebafa7ae499bf973833ef72dd7f3da5f59b942b1ba6df50d9e65",
-  "size": 315782446,
+  "notes": "CarCare AI Manager 2.0.0\n\n- เพิ่มการเทียบภาพยืนยันว่ารถยังจอดอยู่\n- เพิ่มโปรแกรมตรวจป้ายทะเบียน\n- แก้ธีมมืดหน้าตั้งค่า",
+  "sha256": "781a4348424b7f66a7940765a141433931fd37e881c65591a6fdce362f48c00e",
+  "size": 315777703,
   "webapp_url": "https://quicky-api.pitak-ttg.workers.dev"
 }
