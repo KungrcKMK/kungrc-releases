@@ -2,7 +2,7 @@
   "version": "2.0.0",
   "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.0/CarCareAIManager-Setup-2.0.0.exe",
   "notes": "CarCare AI Manager 2.0.0\n\n- หน้าตาโปรแกรมใหม่ เร็วขึ้น ตัวเลข/กรอบกล้องไม่ยืดหด\n- ชื่อและโลโก้ร้าน QUICKY\n- เปิดโปรแกรมใหม่เองอัตโนมัติถ้าถูกปิดหรือค้าง\n- เลือกแจ้งเตือนทาง Telegram / LINE (สรุปรายวัน) / ทั้งคู่ / ไม่แจ้ง\n- เปิด/ปิดกรอบตรวจจับบนภาพกล้องได้\n- ใช้กล้องได้สูงสุด 2 ตัว\n- โปรแกรมตรวจป้ายทะเบียนแยกเป็นโปรแกรมต่างหาก",
-  "sha256": "f39bdcfaf9261c57c1b11631d31da33d9288665ad7e25e64f78af553e8bc27f2",
-  "size": 339924062,
+  "sha256": "2aa48d730ac683574325d22301fe4ac6e0db2450a56a988e6745d73e1af71920",
+  "size": 339950598,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
