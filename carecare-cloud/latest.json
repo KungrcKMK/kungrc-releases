@@ -1,8 +1,8 @@
 {
-  "version": "2.0.3",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.3/CarCareAIManager-Setup-2.0.3.exe",
-  "notes": "CarCare AI Manager 2.0.3\n\n- ตั้งกลุ่ม Telegram เองได้จากหน้าตั้งค่า (ค้นหากลุ่ม/บันทึก/ทดสอบ)\n- พิมพ์เวลาส่งสรุปรายวันเองได้ เช่น 21:30\n- เลือกได้ว่าจะเปิดโปรแกรมกลับเองเมื่อมีคนกดปิดหรือไม่\n- ตัวติดตั้งเลือกได้: โปรแกรมนับรถ / ตรวจป้ายทะเบียน / ทั้งสอง\n- ติดตั้งทับ/ถอนการติดตั้ง ปิดโปรแกรมให้ก่อนเสมอ\n- ใช้สีตามโลโก้ร้าน และไม่แสดงชื่อร้านซ้ำบนหัวโปรแกรม",
-  "sha256": "317ffec855a8fa38a5c7dfd0f3f7aae40129f51bcbc86dde5367bcd6044cf862",
-  "size": 339958555,
+  "version": "2.0.4",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.4/CarCareAIManager-Setup-2.0.4.exe",
+  "notes": "CarCare AI Manager 2.0.4\n\n- ตัวหาป้ายในเครื่องหาไม่เจอ (ป้ายเล็ก/มุมเฉียง): ให้ Gemini หาและอ่านป้ายจากภาพหน้ารถทันที แล้วเก็บเฉพาะภาพป้าย\n- คิวรอระบุทะเบียนลดลง และชุดข้อมูลป้ายเป็นภาพป้ายเสมอ",
+  "sha256": "edc4365a44e875d687be8f622adf04a7e5b3fbc6fd07a5ae417ee063b0bd48cc",
+  "size": 339947953,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
