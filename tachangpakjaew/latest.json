@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0",
+  "notes": "ตาชั่งปากแจ๋ว 1.0.0 — เวอร์ชันแรกที่อัปเดตออนไลน์ได้\n- อัปเดตอัตโนมัติ: ดาวน์โหลดเบื้องหลัง ติดตั้งเองตอนไม่มีคนชั่ง\n- ปุ่มเช็คอัปเดตในแท็บตั้งค่า\n- ตัวติดตั้งใหม่ (Inno Setup) ถอนการติดตั้งได้จากแอปและฟีเจอร์",
+  "sha256": "2379968cb9db612bdf446b9a4e244967effe1bc738223d689dc56a3fe1a1d6c4",
+  "size": 45295538,
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/tachang-v1.0.0/TaChangPakJaew-Setup-1.0.0.exe"
+}
