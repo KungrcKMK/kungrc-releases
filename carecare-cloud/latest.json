@@ -1,8 +1,8 @@
 {
-  "version": "2.0.8",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.8/CarCareAIManager-Setup-2.0.8.exe",
-  "notes": "CarCare AI Manager 2.0.8\n\n- กล้องไม่ส่งภาพนานเกิน 10 นาที เปิดโปรแกรมใหม่เองเพื่อต่อกล้องใหม่ (ไม่เกินชั่วโมงละครั้ง · ไม่เกิน 3 ครั้งต่อวัน)\n- เปิดใหม่แล้วภาพกลับมา แจ้งกลุ่มว่ากลับมาปกติ",
-  "sha256": "e895ad1a1c62955bbe5b9eba347c8c1ff2c28ddc86d26de697c293a81eb00e91",
-  "size": 339989280,
+  "version": "2.0.9",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.9/CarCareAIManager-Setup-2.0.9.exe",
+  "notes": "CarCare AI Manager 2.0.9\n\n- ค้นหากล้อง: เจอกล้องที่ปิด ONVIF ไว้ได้ด้วย (หาพอร์ต RTSP 554 ในวงแลน)\n- รีสตาร์ทเพราะกล้องหาย: ห่างกันอย่างน้อย 1 ชั่วโมงเสมอ ไม่เกิน 3 ครั้งต่อวัน",
+  "sha256": "c2225d5e8a212fbe3ea99475c1c20b343713360cb6b6adba5febc3c774b7ac29",
+  "size": 339996671,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
