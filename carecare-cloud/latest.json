@@ -1,8 +1,8 @@
 {
-  "version": "2.0.5",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.5/CarCareAIManager-Setup-2.0.5.exe",
-  "notes": "CarCare AI Manager 2.0.5\n\n- ป้ายแดง: นับรถอย่างเดียว ไม่อ่านทะเบียน ไม่เข้าคิวรอระบุ (ไม่เปลืองโควตาอ่านป้าย)\n- (จาก 2.0.4) ตัวหาป้ายในเครื่องหาไม่เจอ: ให้ Gemini หาและอ่านป้ายจากภาพหน้ารถ แล้วเก็บเฉพาะภาพป้าย",
-  "sha256": "ea501f973762e963b92f2318fc872614530d23086ad4e6a58697260c10cfb701",
-  "size": 339967791,
+  "version": "2.0.6",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.6/CarCareAIManager-Setup-2.0.6.exe",
+  "notes": "CarCare AI Manager 2.0.6\n\n- กันนับรถผี: กรอบความมั่นใจต่ำที่ลอยอยู่ครึ่งบนของภาพ (เต็นท์/ป้ายร้านตอนแสงน้อย) ไม่นับ\n- รูปที่ส่ง Telegram วาดกรอบรถ / ป้าย / คน พร้อม % ความแม่นยำ (ปิดได้ในตั้งค่า)\n- บันทึกข้อผิดพลาดลงเครื่องและส่งขึ้นระบบกลาง\n- (จาก 2.0.5) ป้ายแดงนับรถอย่างเดียว",
+  "sha256": "e701567295c83cf4588de0d47d24bede5855e986ff7cd1fda248d8374805d63f",
+  "size": 339988517,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
