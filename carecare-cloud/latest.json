@@ -1,8 +1,8 @@
 {
-  "version": "2.0.6",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.6/CarCareAIManager-Setup-2.0.6.exe",
-  "notes": "CarCare AI Manager 2.0.6\n\n- กันนับรถผี: กรอบความมั่นใจต่ำที่ลอยอยู่ครึ่งบนของภาพ (เต็นท์/ป้ายร้านตอนแสงน้อย) ไม่นับ\n- รูปที่ส่ง Telegram วาดกรอบรถ / ป้าย / คน พร้อม % ความแม่นยำ (ปิดได้ในตั้งค่า)\n- บันทึกข้อผิดพลาดลงเครื่องและส่งขึ้นระบบกลาง\n- (จาก 2.0.5) ป้ายแดงนับรถอย่างเดียว",
-  "sha256": "e701567295c83cf4588de0d47d24bede5855e986ff7cd1fda248d8374805d63f",
-  "size": 339988517,
+  "version": "2.0.7",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.7/CarCareAIManager-Setup-2.0.7.exe",
+  "notes": "CarCare AI Manager 2.0.7\n\n- เช็คเวอร์ชันใหม่ทุก 15 นาที · ติดตั้งทันทีเมื่อทุกช่องว่าง 90 วินาที\n- หลังอัปเดตเสร็จ ตรวจกล้องทุกช่องทันที (นับรถที่เข้ามาจอดระหว่างอัปเดต)\n- วัดเวลาที่โปรแกรมปิดไประหว่างอัปเดต · นานเกิน 3 นาทีแจ้งกลุ่มให้ตรวจช่วงที่ไม่ได้นับ",
+  "sha256": "216c1bd7b305578a1bc2346270cc534b0354a1d74c31a769179baa3f07da3c32",
+  "size": 339992194,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
