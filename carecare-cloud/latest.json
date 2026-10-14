@@ -1,8 +1,8 @@
 {
-  "version": "2.0.7",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.7/CarCareAIManager-Setup-2.0.7.exe",
-  "notes": "CarCare AI Manager 2.0.7\n\n- เช็คเวอร์ชันใหม่ทุก 15 นาที · ติดตั้งทันทีเมื่อทุกช่องว่าง 90 วินาที\n- หลังอัปเดตเสร็จ ตรวจกล้องทุกช่องทันที (นับรถที่เข้ามาจอดระหว่างอัปเดต)\n- วัดเวลาที่โปรแกรมปิดไประหว่างอัปเดต · นานเกิน 3 นาทีแจ้งกลุ่มให้ตรวจช่วงที่ไม่ได้นับ",
-  "sha256": "216c1bd7b305578a1bc2346270cc534b0354a1d74c31a769179baa3f07da3c32",
-  "size": 339992194,
+  "version": "2.0.8",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.8/CarCareAIManager-Setup-2.0.8.exe",
+  "notes": "CarCare AI Manager 2.0.8\n\n- กล้องไม่ส่งภาพนานเกิน 10 นาที เปิดโปรแกรมใหม่เองเพื่อต่อกล้องใหม่ (ไม่เกินชั่วโมงละครั้ง · ไม่เกิน 3 ครั้งต่อวัน)\n- เปิดใหม่แล้วภาพกลับมา แจ้งกลุ่มว่ากลับมาปกติ",
+  "sha256": "e895ad1a1c62955bbe5b9eba347c8c1ff2c28ddc86d26de697c293a81eb00e91",
+  "size": 339989280,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
