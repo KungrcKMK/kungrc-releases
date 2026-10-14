@@ -1,8 +1,8 @@
 {
-  "version": "2.0.9",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.9/CarCareAIManager-Setup-2.0.9.exe",
-  "notes": "CarCare AI Manager 2.0.9\n\n- ค้นหากล้อง: เจอกล้องที่ปิด ONVIF ไว้ได้ด้วย (หาพอร์ต RTSP 554 ในวงแลน)\n- รีสตาร์ทเพราะกล้องหาย: ห่างกันอย่างน้อย 1 ชั่วโมงเสมอ ไม่เกิน 3 ครั้งต่อวัน",
-  "sha256": "c2225d5e8a212fbe3ea99475c1c20b343713360cb6b6adba5febc3c774b7ac29",
-  "size": 339996671,
+  "version": "2.0.10",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.10/CarCareAIManager-Setup-2.0.10.exe",
+  "notes": "CarCare AI Manager 2.0.10\n\n- กรอบป้ายทะเบียนบนภาพสด\n- รถจอดนิ่งแต่ยังไม่ถูกนับ ระบบตรวจซ้ำเองอัตโนมัติ",
+  "sha256": "2eb87474c419eddb17d2e2d18720f1659eff1ff24e6aec3e3ac9526e8dd9086b",
+  "size": 339998482,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
