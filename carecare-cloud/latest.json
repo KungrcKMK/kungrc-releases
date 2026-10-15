@@ -1,8 +1,8 @@
 {
-  "version": "2.0.16",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.16/CarCareAIManager-Setup-2.0.16.exe",
-  "notes": "CarCare AI Manager 2.0.16\n\n- หมุดจุดจอดเป็นสีเขียวเมื่อรถทับจุด\n- รูปในชุดข้อมูลป้ายเป็นรูปป้ายเท่านั้น",
-  "sha256": "bf80efff45a4df5ca542b8e5cc6f11f8797387a91f29ee96934af86231c5e836",
-  "size": 340107451,
+  "version": "2.0.17",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.17/CarCareAIManager-Setup-2.0.17.exe",
+  "notes": "CarCare AI Manager 2.0.17\n\n- ข้อความเปิดโปรแกรมตรวจป้ายทะเบียนไม่ค้างบนแถบล่าง",
+  "sha256": "4e9d8674e0cca6efa0755ae9509d155fa83ac71d0f5e94da2619a1f35cd30fcb",
+  "size": 340101375,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
