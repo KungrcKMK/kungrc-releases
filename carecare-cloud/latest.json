@@ -1,8 +1,8 @@
 {
-  "version": "2.0.14",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.14/CarCareAIManager-Setup-2.0.14.exe",
-  "notes": "CarCare AI Manager 2.0.14\n\n- 📍 จุดจอด: คลิกจุดเดียวบนภาพ แทนการลากกรอบช่องจอด\n- กันกรอบหลอกที่ขอบภาพไม่ให้นับเป็นรถ",
-  "sha256": "03472d7b7b8578f6fb4c9a26037df691f38c10c48a6089250783c5feb9f35f9f",
-  "size": 340009195,
+  "version": "2.0.15",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.15/CarCareAIManager-Setup-2.0.15.exe",
+  "notes": "CarCare AI Manager 2.0.15\n\n- เพิ่มส่วนเสริม \"อุปกรณ์ช่วยนับ\" (ปิดไว้เป็นค่าเริ่มต้น)\n- 📍 จุดจอด · กันกรอบหลอก · เตือนกล้องความละเอียดต่ำ",
+  "sha256": "7c7dc8a9de61d708cdd3dba1903afbb60b587f54b0a4ea78c434ef54fdb77434",
+  "size": 340097339,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
