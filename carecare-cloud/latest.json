@@ -1,8 +1,8 @@
 {
-  "version": "2.0.12",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.12/CarCareAIManager-Setup-2.0.12.exe",
-  "notes": "CarCare AI Manager 2.0.12\n\n- เตือนเมื่อกล้องส่งภาพความละเอียดต่ำ (ป้ายเล็กเกินอ่าน)\n- รถใหญ่ถึง % ที่ตั้งและอยู่ในช่อง เริ่มจับเวลานับทันที · กรอบป้ายบนภาพสด · ตรวจซ้ำรถจอดนิ่ง",
-  "sha256": "3bd6b68f2baf7f1bdecfb8cca9ed76ecde43713854a8bce0bac462fd17a23419",
-  "size": 340016401,
+  "version": "2.0.14",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.14/CarCareAIManager-Setup-2.0.14.exe",
+  "notes": "CarCare AI Manager 2.0.14\n\n- 📍 จุดจอด: คลิกจุดเดียวบนภาพ แทนการลากกรอบช่องจอด\n- กันกรอบหลอกที่ขอบภาพไม่ให้นับเป็นรถ",
+  "sha256": "03472d7b7b8578f6fb4c9a26037df691f38c10c48a6089250783c5feb9f35f9f",
+  "size": 340009195,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
