@@ -1,7 +1,7 @@
 {
-  "version": "2.0.16",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.16/CarCareAIManager-FromCount-Setup-2.0.16.exe",
+  "version": "2.0.17",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.17/CarCareAIManager-FromCount-Setup-2.0.17.exe",
   "notes": "เปลี่ยนเป็น CarCare AI Manager (QUICKY) — ใช้ชื่อสาขาและกล้องเดิม แล้วถอนโปรแกรมเดิมออกให้อัตโนมัติ",
-  "sha256": "442bc3c21aa8a635bc01aeb96a52b00ad8f6406011fae20d0dff0687a4d87e74",
-  "size": 340107543
+  "sha256": "efb86df15edfe5d01477232d447d9da92489b99778aa3f213756908eeefa2a64",
+  "size": 340101464
 }
