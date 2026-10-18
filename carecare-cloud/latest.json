@@ -1,8 +1,8 @@
 {
-  "version": "2.0.20",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.20/CarCareAIManager-Setup-2.0.20.exe",
-  "notes": "CarCare AI Manager 2.0.20\n\n- กล้องเปลี่ยน IP หลังไฟดับ: โปรแกรมหาและแก้ให้อัตโนมัติ",
-  "sha256": "0bb88da97343f3741c6cae7a6aa05a4807e1710357ed0c0b5209f24e95b4b6a8",
-  "size": 340144711,
+  "version": "2.0.21",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.21/CarCareAIManager-Setup-2.0.21.exe",
+  "notes": "CarCare AI Manager 2.0.21\n\n- จำรหัสกล้อง ค้นหากล้องได้ทันที\n- ชื่อช่องไม่ซ้อนคำ",
+  "sha256": "03506c3e22ed11fc3a2504ba3af1e6c0196fc4ea468560b85046ecfe6dc413b6",
+  "size": 340147814,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
