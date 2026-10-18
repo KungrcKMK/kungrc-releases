@@ -1,8 +1,8 @@
 {
-  "version": "2.0.21",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.21/CarCareAIManager-Setup-2.0.21.exe",
-  "notes": "CarCare AI Manager 2.0.21\n\n- จำรหัสกล้อง ค้นหากล้องได้ทันที\n- ชื่อช่องไม่ซ้อนคำ",
-  "sha256": "03506c3e22ed11fc3a2504ba3af1e6c0196fc4ea468560b85046ecfe6dc413b6",
-  "size": 340147814,
+  "version": "2.0.22",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.22/CarCareAIManager-Setup-2.0.22.exe",
+  "notes": "CarCare AI Manager 2.0.22\n\n- รถออกแล้วกรอบหายเร็ว ตัดงานก่อนคันใหม่เข้า\n- ปิดกรอบตรวจจับบนภาพสดเพื่อลด CPU ได้",
+  "sha256": "845e34bad0cf721da64ef50662529da2e33c6c5401604c864a900c9f04789973",
+  "size": 340161091,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
