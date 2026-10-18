@@ -1,8 +1,8 @@
 {
-  "version": "2.0.24",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.24/CarCareAIManager-Setup-2.0.24.exe",
-  "notes": "CarCare AI Manager 2.0.24\n\n- แก้โปรแกรมปิดเองระหว่างส่งรูปรถออก\n- ข้อความรถออกมีรูปครบ\n- เลือกกรอบบนภาพสดแยกได้",
-  "sha256": "e71766534cb94a678e02b17ca6fbed15587625e87d208ee29c8d88caff7acb9b",
-  "size": 340164045,
+  "version": "2.0.25",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.25/CarCareAIManager-Setup-2.0.25.exe",
+  "notes": "CarCare AI Manager 2.0.25\n\n- ประหยัดการอ่านทะเบียนซ้ำ\n- ลดการตัดงานผิด",
+  "sha256": "97f9391df190655e76493f6a944786e77a123f5a589903e5102c9a4017aafc18",
+  "size": 340176849,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
