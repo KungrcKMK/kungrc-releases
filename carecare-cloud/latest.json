@@ -1,8 +1,8 @@
 {
-  "version": "2.0.22",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.22/CarCareAIManager-Setup-2.0.22.exe",
-  "notes": "CarCare AI Manager 2.0.22\n\n- รถออกแล้วกรอบหายเร็ว ตัดงานก่อนคันใหม่เข้า\n- ปิดกรอบตรวจจับบนภาพสดเพื่อลด CPU ได้",
-  "sha256": "845e34bad0cf721da64ef50662529da2e33c6c5401604c864a900c9f04789973",
-  "size": 340161091,
+  "version": "2.0.23",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.23/CarCareAIManager-Setup-2.0.23.exe",
+  "notes": "CarCare AI Manager 2.0.23\n\n- กันนับคันเดิมซ้ำหลังเปิดโปรแกรมใหม่",
+  "sha256": "1aac20c8d0b11885360e9922235a40a4674b44cedc1fa59419fc570ee09e7e20",
+  "size": 340171171,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
