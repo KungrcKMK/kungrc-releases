@@ -1,8 +1,8 @@
 {
-  "version": "2.0.18",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.18/CarCareAIManager-Setup-2.0.18.exe",
-  "notes": "CarCare AI Manager 2.0.18\n\n- นับรถที่เปลี่ยนคันต่อกันทันทีได้ถูกต้องขึ้น (ยืนยันด้วยทะเบียน)\n- กรอบรถครอบได้คันเดียว\n- ข้อความรถออกแสดงระยะห่างจากคันก่อน",
-  "sha256": "4342a42ba01ca2d6885bb107b0fffc366b73f93d44a53a24339a8bf44e8db14f",
-  "size": 340114032,
+  "version": "2.0.19",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.19/CarCareAIManager-Setup-2.0.19.exe",
+  "notes": "CarCare AI Manager 2.0.19\n\n- กันนับรถคันเดิมซ้ำ เมื่ออ่านตัวอักษรทะเบียนเพี้ยน",
+  "sha256": "b4577aa527ff679c65a2c1f6ba8ab522c1fd628a55290bfd5902e6eb0f63c5bb",
+  "size": 340105674,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
