@@ -1,7 +1,7 @@
 {
-  "version": "1.0.2",
-  "notes": "ตาชั่งปากแจ๋ว 1.0.2\n- แก้เสียงพูดตกไปเป็นเสียง Windows: เสียงเปรมวดีบนเซิร์ฟเวอร์ Microsoft ช่วงนี้ไม่ส่งเสียงกลับบ่อย จึงเปลี่ยนค่าเริ่มต้นเป็นนิวัฒน์ (เสถียรและเร็วกว่า)\n- ถ้าเสียงที่เลือกไม่ตอบ จะสลับไปเสียงธรรมชาติอีกตัวก่อน แล้วค่อยใช้เสียง Windows\n- หน้าตั้งค่าบอกว่าพูดด้วยเสียงไหน และถ้าสลับเสียงเป็นเพราะอะไร",
-  "sha256": "c4d6476f550d22e8455971090cd309823c0a65c6ec78dc12ac9b70cc31f9bf03",
-  "size": 62253305,
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/tachang-v1.0.2/TaChangPakJaew-Setup-1.0.2.exe"
+  "version": "1.0.3",
+  "notes": "แก้เสียงพูดไม่เปลี่ยนตามที่เลือก (เซิร์ฟเวอร์เสียง Microsoft เปลี่ยน ทำให้ตกไปเสียง Windows ตลอด) · เพิ่มปุ่ม 🗑 ลบผลนี้ และลบแถวที่เลือกในแท็บประวัติ · ตัวกรอง ⚠ น่าสงสัย หาผลชั่งที่อาจไม่ใช่ของคนนั้น (แถวที่ลบเก็บสำรองไว้ใน history_deleted.csv)",
+  "sha256": "2f74de4238bba9543f40eb0c38c02c2bf98a62db90a2bf9d231a63d84e1608fd",
+  "size": 62271132,
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/tachang-v1.0.3/TaChangPakJaew-Setup-1.0.3.exe"
 }
