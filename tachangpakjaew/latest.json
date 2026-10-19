@@ -1,7 +1,7 @@
 {
-  "version": "1.0.3",
-  "notes": "แก้เสียงพูดไม่เปลี่ยนตามที่เลือก (เซิร์ฟเวอร์เสียง Microsoft เปลี่ยน ทำให้ตกไปเสียง Windows ตลอด) · เพิ่มปุ่ม 🗑 ลบผลนี้ และลบแถวที่เลือกในแท็บประวัติ · ตัวกรอง ⚠ น่าสงสัย หาผลชั่งที่อาจไม่ใช่ของคนนั้น (แถวที่ลบเก็บสำรองไว้ใน history_deleted.csv)",
-  "sha256": "2f74de4238bba9543f40eb0c38c02c2bf98a62db90a2bf9d231a63d84e1608fd",
-  "size": 62271132,
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/tachang-v1.0.3/TaChangPakJaew-Setup-1.0.3.exe"
+  "version": "1.0.4",
+  "notes": "กด 🔄 เช็คอัปเดตตอนนี้ แล้วถาม ",
+  "sha256": "eb98573a8bae5e8fac09afc7dfe8ab50567767b60b5d5ad7bd3c36553e07a851",
+  "size": 62265572,
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/tachang-v1.0.4/TaChangPakJaew-Setup-1.0.4.exe"
 }
