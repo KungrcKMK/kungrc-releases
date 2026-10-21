@@ -1,12 +1,12 @@
 {
  "app": "shottimer",
- "version": "1.4.0",
+ "version": "1.5.0",
  "files": {
   "board.html": "b930e5dfd790544983f00936fef5f0fce0a9bb00b79dfde31171c2d4f696bc9b",
   "board.webmanifest": "c81ed41c9efa7f2c349da59f56defd026cc645cc110e01d3cc23d71522f55f5c",
-  "css/app.css": "f3f25fa514e03ac24cc16411de2af7ca6ce825c67b36ff8d8e0c6f4eda75efe4",
-  "css/board.css": "f358af39aab0c2f6837e6f64422f9a31119b1108b1567392f95ede66dd576c27",
-  "css/public.css": "f9c9e1b71a8238bc2b16be9489353d1d696ffc8f6f95b2150207632b37583db4",
+  "css/app.css": "3615d17a31cdad371b51e39cf87b68cb5a9a61abd36e944a67bbc58eefb24af4",
+  "css/board.css": "eabff62402391060e0601cddde786f18445060cfe42613ec76cc13a414993d85",
+  "css/public.css": "3d9bf5eb0f7ecac2350a6e8998e1f8f093650575da1dfbbc8a06fd4e8c5e9751",
   "fonts/OFL-IBM-Plex.txt": "0eda9417087c7f8fd73ef70d2598e66bbf2e5fabc121fe796fa2e36b9eb16789",
   "fonts/ibm-plex-mono-latin-500-normal.woff2": "01d285447409c8a588692162439a038b8cbd7871309ee20267b0d2d91c6e8e22",
   "fonts/ibm-plex-sans-thai-latin-400-normal.woff2": "82ddd36544e4776857cce6ab26d0e509d10c1eeddf872c1b16f421489b0096a7",
@@ -15,8 +15,8 @@
   "fonts/ibm-plex-sans-thai-thai-600-normal.woff2": "ea935955dc3bccb684f8fb772dbd429250dd0d3dfee9483995a3ee3456471df8",
   "icons/icon-192.png": "0fd5054ada7dc58a4b33c97b5c48f5bcd481c5bcd75781d66dd75965f29cc81f",
   "icons/icon-512.png": "4072943d505bc3c7e3bea4130c0d478c494ca02e9bf6aa31f592c9d2449f2f6f",
-  "index.html": "5bb30de5f99510c662b4aaf085f263f668ed98c9cf1ad37a0962e56377ac6829",
-  "js/app.js": "55e3472cda88756fb0fcf5c372db86174d01cbb59c0a43b25c7c7f9c1fe28f10",
+  "index.html": "93ea6abcd7bb306f7a87879ee3a156fdbb517565dc151b29769ade61b67cb154",
+  "js/app.js": "1ea62db0485894be3ed0d67ab8cc5de492c3d491ef608af02b6ab997fcc5f955",
   "js/audio.js": "4c5a77eab89862650068f37d4ae8e8ae6e1c8c45bb9529a91b76824f81fca38d",
   "js/banners.js": "62fc0848afd0238f2d26adb089d1abe6726383bb3b015577a551429c27cabf09",
   "js/board.js": "0a0c076bf0a4c4ccda1fe2a62b3c26c6fd9989fb7ec18054440b6c14573cc8f4",
@@ -26,7 +26,7 @@
   "js/drill.js": "54f2cc15cc74511b9dc49c4ef37a90993cca31ec5b4bfed7cedc0af3540d6e71",
   "js/license-key.js": "4df22676ccdb57fa0afed0d4a17507ae9f06fc1f3b33cdeba969341776e1b9e8",
   "js/license.js": "c167db53c2bc28f000c209f6c418fa20ff68f60eab55d05db9eecfd0331b0d8e",
-  "js/live.js": "2b3dc1ea9ef32afe644a08e4c08118c95c4f6116bdd38f0271cbfbdebf9d217c",
+  "js/live.js": "9ab8d48cba367765c8f9a1534867c8439364b01e707d5a5c1f7f84e3efe517d5",
   "js/mic-profiles.js": "eddfc8a996f594aa997a37ed8c8ede2455660f006d71951e7236223fdbeb2979",
   "js/mic-test.js": "aea41aa3904fa36f8a0388a5d0507e9cac944e5d00241df7784eb817df4a4d12",
   "js/promptpay.js": "ab966f52fb6310a85c7747d0eaf82de0593deab3943dbe83b00e88d023518bee",
@@ -47,9 +47,9 @@
   "live.html": "b0e80601ff43df4f69ea17233e51161e322ceac192a0419f3c808121217255ad",
   "manifest.webmanifest": "cdf440edd103e156a8bd9c1a5ab2f5d2e30473a0d93b085369dd47fd8a63cf1d",
   "register.html": "81a6345f64cb043e1024bec4730d39ba218de9fdc89d7ae6bb4ce52c6595ed73",
-  "version.js": "c438aa95d36a0043789f87a546194f90169921e679eb406252b0a1a46432b7c0"
+  "version.js": "4a3836d94d36435e13730914b63a159c7f044f7f9a6d351c3c34adf8e5f61656"
  },
- "size": 688278,
- "notes": "แก้ความปลอดภัย: ปิดช่องฝังสคริปต์บนหน้าผลสด · กันเดารหัสอีเมล · มือถือส่งผลไม่ค้าง (ผลที่คลาวด์ไม่รับพักไว้พร้อมเหตุผล) · ผลที่ผู้จัดแก้ขึ้นถูกต้องแม้นาฬิกามือถือเพี้ยน และมือถือไม่ทับ · หน้าคอมดึงผลสดเฉพาะที่เปลี่ยน (เร็วขึ้น ประหยัดเน็ต)",
+ "size": 699449,
+ "notes": "มือถือจัดอันดับเองได้ (รวมแมตช์ · รายด่าน · แยกประเภทตามกติกา IPSC) · ปุ่มเห็นครบไม่ต้องเลื่อน กว้างเท่ากัน · \"รวม\" ปุ่มใหญ่เต็มแถว ด่านอยู่แถวเดียวกัน",
  "webapp_url": ""
 }
