@@ -1,8 +1,8 @@
 {
-  "version": "2.0.26",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.26/CarCareAIManager-Setup-2.0.26.exe",
-  "notes": "CarCare AI Manager 2.0.26\n\n- นับรถที่จอดต่อกันในช่องเดียวกันได้แม่นขึ้น (ไม่รวมหลายคันเป็นงานเดียว)\n- ภาพกล้องไม่ค้างถาวรเมื่อหน้าจอติดงาน\n- กรอบทองบนรูปรถลูกค้าเดิม\n- ส่งล็อกเมื่อโปรแกรมหลุด เพื่อแก้ไขได้เร็วขึ้น",
-  "sha256": "7aeab82ff3d6d7826918f1059f02ddd16600a1833568152b4500b6c3072d2af4",
-  "size": 340187995,
+  "version": "2.0.27",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.27/CarCareAIManager-Setup-2.0.27.exe",
+  "notes": "CarCare AI Manager 2.0.27\n\n- อัปเดตไม่สำเร็จ โปรแกรมเปิดกลับมาเองทุกครั้ง\n- กันนับรถเกินจากแถวที่รอยกเลิกตอนปิดโปรแกรม\n- ไม่เก็บรูปที่ส่งแล้วค้างในเครื่อง (ประหยัดพื้นที่)\n- งานล้างรถยาวไม่ถูกตัดหลังเปิดโปรแกรมใหม่\n- อุปกรณ์ช่วยนับ: ตามหาบอร์ดเองเมื่อ IP เปลี่ยน",
+  "sha256": "6752eb2ce236948b2d316d9534b95d2e4ac7a21ee3d3c20d89afc401b10c73d2",
+  "size": 340195573,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
