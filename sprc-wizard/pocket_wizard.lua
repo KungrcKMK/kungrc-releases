@@ -30,8 +30,17 @@ local CURVE_EXPO, CURVE_CUSTOM = 1, 3   -- myeeprom.h CurveRefType: DIFF, EXPO, 
 -- Ail/Ele/Thr/Rud, and the team's robots are driven from Ele + Ail (right
 -- stick only). The plan carries placeholders; the real index is looked up by
 -- name at apply time, so the same file also works if the sticks are changed.
-local IN_TH, IN_ST, IN_WPN = -1, -2, -3
-local inThr, inStr, inWpn = 0, 1, nil
+local IN_TH, IN_ST, IN_WPN, IN_ROT = -1, -2, -3, -4
+local inThr, inStr, inWpn, inRot = 0, 1, nil, nil
+
+-- Omni and mecanum: one row per wheel, numbered clockwise from the front left. CH3
+-- stays free for the weapon. { channel, fwd, strafe, rotate } as stick percentages.
+-- Never a wheel on CH5: ELRS sends it as a 2-position arm switch, so the wheel would
+-- slam between full forward and full reverse. CH6 is proportional, but only in
+-- Full Res 8ch mode, and the review screen says so.
+local OMNI4 = { { 1, 100, 100, 100 }, { 2, 100, -100, -100 }, { 4, 100, 100, -100 }, { 6, 100, -100, 100 } }
+local WHEELS = { Omni3 = { { 1, 100, 0, 100 }, { 2, -50, 87, 100 }, { 4, -50, -87, 100 } },
+                 Omni4 = OMNI4, Mecanum = OMNI4 }
 
 -- Switch mix sources are NOT exported as constants on every build: the
 -- MIXSRC_* list is generated per radio (lua_mixsrc.inc), so the switch
@@ -93,21 +102,29 @@ local dzFailed = false
 -- 80% throttle / 50% steering rates, and motors corrected in hardware
 -- rather than in the mix so every model file looks the same.
 -- `sec` is the page a row sits on. `tank` is its label in Tank drive; `arcade`
--- rows do nothing in Tank drive and are hidden there.
+-- rows do nothing in Tank drive and are hidden there. `omni` is a row's label on
+-- omni and mecanum wheels; `omniOnly` and `noOmni` rows exist on one side of that line.
 local OPTS = {
-  { key="drive",   sec="Drive",  txt="Drive",          v=1, list={ "Arcade","Tank" } },
+  { key="drive",   sec="Drive",  txt="Drive",          v=1, list={ "Arcade","Tank","Omni3","Omni4","Mecanum" } },
   { key="thrIn",   sec="Drive",  txt="Fwd-Back stick", tank="L wheel stick", v=3, list={ "TH","Thr","Ele","Ail","Rud" } },
-  { key="strIn",   sec="Drive",  txt="L-R stick",      tank="R wheel stick", v=3, list={ "ST","Rud","Ail","Ele","Thr" } },
-  { key="revL",    sec="Drive",  txt="L wheel rev",    v=1, list=YN },
-  { key="revR",    sec="Drive",  txt="R wheel rev",    v=1, list=YN },
-  { key="invSw",   sec="Drive",  txt="Flip sw",        v=flipAt, list=FLIP },   -- default on Pocket: SA
+  { key="strIn",   sec="Drive",  txt="L-R stick",      tank="R wheel stick", omni="Strafe stick", v=3, list={ "ST","Rud","Ail","Ele","Thr" } },
+  { key="rotIn",   sec="Drive",  txt="Rotate stick",   omniOnly=true, v=1, list={ "Rud","Ail","Ele","Thr" } },
+  { key="revL",    sec="Drive",  txt="L wheel rev",    noOmni=true, v=1, list=YN },
+  { key="revR",    sec="Drive",  txt="R wheel rev",    noOmni=true, v=1, list=YN },
+  { key="invSw",   sec="Drive",  txt="Flip sw",        noMecanum=true, v=flipAt, list=FLIP },   -- default on Pocket: SA
+  { key="rev1",    sec="Wheels", txt="Wheel 1 rev",    omniOnly=true, v=1, list=YN },
+  { key="rev2",    sec="Wheels", txt="Wheel 2 rev",    omniOnly=true, v=1, list=YN },
+  { key="rev3",    sec="Wheels", txt="Wheel 3 rev",    omniOnly=true, v=1, list=YN },
+  { key="rev4",    sec="Wheels", txt="Wheel 4 rev",    omniOnly=true, wheel4=true, v=1, list=YN },
   { key="thrRate", sec="Rates",  txt="Fwd-Back rate",  tank="Wheel rate", num=true, val=80,  min=1, max=100 },
-  { key="strRate", sec="Rates",  txt="L-R rate",       arcade=true, num=true, val=50,  min=1, max=100 },
-  { key="turn",    sec="Rates",  txt="Turn rate",      arcade=true, num=true, val=100, min=1, max=100 },
+  { key="strRate", sec="Rates",  txt="L-R rate",       arcade=true, omni="Strafe rate", num=true, val=50,  min=1, max=100 },
+  { key="turn",    sec="Rates",  txt="Turn rate",      arcade=true, omni="Rotate rate", num=true, val=100, min=1, max=100 },
+  { key="spdSw",   sec="Rates",  txt="Speed sw",       v=1, list=SW0 },
+  { key="spdLow",  sec="Rates",  txt="Low speed",      num=true, val=50, min=10, max=100, step=2 },
   { key="thrExpo", sec="Feel",   txt="Fwd-Back expo",  tank="Wheel expo", num=true, val=0, min=0, max=100 },
-  { key="strExpo", sec="Feel",   txt="L-R expo",       arcade=true, num=true, val=0, min=0, max=100 },
+  { key="strExpo", sec="Feel",   txt="L-R expo",       arcade=true, omni="Strafe expo", num=true, val=0, min=0, max=100 },
   { key="dzT",     sec="Feel",   txt="Fwd-Back dead",  tank="L wheel dead", num=true, val=0, min=0, max=25, zero="No" },
-  { key="dzS",     sec="Feel",   txt="L-R dead",       tank="R wheel dead", num=true, val=0, min=0, max=25, zero="No" },
+  { key="dzS",     sec="Feel",   txt="L-R dead",       tank="R wheel dead", omni="Strafe dead", num=true, val=0, min=0, max=25, zero="No" },
   { key="wpn",     sec="Weapon", txt="Weapon",         num=true, val=100, min=0, max=100, zero="No" },
   { key="wpnSw",   sec="Weapon", txt="Weapon src",     v=#WSRC, list=WSRC },   -- default: Thr stick
   { key="wpnDir",  sec="Weapon", txt="Weapon ESC",     v=1, list={ "Norm", "Rev" } },
@@ -139,6 +156,15 @@ local function swSrc(name)
 end
 
 local function tank() return O("drive") == "Tank" end
+
+local function omni() return WHEELS[O("drive")] end
+
+-- Upside down, the rollers of a mecanum wheel lean the other way: X becomes O and
+-- strafing stops working, so Flip is an omni and two-wheel idea only.
+local function flipName()
+  if O("drive") == "Mecanum" then return "No" end
+  return O("invSw")
+end
 
 -- Tank drive needs both vertical sticks, and Thr is one of them, so the weapon
 -- moves off that stick and onto a switch (SB: off, half, full).
@@ -173,10 +199,27 @@ local function findClash(p)
     seen[src] = true
   end
   -- the stick can be double-booked too: weapon on Thr while Thr also drives
-  if O("wpnSw") == "Thr stick" and (O("thrIn") == "Thr" or O("strIn") == "Thr") then
+  if O("wpnSw") == "Thr stick" and (O("thrIn") == "Thr" or O("strIn") == "Thr"
+                                    or (omni() and O("rotIn") == "Thr")) then
     return "CLASH: Thr stick"
   end
   return nil
+end
+
+-- Speed switch: up is the full rate, down is Low speed. It scales the whole wheel
+-- channel, last in line, and weight and offset make the switch read 1 up and Low speed
+-- down. Low speed moves in steps of 2 so the weight stays a whole number.
+local function speedLine()
+  local sp = swSrc(O("spdSw"))
+  if sp == nil then return nil end
+  local w = math.floor((num("spdLow") - 100) / 2)
+  return { sp, w, "Speed", MULT, 100 + w }
+end
+
+local function speeded(m)
+  local s = speedLine()
+  if s ~= nil then m[#m + 1] = s end
+  return m
 end
 
 -- ---------------------------------------------------------------- build plan
@@ -200,7 +243,7 @@ local function buildPlan()
   -- (-100, also where a momentary rests) normal driving.
   -- Tank drive is the same split written with sticks: fwd/back is the sticks'
   -- half sum, turn their half difference. Those add back to one stick per wheel.
-  local iv = swSrc(O("invSw"))
+  local iv = swSrc(flipName())
   local function side(s, dir)        -- dir: +1 left wheel, -1 right wheel
     local m
     if tk then
@@ -215,10 +258,24 @@ local function buildPlan()
     else
       m[#m + 1] = { IN_ST, dir * s * t, "Turn" }
     end
-    return m
+    return speeded(m)
   end
-  ch(1, "Drive L", side(sL, 1))
-  ch(2, "Drive R", side(sR, -1))
+  if omni() then
+    -- Same split as above: only fwd/back goes through Flip, strafe and rotate come
+    -- after it. An omni wheel's force flips with the side it touches the floor on.
+    for i, w in ipairs(omni()) do
+      local s = (O("rev" .. i) == "Yes") and -1 or 1
+      local m = { { IN_TH, s * w[2], "Fwd" } }
+      if iv then m[#m + 1] = { iv, -100, "Flip", MULT } end
+      if w[3] ~= 0 then m[#m + 1] = { IN_ST, s * w[3], "Strf" } end
+      m[#m + 1] = { IN_ROT, s * w[4], "Rot" }
+      ch(w[1], "Wheel " .. i, speeded(m))
+      p[#p].quiet = true
+    end
+  else
+    ch(1, "Drive L", side(sL, 1))
+    ch(2, "Drive R", side(sR, -1))
+  end
 
   -- Weapon 0% means no weapon channel at all, rather than a dead 0-weight
   -- mix sitting on a channel the receiver still has to drive.
@@ -264,6 +321,7 @@ end
 local function resolveSrc(src)
   if src == IN_TH then return MIXSRC_FIRST_INPUT + inThr end
   if src == IN_ST then return MIXSRC_FIRST_INPUT + inStr end
+  if src == IN_ROT then return MIXSRC_FIRST_INPUT + inRot end
   if src == IN_WPN then
     if inWpn == nil then return nil end
     return MIXSRC_FIRST_INPUT + inWpn
@@ -314,6 +372,7 @@ local function applyPlan()
   model.defaultInputs()
   inThr = findInput(O("thrIn")) or 0
   inStr = findInput(O("strIn")) or 1
+  inRot = omni() and findInput(O("rotIn")) or 3
   inWpn = findInput("Thr")          -- may be nil: then no weapon channel
   setInputRate(inThr, num("thrRate"), num("thrExpo"), 0, num("dzT"))
   if tank() then
@@ -321,6 +380,7 @@ local function applyPlan()
   else
     setInputRate(inStr, num("strRate"), num("strExpo"), 1, num("dzS"))
   end
+  if omni() then setInputRate(inRot, num("turn"), 0, 2, 0) end
   model.deleteMixes()
   for _, c in ipairs(plan) do
     for j, m in ipairs(c.mixes) do
@@ -379,8 +439,8 @@ local function held(e) return e == EVT_VIRTUAL_INC_REPT or e == EVT_VIRTUAL_DEC_
 -- Holding the key steps by 5 so 1..100 stays usable on a two-button radio.
 local function bump(o, dir, fast)
   if o.num then
-    local step = 1
-    if fast then step = 5 end
+    local step = o.step or 1
+    if fast then step = step * 5 end
     o.val = o.val + dir * step
     if o.val > o.max then o.val = o.max end
     if o.val < o.min then o.val = o.min end
@@ -404,13 +464,16 @@ end
 local function rows()
   local t = {}
   for _, o in ipairs(OPTS) do
-    if not (o.arcade and tank()) then t[#t + 1] = o end
+    local hide = (o.arcade and tank()) or (o.omniOnly and not omni()) or (o.noOmni and omni())
+              or (o.wheel4 and O("drive") == "Omni3") or (o.noMecanum and O("drive") == "Mecanum")
+    if not hide then t[#t + 1] = o end
   end
   return t
 end
 
 local function label(o)
   if o.tank ~= nil and tank() then return o.tank end
+  if o.omni ~= nil and omni() then return o.omni end
   return o.txt
 end
 
@@ -450,16 +513,27 @@ end
 
 local function drawReview()
   lcd.clear()
-  title((tank() and "Tank" or "Robot") .. " channels", pageCount, pageCount)
+  title((O("drive") == "Arcade" and "Robot" or O("drive")) .. " channels", pageCount, pageCount)
   local y = 2
   local function line(a, b)
     y = y + 9
     text(2, y, a, 0)
     if b ~= nil then text(VALX, y, b, 0) end
   end
-  for _, c in ipairs(plan) do line("CH" .. c.num .. " " .. c.name, c.note) end
-  if O("invSw") ~= "No" then line("Flip sw", O("invSw")) end
+  if omni() then line(O("drive") == "Omni3" and "CH1 2 4 wheels" or "CH1 2 4 6 wheels", nil) end
+  for _, c in ipairs(plan) do
+    if not c.quiet then line("CH" .. c.num .. " " .. c.name, c.note) end
+  end
+  local flip, speed = flipName(), O("spdSw")
+  if flip ~= "No" and speed ~= "No" then
+    line("Flip Speed", flip .. " " .. speed)      -- one row: the last row of the screen is the bar
+  elseif flip ~= "No" then
+    line("Flip sw", flip)
+  elseif speed ~= "No" then
+    line("Speed sw", speed)
+  end
   if num("dzT") + num("dzS") > 0 then line("Dead zone", num("dzT") .. "/" .. num("dzS") .. "%") end
+  if omni() and O("drive") ~= "Omni3" then line("ELRS mode", "8ch Full") end
   bar(56)
   text(1, 56, clashSw or "[Long Enter] apply", INVERS)
 end
