@@ -1,12 +1,15 @@
-local toolName = "TNS|SPRC Pocket Wiz|TNE"
+local toolName = "TNS|SPRC Robot Wiz|TNE"
 
 ---- #########################################################################
----- # TeamSPRC Robot -- POCKET build. Fighting-robot setup only.            #
+---- # TeamSPRC Robot -- stick radios: Pocket, TX15, TX16S, TX16S MK3.        #
+---- # Fighting-robot setup only. The file keeps its Pocket name so a card    #
+---- # that already has it is overwritten, not left with two wizards.         #
 ---- #                                                                       #
 ---- # Installed alongside the stock aircraft wizard, which this radio still  #
 ---- # needs, so nothing here touches SCRIPTS/WIZARD.                        #
 ---- # Car / crawler / tank / boat are stripped out: on the Pocket the only   #
 ---- # surface models are robots, so there is nothing to choose between.      #
+---- # Only the Pocket and EdgeTX 2.10 have been tried on a real radio.       #
 ---- # License GPLv2: http://www.gnu.org/licenses/gpl-2.0.html                #
 ---- #                                                                       #
 ---- # WARNING: applying overwrites ALL inputs and mixes of the CURRENT       #
@@ -35,27 +38,43 @@ local inThr, inStr, inWpn = 0, 1, nil
 -- constants exist on one handset and are nil on the next -- which is exactly
 -- how this crashed. getFieldInfo resolves a switch by name on any radio
 -- ("sa".."sz"), so ask the radio once, at load, what it actually has.
-local SW, SW0, SWSRC, ISSW = {}, { "No" }, {}, {}
+local SW, SW0, SWSRC, ISSW, SWINFO = {}, { "No" }, {}, {}, {}
 if getFieldInfo ~= nil then
   for i = 0, 25 do
     local key = "s" .. string.char(97 + i)
     local fi = getFieldInfo(key)
-    if fi ~= nil and fi.id ~= nil then
+    -- EdgeTX 2.12 also says how each switch is set up. Type 0 is switched off.
+    local si = nil
+    if fi ~= nil and fi.id ~= nil and getSwitchInfo ~= nil then si = getSwitchInfo(fi.id) end
+    if fi ~= nil and fi.id ~= nil and (si == nil or si.type ~= 0) then
       local nm = string.upper(key)
       SW[#SW + 1]   = nm
       SW0[#SW0 + 1] = nm
       SWSRC[nm]     = fi.id
       ISSW[fi.id]   = true
+      SWINFO[nm]    = si
     end
   end
 end
 if #SW == 0 then SW[1] = "n/a" end
 
 -- Flip multiplies throttle by the switch, so a 3-position switch would cut all
--- throttle in its middle position. Those two are left out of the Flip list.
-local POS3, FLIP = { SB = true, SC = true }, { "No" }
+-- throttle in its middle position. Those are left out of the Flip list: EdgeTX
+-- 2.12 says which they are, and older firmware gets the radio's stock layout.
+-- A colour radio's front buttons can be chosen, but Flip never starts on one.
+local _, RADIO = getVersion()
+local POS3 = { SB = true, SC = true }
+if string.find(RADIO, "tx16", 1, true) then
+  POS3 = { SA = true, SB = true, SC = true, SD = true, SE = true, SG = true }
+end
+local FLIP, flipAt = { "No" }, 1
 for _, nm in ipairs(SW) do
-  if not POS3[nm] and nm ~= "n/a" then FLIP[#FLIP + 1] = nm end
+  local si, pos3 = SWINFO[nm], POS3[nm]
+  if si ~= nil then pos3 = si.type == 3 end
+  if not pos3 and nm ~= "n/a" then
+    FLIP[#FLIP + 1] = nm
+    if flipAt == 1 and not (si ~= nil and si.isCustomisableSwitch) then flipAt = #FLIP end
+  end
 end
 
 -- The weapon may hang off a switch or off the Thr stick, which on this radio
@@ -81,7 +100,7 @@ local OPTS = {
   { key="strIn",   sec="Drive",  txt="L-R stick",      tank="R wheel stick", v=3, list={ "ST","Rud","Ail","Ele","Thr" } },
   { key="revL",    sec="Drive",  txt="L wheel rev",    v=1, list=YN },
   { key="revR",    sec="Drive",  txt="R wheel rev",    v=1, list=YN },
-  { key="invSw",   sec="Drive",  txt="Flip sw",        v=math.min(2, #FLIP), list=FLIP },   -- default: SA
+  { key="invSw",   sec="Drive",  txt="Flip sw",        v=flipAt, list=FLIP },   -- default on Pocket: SA
   { key="thrRate", sec="Rates",  txt="Fwd-Back rate",  tank="Wheel rate", num=true, val=80,  min=1, max=100 },
   { key="strRate", sec="Rates",  txt="L-R rate",       arcade=true, num=true, val=50,  min=1, max=100 },
   { key="turn",    sec="Rates",  txt="Turn rate",      arcade=true, num=true, val=100, min=1, max=100 },
@@ -315,7 +334,41 @@ end
 
 -- --------------------------------------------------------------------- UI
 -- One page per section, so a group of settings is seen whole and nothing scrolls.
+-- Every screen is laid out on a mono radio's 128x64 grid and a colour radio scales
+-- that grid up. Colour EdgeTX has no drawScreenTitle, but a flags-0 rectangle and
+-- the box behind INVERS text come out the same colour there, whatever the theme,
+-- so a bar still reads as one solid row.
 local VIS, VALX = 6, 78     -- rows that fit on a 128x64 screen, value column
+local MONO = lcd.drawScreenTitle ~= nil
+local FONT, BIG, TOP = 0, DBLSIZE, 0
+
+local function gx(v) return math.floor(v * LCD_W / 128) end
+local function gy(v) return math.floor(v * LCD_H / 64) end
+
+if not MONO then
+  FONT, BIG = MIDSIZE, DBLSIZE
+  if LCD_W >= 800 then FONT, BIG = DBLSIZE, XXLSIZE end
+  local _, h = lcd.sizeText("Ag", FONT)
+  TOP = math.floor((gy(7) - h) / 2)      -- centres the text on its 9-tall row
+end
+
+local function text(x, y, s, f, big)
+  lcd.drawText(gx(x), gy(y) + TOP, s, f + (big and BIG or FONT))
+end
+
+local function bar(y)                    -- one full-width row, y is its text line
+  lcd.drawFilledRectangle(0, gy(y - 1), LCD_W, gy(9), 0)
+end
+
+local function title(s, idx, cnt)
+  if MONO then
+    lcd.drawScreenTitle(s, idx, cnt)
+    return
+  end
+  lcd.drawFilledRectangle(0, 0, LCD_W, gy(8), 0)     -- a gap, or it merges with a selected first row
+  text(2, 1, s, INVERS)
+  lcd.drawText(gx(126), gy(1) + TOP, idx .. "/" .. cnt, FONT + INVERS + RIGHT)
+end
 
 local function inc(e) return e == EVT_VIRTUAL_INC or e == EVT_VIRTUAL_INC_REPT end
 local function dec(e) return e == EVT_VIRTUAL_DEC or e == EVT_VIRTUAL_DEC_REPT end
@@ -367,13 +420,13 @@ end
 local function drawRow(o, y, sel)
   local fl, vf = 0, 0
   if sel and not edit then
-    lcd.drawFilledRectangle(0, y - 1, LCD_W, 9, 0)
+    bar(y)
     fl, vf = INVERS, INVERS
   elseif sel then
     vf = INVERS + BLINK
   end
-  lcd.drawText(2, y, label(o), fl)
-  lcd.drawText(VALX, y, shown(o), vf)
+  text(2, y, label(o), fl)
+  text(VALX, y, shown(o), vf)
 end
 
 local function drawOptions()
@@ -387,28 +440,28 @@ local function drawOptions()
   end
   pageCount = secs + 1              -- the review page
   lcd.clear()
-  lcd.drawScreenTitle("Robot " .. sec, here, pageCount)
+  title("Robot " .. sec, here, pageCount)
   for r, i in ipairs(view) do
     drawRow(list[i], 1 + r * 9, i - 1 == cursor)
   end
-  if #view < VIS then lcd.drawText(2, LCD_H - 8, "Hold ENTER: review", 0) end
+  if #view < VIS then text(2, 56, "Hold ENTER: review", 0) end
   return list
 end
 
 local function drawReview()
   lcd.clear()
-  lcd.drawScreenTitle((tank() and "Tank" or "Robot") .. " channels", pageCount, pageCount)
+  title((tank() and "Tank" or "Robot") .. " channels", pageCount, pageCount)
   local y = 2
   local function line(a, b)
     y = y + 9
-    lcd.drawText(2, y, a, 0)
-    if b ~= nil then lcd.drawText(VALX, y, b, 0) end
+    text(2, y, a, 0)
+    if b ~= nil then text(VALX, y, b, 0) end
   end
   for _, c in ipairs(plan) do line("CH" .. c.num .. " " .. c.name, c.note) end
   if O("invSw") ~= "No" then line("Flip sw", O("invSw")) end
   if num("dzT") + num("dzS") > 0 then line("Dead zone", num("dzT") .. "/" .. num("dzS") .. "%") end
-  lcd.drawFilledRectangle(0, LCD_H - 9, LCD_W, 9, 0)
-  lcd.drawText(1, LCD_H - 8, clashSw or "[Long Enter] apply", INVERS)
+  bar(56)
+  text(1, 56, clashSw or "[Long Enter] apply", INVERS)
 end
 
 -- Failsafe lives on the RECEIVER with ELRS. EdgeTX's crossfire driver has no
@@ -416,11 +469,11 @@ end
 -- pointing the user at Model Setup would send them to a dead end.
 local function drawDone()
   lcd.clear()
-  lcd.drawScreenTitle("SPRC Pocket Wizard", pageCount, pageCount)
-  lcd.drawText(16, 10, "FAILSAFE!", DBLSIZE + INVERS)
-  lcd.drawText(2, 30, "Set it on the RX:", 0)
-  lcd.drawText(2, 39, "ELRS Lua or 10.0.0.1", 0)
-  lcd.drawText(2, 52, dzFailed and "Dead zone NOT set" or "Then set OUTPUTS", 0)
+  title("SPRC Robot Wizard", pageCount, pageCount)
+  text(16, 10, "FAILSAFE!", INVERS, true)
+  text(2, 30, "Set it on the RX:", 0)
+  text(2, 39, "ELRS Lua or 10.0.0.1", 0)
+  text(2, 52, dzFailed and "Dead zone NOT set" or "Then set OUTPUTS", 0)
 end
 
 -- ------------------------------------------------------------------- main
