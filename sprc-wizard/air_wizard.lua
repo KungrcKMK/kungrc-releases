@@ -17,7 +17,7 @@ local toolName = "TNS|SPRC Air Wiz|TNE"
 ---- #########################################################################
 
 local REPLACE = 2                       -- MixerMultiplex: ADD, MULTIPLY, REPLACE
-local CURVE_CUSTOM = 3                  -- CurveRefType: DIFF, EXPO, FUNC, CUSTOM
+local CURVE_DIFF, CURVE_CUSTOM = 0, 3   -- CurveRefType: DIFF, EXPO, FUNC, CUSTOM
 local UP, MID, DOWN = 1, 2, 3
 
 local T_DRONE, T_PLANE, T_DELTA, T_HELI = 0, 1, 2, 3
@@ -107,12 +107,19 @@ local OPTS = {
     swRow("ch8", "CH8 sw", "SD"), swRow("ch9", "CH9 sw", "SE"),
     { key="ch10", txt="CH10 pot", v=#POTS, list=POTS },
   }),
-  [T_PLANE] = section("Setup", {
-    { key="ail2", txt="2nd aileron", v=1, list=YN },
-    swRow("flap", "Flap sw", "No"),
-    { key="vtail", txt="V-tail", v=1, list=YN },
-    swRow("cut", "Thr cut", "SA"),
-  }),
+  [T_PLANE] = joined(
+    section("Setup", {
+      { key="ail2", txt="2nd aileron", v=1, list=YN },
+      swRow("flap", "Flap sw", "No"),
+      { key="vtail", txt="V-tail", v=1, list=YN },
+      swRow("cut", "Thr cut", "SA"),
+    }),
+    section("Mixes", {
+      { key="flpr", txt="Flaperon", num=true, val=0, min=0, max=100, step=2, zero="No" },
+      { key="diff", txt="Ail diff", num=true, val=0, min=-100, max=100, zero="No" },
+      { key="a2r", txt="Ail>Rud", num=true, val=0, min=0, max=100, step=2, zero="No" },
+    })
+  ),
   [T_DELTA] = section("Setup", {
     { key="revL", txt="L elevon rev", v=1, list=YN },
     { key="revR", txt="R elevon rev", v=1, list=YN },
@@ -195,18 +202,46 @@ local function droneChannels(ch)
   if O("ch10") ~= "No" then ch(10, { line(POT.id, 100, "CH10") }) end
 end
 
+-- Flaperon and differential need a servo per wing, so both only act with 2nd aileron.
+-- EdgeTX runs differential after the weight and cuts the negative side, so the same
+-- number suits both wings; a model that travels the wrong way takes a negative one.
+local function flaperon()
+  return yes("ail2") and O("flap") ~= "No" and num("flpr") > 0
+end
+
+local function differential()
+  return yes("ail2") and num("diff") ~= 0
+end
+
+local function aileron(weight, name)
+  return line("Ail", weight, name, differential() and { diff=num("diff") } or nil)
+end
+
 local function planeChannels(ch)
-  ch(1, { line("Ail", 100, "Ail") })
-  ch(3, throttle({ line("Thr", 100, "Thr") }))
-  if yes("vtail") then
-    ch(2, { line("Ele", 50, "VtL"), line("Rud", 50, "VtL") })
-    ch(4, { line("Ele", 50, "VtR"), line("Rud", -50, "VtR") })
-  else
-    ch(2, { line("Ele", 100, "Ele") })
-    ch(4, { line("Rud", 100, "Rud") })
+  local turn = math.floor(num("a2r") / 2)
+  local wing1, wing2 = { aileron(100, "Ail") }, { aileron(-100, "Ail2") }
+  if flaperon() then
+    -- up 0, down the full droop: the second servo mirrors the first
+    local f, src = math.floor(num("flpr") / 2), SWSRC[O("flap")]
+    wing1[2] = line(src, f, "Flpr", { offset=f })
+    wing2[2] = line(src, -f, "Flpr", { offset=-f })
   end
+  ch(1, wing1)
+  ch(3, throttle({ line("Thr", 100, "Thr") }))
+  local left, right
+  if yes("vtail") then
+    left, right = { line("Ele", 50, "VtL"), line("Rud", 50, "VtL") }, { line("Ele", 50, "VtR"), line("Rud", -50, "VtR") }
+    if turn > 0 then
+      left[3], right[3] = line("Ail", turn, "A>R"), line("Ail", -turn, "A>R")
+    end
+  else
+    left, right = { line("Ele", 100, "Ele") }, { line("Rud", 100, "Rud") }
+    if turn > 0 then right[2] = line("Ail", 2 * turn, "A>R") end
+  end
+  ch(2, left)
+  ch(4, right)
   if O("flap") ~= "No" then ch(5, { line(SWSRC[O("flap")], 100, "Flap") }) end
-  if yes("ail2") then ch(6, { line("Ail", -100, "Ail2") }) end
+  if yes("ail2") then ch(6, wing2) end
 end
 
 local function deltaChannels(ch)
@@ -217,6 +252,9 @@ local function deltaChannels(ch)
   ch(3, throttle({ line("Thr", 100, "Thr") }))
 end
 
+-- ELRS sends CH5 as a 2-position arm switch, and CH6 up only as coarse, slow steps
+-- unless the module is set to Full Res 8ch. So nothing proportional goes on CH5, and
+-- the review screen says "8ch Full" beside anything on CH6 that flies the model.
 -- Flybarless: the controller on the heli does the swash, so the radio only sends
 -- sticks, a throttle curve and a pitch curve. Normal is the plain line, so a radio
 -- with no idle switch can only ever sit on it, and Hold comes last on CH3 to beat
@@ -301,8 +339,11 @@ local function applyPlan()
       local mix = { source = src, weight = l.weight, name = l.name }
       if l.multiplex ~= nil then mix.multiplex = l.multiplex end
       if l.switch ~= nil then mix.switch = l.switch end
+      if l.offset ~= nil then mix.offset = l.offset end
       if l.curve ~= nil then
         mix.curveType, mix.curveValue = CURVE_CUSTOM, l.curve
+      elseif l.diff ~= nil then
+        mix.curveType, mix.curveValue = CURVE_DIFF, l.diff
       end
       out[#out + 1] = { c.num - 1, j - 1, mix }
     end
@@ -356,7 +397,7 @@ local function held(e) return e == EVT_VIRTUAL_INC_REPT or e == EVT_VIRTUAL_DEC_
 -- by 5 so -100..100 stays usable on a two-button radio.
 local function bump(o, dir, fast)
   if o.num then
-    o.val = o.val + dir * (fast and 5 or 1)
+    o.val = o.val + dir * (o.step or 1) * (fast and 5 or 1)
     if o.val > o.max then o.val = o.max end
     if o.val < o.min then o.val = o.min end
   elseif dir > 0 then
@@ -367,7 +408,10 @@ local function bump(o, dir, fast)
 end
 
 local function shown(o)
-  if o.num then return o.val .. "%" end
+  if o.num then
+    if o.zero ~= nil and o.val == 0 then return o.zero end
+    return o.val .. "%"
+  end
   return o.list[o.v]
 end
 
@@ -434,7 +478,9 @@ local function reviewLines()
     add("CH1-4 sticks", yes("vtail") and "V-tail" or "AETR")
     cutRow()
     if O("flap") ~= "No" then add("CH5 Flap", O("flap")) end
-    if yes("ail2") then add("CH6 Ail 2", "On") end
+    if yes("ail2") then add("CH6 Ail 2", "8ch Full") end
+    local mixes = (flaperon() and " Flpr" or "") .. (differential() and " Diff" or "") .. (num("a2r") > 0 and " A>R" or "")
+    if mixes ~= "" then add("Mix" .. mixes, nil) end
   elseif vtype == T_DELTA then
     add("CH1 L elevon", yes("revL") and "Rev" or "Norm")
     add("CH2 R elevon", yes("revR") and "Rev" or "Norm")
@@ -444,7 +490,7 @@ local function reviewLines()
     add("CH1 2 4 sticks", "AER")
     add("CH3 Thr", "Idle " .. O("idle"))
     add("CH5 Mode", O("mode"))
-    add("CH6 Pitch", nil)
+    add("CH6 Pitch", "8ch Full")
     add("Hold", O("hold"))
   end
   return l
