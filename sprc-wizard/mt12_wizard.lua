@@ -150,6 +150,8 @@ local OPTS = {
     { key="thrRate", sec="Rates",  txt="Fwd-Back rate",  num=true, val=80,  min=1, max=100 },
     { key="strRate", sec="Rates",  txt="L-R rate",       num=true, val=50,  min=1, max=100 },
     { key="turn",    sec="Rates",  txt="Turn rate",      num=true, val=100, min=1, max=100 },
+    { key="spdSw",   sec="Rates",  txt="Speed sw",       v=1, list=SW0 },
+    { key="spdLow",  sec="Rates",  txt="Low speed",      num=true, val=50, min=10, max=100, step=2 },
     { key="thrExpo", sec="Feel",   txt="Fwd-Back expo",  num=true, val=0,   min=0, max=100 },
     { key="strExpo", sec="Feel",   txt="L-R expo",       num=true, val=0,   min=0, max=100 },
     { key="dzT",     sec="Feel",   txt="Fwd-Back dead",  num=true, val=0,   min=0, max=25, zero="No" },
@@ -240,6 +242,16 @@ local function findClash(p)
   return dup
 end
 
+-- Speed switch: up is the full rate, down is Low speed. It scales the whole wheel
+-- channel, last in line, and weight and offset make the switch read 1 up and Low speed
+-- down. Low speed moves in steps of 2 so the weight stays a whole number.
+local function speedLine()
+  local sp = swSrc(O("spdSw"))
+  if sp == nil then return nil end
+  local w = math.floor((num("spdLow") - 100) / 2)
+  return { sp, w, "Speed", MULT, 100 + w }
+end
+
 -- ---------------------------------------------------------------- build plan
 local function buildPlan()
   local st = 100 * stSign()
@@ -307,6 +319,10 @@ local function buildPlan()
     end
     L[#L + 1] = { IN_ST,  sL * t, "Turn" }
     R[#R + 1] = { IN_ST, -sR * t, "Turn" }
+    if vtype == T_ROBOT and speedLine() ~= nil then
+      L[#L + 1] = speedLine()
+      R[#R + 1] = speedLine()
+    end
     ch("Drive L", L, 1)
     ch("Drive R", R, 2)
     if vtype == T_TANK then
@@ -437,8 +453,8 @@ local function held(e) return e == EVT_VIRTUAL_INC_REPT or e == EVT_VIRTUAL_DEC_
 -- Holding the key steps by 5 so 1..100 stays usable on a two-button radio.
 local function bump(o, dir, fast)
   if o.num then
-    local step = 1
-    if fast then step = 5 end
+    local step = o.step or 1
+    if fast then step = step * 5 end
     o.val = o.val + dir * step
     if o.val > o.max then o.val = o.max end
     if o.val < o.min then o.val = o.min end
@@ -524,7 +540,14 @@ local function drawReview()
       lcd.drawText(2, 2 + row * 9, a, 0)
       lcd.drawText(VALX, 2 + row * 9, b, 0)
     end
-    if O("invSw") ~= "No" then extra("Flip sw", O("invSw")) end
+    local flip, speed = O("invSw"), O("spdSw")
+    if flip ~= "No" and speed ~= "No" then
+      extra("Flip Speed", flip .. " " .. speed)   -- one row: the last row of the screen is the bar
+    elseif flip ~= "No" then
+      extra("Flip sw", flip)
+    elseif speed ~= "No" then
+      extra("Speed sw", speed)
+    end
     if dzVal("dzT") + dzVal("dzS") > 0 then
       extra("Dead zone", dzVal("dzT") .. "/" .. dzVal("dzS") .. "%")
     end
