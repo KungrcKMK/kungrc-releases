@@ -1,5 +1,9 @@
 <!doctype html>
-<html lang="th"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="th"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1E2226">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-192.png">
 <title>SPRC Wizard Simulator</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans+Thai:wght@400;600&family=Roboto:wght@400&display=swap">
@@ -71,6 +75,7 @@ thead th { border-top: 0; color: var(--muted); font-weight: 600; }
   <div class="tabs">
     <button id="tab-radio" aria-pressed="true">จอวิทยุ</button>
     <button id="tab-inst" aria-pressed="false">ตัวติดตั้ง</button>
+    <button id="install" hidden>ติดตั้งเป็นแอป</button>
   </div>
 
   <div id="view-radio" class="bench">
@@ -457,6 +462,14 @@ function selftest() {
   pre.id = "selftest";
   pre.textContent = JSON.stringify(out);
   document.body.append(pre);
+}
+
+// Only the page on GitHub Pages has a web app beside it (make_simulator.py), an Artifact does not.
+if (document.querySelector('link[rel="manifest"]')) {
+  navigator.serviceWorker?.register("sw.js").catch(() => {});
+  let ask = null;
+  addEventListener("beforeinstallprompt", e => { e.preventDefault(); ask = e; $("install").hidden = false; });
+  $("install").addEventListener("click", () => { ask.prompt(); $("install").hidden = true; });
 }
 
 if (window.fengari) {
