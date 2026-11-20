@@ -1,8 +1,8 @@
 {
-  "version": "2.0.29",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.29/CarCareAIManager-Setup-2.0.29.exe",
-  "notes": "CarCare AI Manager 2.0.29\n\n- อุปกรณ์ช่วยนับ: รองรับ Bay Sensor (เฟิร์มแวร์ 1.3.0 ขึ้นไป)\n- อุปกรณ์ช่วยนับ: วัดพื้นไม่สำเร็จ จะแจ้งสาเหตุและวิธีแก้เป็นภาษาไทย (ไม่พบเซนเซอร์ / มีของใต้เซนเซอร์)",
-  "sha256": "4c210aef5c5adcec3261d87f15ac341186920ec7f267e16d559e17b2d9d4e959",
-  "size": 340219597,
+  "version": "2.0.30",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.30/CarCareAIManager-Setup-2.0.30.exe",
+  "notes": "CarCare AI Manager 2.0.30\n\n- นับรถ: รถคันใหม่เข้าแทนคันเดิมโดยไม่มีช่วงว่าง ใช้ตำแหน่งป้ายเทียบกับจุดจอดช่วยตัดสิน (นับคันใหม่ได้ แม้กรอบรถเห็นไม่ครบคัน)\n- ภาพสด: กรอบป้ายย้ายตามเมื่อรถคันเดิมขยับ\n- อ่านป้าย: แยกรูปแบบป้ายรถยนต์/มอเตอร์ไซค์ และระวังตัวอักษรที่คล้ายกันมากขึ้น",
+  "sha256": "722bc8fb73d67948e40ee5ce9a697cb0f336972a3880590cd44733677b37e4bf",
+  "size": 340221481,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
