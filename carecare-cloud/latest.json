@@ -1,8 +1,8 @@
 {
-  "version": "2.0.32",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.32/CarCareAIManager-Setup-2.0.32.exe",
-  "notes": "CarCare AI Manager 2.0.32\n\n- นับรถ: รถคันใหม่เข้าแทนคันเดิมโดยไม่มีช่วงว่าง ใช้ตำแหน่งป้ายเทียบกับจุดจอดช่วยตัดสิน\n- ภาพสด: กรอบป้ายย้ายตามเมื่อรถคันเดิมขยับ\n- อ่านป้าย: แยกรูปแบบป้ายรถยนต์/มอเตอร์ไซค์ และระวังตัวอักษรที่คล้ายกันมากขึ้น\n- ค่าเริ่มต้นนับจาก กล้อง + เซนเซอร์ (ยังไม่ใส่ไอพีบอร์ด = กล้องนับตามเดิม)\n- กล้องหลุดเกิน 1 นาที: ติดตั้งอัปเดตทันที (งานค้างทำต่อหลังเปิดใหม่)",
-  "sha256": "0e17959e2353429053836d61feaaa04b9d406bbc161cf7413d4d3121e71fe3b4",
-  "size": 340228037,
+  "version": "2.0.33",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.33/CarCareAIManager-Setup-2.0.33.exe",
+  "notes": "CarCare AI Manager 2.0.33\n\n- ส่งค่าเซนเซอร์ (ระยะ/ระยะพื้น/มีรถ) ไปกับสัญญาณชีพทุก 5 นาที ให้ผู้ดูแลตรวจจากระยะไกลได้\n- รวมทุกอย่างของ 2.0.32",
+  "sha256": "915a68749df43c0ca209bcc62a598b6107a1c7632e971df2786b90146a62da8a",
+  "size": 340223139,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
