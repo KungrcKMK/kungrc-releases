@@ -1,8 +1,8 @@
 {
-  "version": "2.0.31",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.31/CarCareAIManager-Setup-2.0.31.exe",
-  "notes": "CarCare AI Manager 2.0.31\n\n- กลับไปใช้การนับแบบรุ่น 2.0.29\n- ค่าเริ่มต้นนับจาก กล้อง + เซนเซอร์ (ยังไม่ใส่ไอพีบอร์ด = กล้องนับตามเดิม)\n- กล้องหลุดเกิน 1 นาที: ติดตั้งอัปเดตทันที (งานค้างทำต่อหลังเปิดใหม่)",
-  "sha256": "45747ef2da7e36cce0ce8dfb0d33c71a5c7819887420ab610a66c1abe5b258c0",
-  "size": 340235424,
+  "version": "2.0.32",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.32/CarCareAIManager-Setup-2.0.32.exe",
+  "notes": "CarCare AI Manager 2.0.32\n\n- นับรถ: รถคันใหม่เข้าแทนคันเดิมโดยไม่มีช่วงว่าง ใช้ตำแหน่งป้ายเทียบกับจุดจอดช่วยตัดสิน\n- ภาพสด: กรอบป้ายย้ายตามเมื่อรถคันเดิมขยับ\n- อ่านป้าย: แยกรูปแบบป้ายรถยนต์/มอเตอร์ไซค์ และระวังตัวอักษรที่คล้ายกันมากขึ้น\n- ค่าเริ่มต้นนับจาก กล้อง + เซนเซอร์ (ยังไม่ใส่ไอพีบอร์ด = กล้องนับตามเดิม)\n- กล้องหลุดเกิน 1 นาที: ติดตั้งอัปเดตทันที (งานค้างทำต่อหลังเปิดใหม่)",
+  "sha256": "0e17959e2353429053836d61feaaa04b9d406bbc161cf7413d4d3121e71fe3b4",
+  "size": 340228037,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
