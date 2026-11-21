@@ -1,8 +1,8 @@
 {
-  "version": "2.0.33",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.33/CarCareAIManager-Setup-2.0.33.exe",
-  "notes": "CarCare AI Manager 2.0.33\n\n- ส่งค่าเซนเซอร์ (ระยะ/ระยะพื้น/มีรถ) ไปกับสัญญาณชีพทุก 5 นาที ให้ผู้ดูแลตรวจจากระยะไกลได้\n- รวมทุกอย่างของ 2.0.32",
-  "sha256": "915a68749df43c0ca209bcc62a598b6107a1c7632e971df2786b90146a62da8a",
-  "size": 340223139,
+  "version": "2.0.34",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.34/CarCareAIManager-Setup-2.0.34.exe",
+  "notes": "CarCare AI Manager 2.0.34\n\n- เซนเซอร์: ความสูงใต้เซนเซอร์ต่างจากคันที่นับเกินค่าที่ตั้ง (เริ่มต้น 20%) ต่อเนื่อง 5 วิ = เปลี่ยนคัน (คันต่อไปเข้าเร็วก็ตัดงานทัน)\n- เซนเซอร์: แยกป้าย OFFLINE (บอร์ดหลุด) กับ NO SIGNAL (บอร์ดอยู่แต่อ่านค่าไม่ได้ เช่น น้ำ/เลนส์) · ช่องที่ไม่มีบอร์ดไม่แสดงป้าย\n- อ่านป้าย: กรอบป้ายไปจับกระจังหน้า -> เลือกกรอบที่มีตัวอักษร และหาป้ายใหม่ทั้งหน้ารถเมื่ออ่านไม่ได้\n- ปุ่ม รอระบุทะเบียน ไม่แสดงที่ร้านแล้ว (ผู้ดูแลระบุให้)",
+  "sha256": "d13b4332a0d63aa7c313cef4c7c813afcd23bd6fc0e3c5d41eb78ded87821acc",
+  "size": 340221428,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
