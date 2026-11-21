@@ -1,8 +1,8 @@
 {
-  "version": "2.0.34",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.34/CarCareAIManager-Setup-2.0.34.exe",
-  "notes": "CarCare AI Manager 2.0.34\n\n- เซนเซอร์: ความสูงใต้เซนเซอร์ต่างจากคันที่นับเกินค่าที่ตั้ง (เริ่มต้น 20%) ต่อเนื่อง 5 วิ = เปลี่ยนคัน (คันต่อไปเข้าเร็วก็ตัดงานทัน)\n- เซนเซอร์: แยกป้าย OFFLINE (บอร์ดหลุด) กับ NO SIGNAL (บอร์ดอยู่แต่อ่านค่าไม่ได้ เช่น น้ำ/เลนส์) · ช่องที่ไม่มีบอร์ดไม่แสดงป้าย\n- อ่านป้าย: กรอบป้ายไปจับกระจังหน้า -> เลือกกรอบที่มีตัวอักษร และหาป้ายใหม่ทั้งหน้ารถเมื่ออ่านไม่ได้\n- ปุ่ม รอระบุทะเบียน ไม่แสดงที่ร้านแล้ว (ผู้ดูแลระบุให้)",
-  "sha256": "d13b4332a0d63aa7c313cef4c7c813afcd23bd6fc0e3c5d41eb78ded87821acc",
-  "size": 340221428,
+  "version": "2.0.35",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.35/CarCareAIManager-Setup-2.0.35.exe",
+  "notes": "CarCare AI Manager 2.0.35\n\n- ก่อนปิดโปรแกรมเพื่ออัปเดต ปิดการเชื่อมต่อกล้องให้เสร็จก่อน (แก้กล้องต่อไม่ได้หลังอัปเดต)\n- กล้องหลุด: ตรวจเองว่าเสียที่กล้อง/เครือข่าย/โปรแกรม แล้วส่งผลให้ผู้ดูแล\n- รวมทุกอย่างของ 2.0.34",
+  "sha256": "b131e1ff1bbf3d195514ea14c8866e3156c0ca4ad410434aa2c21ac47d5dd632",
+  "size": 340227693,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
