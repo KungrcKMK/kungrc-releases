@@ -1,8 +1,8 @@
 {
-  "version": "2.0.36",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.36/CarCareAIManager-Setup-2.0.36.exe",
-  "notes": "CarCare AI Manager 2.0.36\n\n- แก้ตัวตรวจกล้องหลุดของ 2.0.35 ที่ทำงานไม่ได้ และเพิ่มการเช็กว่าเครื่องยังเห็นกล้องในวงแลน\n- รูปตอนรถออกมีตรา นับด้วย: กล้อง / เซนเซอร์ / กล้อง + เซนเซอร์\n- รวมทุกอย่างของ 2.0.35 (ปิดการเชื่อมต่อกล้องก่อนอัปเดต)",
-  "sha256": "e1ad4048d069773e93c1d386cfcea3ffe291d33d51f01f79b4dcfc1e3a375688",
-  "size": 340229249,
+  "version": "2.0.37",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.37/CarCareAIManager-Setup-2.0.37.exe",
+  "notes": "CarCare AI Manager 2.0.37\n\n- รูปรถออก: บอกแค่เวลาออก · ข้อความรถออกไม่ซ้ำเวลากับรูป\n- ป้ายลูกค้าเดิมบนรูป: ตัวอักษรไม่ล้นกรอบ\n- คันที่อ่านทะเบียนไม่ได้: ผู้ดูแลระบุให้\n- รวมทุกอย่างของ 2.0.36",
+  "sha256": "a61243d515c4181e5f8b5e63387007efcd8a24667398d77fd7a7e4c1da434062",
+  "size": 340244702,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
