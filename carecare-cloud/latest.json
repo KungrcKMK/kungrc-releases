@@ -1,8 +1,8 @@
 {
-  "version": "2.0.38",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.38/CarCareAIManager-Setup-2.0.38.exe",
-  "notes": "CarCare AI Manager 2.0.38\n\n- ตรวจกล้องหลุด: ถามกล้องด้วยรหัสผ่านจริง ว่ากล้องตอบอะไร (หาสาเหตุกล้องหายหลังอัปเดต)\n- เซนเซอร์เปลี่ยนคัน: จับค่าอ้างอิงหลังรถจอดนิ่ง (กันปิดงานผิดตอนรถขยับเข้าที่)\n- รวมทุกอย่างของ 2.0.37",
-  "sha256": "d2f65f5b743950568afddf0b13e07cdb70337416bd650a189f9468e572496768",
-  "size": 340240740,
+  "version": "2.0.39",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.39/CarCareAIManager-Setup-2.0.39.exe",
+  "notes": "CarCare AI Manager 2.0.39\n\n- กล้องไม่มีภาพ: รีสตาร์ทโปรแกรมแล้วยังไม่มาอีก 10 นาที -> รีสตาร์ทคอมเอง (ไม่เกิน 1 ครั้งทุก 6 ชั่วโมง) และแจ้งกลุ่ม\n- รวมทุกอย่างของ 2.0.38",
+  "sha256": "71e948605f5f27f1966f7d2bf4cfc5c10d7ba110a76ab69f53f3eb02ab909d8a",
+  "size": 340249219,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
