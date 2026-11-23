@@ -1,8 +1,8 @@
 {
-  "version": "2.0.35",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.35/CarCareAIManager-Setup-2.0.35.exe",
-  "notes": "CarCare AI Manager 2.0.35\n\n- ก่อนปิดโปรแกรมเพื่ออัปเดต ปิดการเชื่อมต่อกล้องให้เสร็จก่อน (แก้กล้องต่อไม่ได้หลังอัปเดต)\n- กล้องหลุด: ตรวจเองว่าเสียที่กล้อง/เครือข่าย/โปรแกรม แล้วส่งผลให้ผู้ดูแล\n- รวมทุกอย่างของ 2.0.34",
-  "sha256": "b131e1ff1bbf3d195514ea14c8866e3156c0ca4ad410434aa2c21ac47d5dd632",
-  "size": 340227693,
+  "version": "2.0.36",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.36/CarCareAIManager-Setup-2.0.36.exe",
+  "notes": "CarCare AI Manager 2.0.36\n\n- แก้ตัวตรวจกล้องหลุดของ 2.0.35 ที่ทำงานไม่ได้ และเพิ่มการเช็กว่าเครื่องยังเห็นกล้องในวงแลน\n- รูปตอนรถออกมีตรา นับด้วย: กล้อง / เซนเซอร์ / กล้อง + เซนเซอร์\n- รวมทุกอย่างของ 2.0.35 (ปิดการเชื่อมต่อกล้องก่อนอัปเดต)",
+  "sha256": "e1ad4048d069773e93c1d386cfcea3ffe291d33d51f01f79b4dcfc1e3a375688",
+  "size": 340229249,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
