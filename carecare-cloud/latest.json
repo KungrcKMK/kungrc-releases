@@ -1,8 +1,8 @@
 {
-  "version": "2.0.40",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.40/CarCareAIManager-Setup-2.0.40.exe",
-  "notes": "CarCare AI Manager 2.0.40\n\n- กล้อง + เซนเซอร์: เซนเซอร์เห็นพื้นแต่กล้องยังเห็นรถ (กำลังเลื่อนรถ) -> ยังไม่ปิดงาน (กันนับรถคันเดิมซ้ำ)\n- รวมทุกอย่างของ 2.0.39",
-  "sha256": "5e58d38c06457fb3bd6d8bfce4e9764ba474772b5d49da894fc6dc8ee8c32aeb",
-  "size": 340233367,
+  "version": "2.0.41",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.0.41/CarCareAIManager-Setup-2.0.41.exe",
+  "notes": "CarCare AI Manager 2.0.41\n\n- เซนเซอร์: จำความสูงตอนรถเข้า · สูงลดลงเกิน 20% หรือเห็นพื้น = รถออกทันที\n- เซนเซอร์: รถกลับมาภายใน 1 นาทีและสูงเท่าเดิม = คันเดิม (พนักงานเลื่อนรถ) ไม่นับซ้ำ\n- เลิกใช้กล้องค้านการปิดงานของเซนเซอร์ (จาก 2.0.40)",
+  "sha256": "114e3aebe68189b72117db16a82d7395a3dd28c844af431c636d02d647a928ce",
+  "size": 340260971,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
