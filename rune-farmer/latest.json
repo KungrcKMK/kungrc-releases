@@ -1,7 +1,7 @@
 {
-  "version": "1.0.0",
-  "notes": "รุ่นแรก: ฟาร์มด้วยลำดับปุ่ม, ไปหมุดเอง (F9), เดินตามเส้นทาง, สู้และหนี, เรดาร์และกรอบ NPC บนจอเกม, อ่านออกเสียง",
-  "sha256": "4be5c4bfd2be14dde994459679252f35040334c8dd489c6f92c750ea4cac8103",
-  "size": 100246722,
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/runefarmer-v1.0.0/TH.AI-RuneFarmer-Setup-1.0.0.exe"
+  "version": "1.0.1",
+  "notes": "เอาคำว่า Qt 6 ออกจากชื่อหน้าต่าง, มีคู่มือ PDF ภาษาไทยไปกับตัวติดตั้ง (ทางลัดในเมนู Start)",
+  "sha256": "e8b93213b33ba66f117fbc3ec7da751320e987ebfa9602cf01fd588f92a7e568",
+  "size": 101078647,
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/runefarmer-v1.0.1/TH.AI-RuneFarmer-Setup-1.0.1.exe"
 }
