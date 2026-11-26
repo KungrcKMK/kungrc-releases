@@ -1,8 +1,8 @@
 {
-  "version": "2.1.0",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.1.0/CarCareAIManager-Setup-2.1.0.exe",
-  "notes": "CarCare AI Manager 2.1.0\n\n- เซนเซอร์เป็นตัวนับหลัก: บอร์ดรุ่น 1.5.0 ขึ้นไปนับเองและส่งยอดเข้าระบบกลางเอง คอมหรือกล้องดับยอดไม่หาย\n- คอมใส่รหัสบอร์ดให้เองอัตโนมัติ แล้วถ่ายรูป/อ่านทะเบียนเติมให้รายการของบอร์ด\n- คอมกลับมาทำงาน ยอดวันนี้ดึงจากระบบกลางให้ตรงกันเอง",
-  "sha256": "556fcd1fb52f7393f07badf76f26074dbfd07a59fac7527c0c6be1a895242a05",
-  "size": 340261671,
+  "version": "2.1.1",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.1.1/CarCareAIManager-Setup-2.1.1.exe",
+  "notes": "CarCare AI Manager 2.1.1\n\n- ช่องที่เซนเซอร์นับ: รถที่อยู่ไม่ถึงเวลาขั้นต่ำถูกยกเลิกเองแม้คอมดับ (ใช้เวลาขั้นต่ำตามค่าตั้งของร้าน)",
+  "sha256": "b26bb97391022b968d82bb1c285c394ed86a1660c9e2cfbfd59d59e9bc9cbb64",
+  "size": 340252418,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
