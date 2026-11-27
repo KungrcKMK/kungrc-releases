@@ -1,8 +1,8 @@
 {
-  "version": "2.1.1",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.1.1/CarCareAIManager-Setup-2.1.1.exe",
-  "notes": "CarCare AI Manager 2.1.1\n\n- ช่องที่เซนเซอร์นับ: รถที่อยู่ไม่ถึงเวลาขั้นต่ำถูกยกเลิกเองแม้คอมดับ (ใช้เวลาขั้นต่ำตามค่าตั้งของร้าน)",
-  "sha256": "b26bb97391022b968d82bb1c285c394ed86a1660c9e2cfbfd59d59e9bc9cbb64",
-  "size": 340252418,
+  "version": "2.1.2",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.1.2/CarCareAIManager-Setup-2.1.2.exe",
+  "notes": "CarCare AI Manager 2.1.2\n\n- ภาพกล้องไม่ช้ากว่าเวลาจริงแล้ว (เดิมช้าราว 9 วินาที รูปตอนเข้าจึงยังไม่เห็นรถ)\n- กรอบป้ายบนภาพสดย้ายตามรถหลังรถเข้าจอด (เดิมค้างที่ตำแหน่งตอนรถเพิ่งเข้าช่อง)\n- ป้ายเซนเซอร์บนภาพสดแยก \"ไม่มีแสงสะท้อน\" (NO ECHO) ออกจาก \"ช่องว่าง\"",
+  "sha256": "595b60390334c5a01b1d4cfd01665e2c9f14552d25a190e6020532d3ec1d0868",
+  "size": 340253645,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
