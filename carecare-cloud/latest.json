@@ -1,8 +1,8 @@
 {
-  "version": "2.1.4",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.1.4/CarCareAIManager-Setup-2.1.4.exe",
-  "notes": "CarCare AI Manager 2.1.4\n\n- แจ้งอุปกรณ์ช่วยนับไม่ตอบเฉพาะเวลาทำงาน 07:00-21:00 (นอกเวลาร้านปิดไฟบอร์ด ไม่แจ้ง)",
-  "sha256": "e6d840e4b18e43c618f37a78700be8b2a3752c0965d5cfa989a49942558a8854",
-  "size": 340257223,
+  "version": "2.1.5",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.1.5/CarCareAIManager-Setup-2.1.5.exe",
+  "notes": "CarCare AI Manager 2.1.5\n\n- ช่องที่เซนเซอร์นับ: เซนเซอร์บอกว่ารถออกเร็วผิดปกติแต่กล้องยังเห็นรถ = ยังไม่จบงาน (ไม่ลบรถที่ยังล้างอยู่)",
+  "sha256": "867c2183da11c2b466b23b13a5da7beaf07dc5ea7e56cdce7a5598a546785e7d",
+  "size": 340256794,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
