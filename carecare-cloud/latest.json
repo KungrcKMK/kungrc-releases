@@ -1,8 +1,8 @@
 {
-  "version": "2.1.5",
-  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.1.5/CarCareAIManager-Setup-2.1.5.exe",
-  "notes": "CarCare AI Manager 2.1.5\n\n- ช่องที่เซนเซอร์นับ: เซนเซอร์บอกว่ารถออกเร็วผิดปกติแต่กล้องยังเห็นรถ = ยังไม่จบงาน (ไม่ลบรถที่ยังล้างอยู่)",
-  "sha256": "867c2183da11c2b466b23b13a5da7beaf07dc5ea7e56cdce7a5598a546785e7d",
-  "size": 340256794,
+  "version": "2.1.6",
+  "url": "https://github.com/KungrcKMK/kungrc-releases/releases/download/carecare-cloud-v2.1.6/CarCareAIManager-Setup-2.1.6.exe",
+  "notes": "CarCare AI Manager 2.1.6\n\n- เก็บข้อมูลเทียบเซนเซอร์กับกล้อง เพื่อปรับค่าเซนเซอร์ของแต่ละช่องให้แม่นขึ้น",
+  "sha256": "b2f873757096a51a67878f44cc59afffa6c3e6970bf6e4ea0ed901acef614c9f",
+  "size": 340270902,
   "webapp_url": "https://carcare-api.quicky-carcare.workers.dev"
 }
